@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Socials from "../components/Socials.astro";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -14,7 +15,7 @@ import Navbar from "../components/Navbar.astro";
     <title>enigmalea.quest</title>
   </head>
   <body class="bg-base text-text">
-    <header class="sticky top-0 z-50 mx-auto w-[95vw] md:max-w-[800px] bg-base">
+    <header class="sticky top-0 z-50 mx-auto w-[95vw] bg-base md:max-w-[800px]">
       <Header />
       <Socials />
       <Navbar />
@@ -22,6 +23,7 @@ import Navbar from "../components/Navbar.astro";
     <article class="mx-auto w-[95vw] px-3 md:max-w-[800px]">
       <slot />
     </article>
+    <Footer />
   </body>
 </html>
 

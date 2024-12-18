@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         title: ['"Unica One"', ...defaultTheme.fontFamily.sans],
       },
+      boxShadow: {
+        footer: "0 -25px 12px rgba(24,25,38,0.25)",
+      },
     },
   },
   plugins: [
