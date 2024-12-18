@@ -1,107 +1,128 @@
 ---
-import {
-  Astronav,
-  MenuItems,
-  MenuIcon,
-  Dropdown,
-  DropdownItems,
-  DropdownSubmenu,
-  StickyHeader,
-} from "astro-navbar";
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, StickyHeader } from "astro-navbar";
 import { Icon } from "astro-icon/components";
 ---
 
 <StickyHeader
-  class="sticky top-0 z-50 m-auto w-[95vw] gap-5 border-b border-overlay0 p-5 py-3 shadow-xl shadow-crust backdrop-blur-lg transition-all md:max-w-[800px] lg:flex"
-  scrollY={50}
->
+  class="sticky top-0 z-50 transition-all w-[95vw] m-auto border-b border-overlay0 shadow-xl shadow-crust backdrop-blur-lg py-3 md:max-w-[800px] lg:flex p-5 gap-5"
+  scrollY={50}>
   <Astronav closeOnClick>
     <div class="flex w-full justify-between">
-      <a href="/" class="text-2xl text-green hover:text-rosewater"
-        ><Icon name="lucide:home" /></a
-      >
+      <a href="/" class="text-2xl text-green hover:text-rosewater"><Icon name="lucide:home" /></a>
       <div class="block lg:hidden">
-        <MenuIcon class="h-4 w-4 text-text" />
+        <MenuIcon class="w-4 h-4 text-text" />
       </div>
     </div>
-    <MenuItems class="hidden w-full justify-end lg:grid">
+    <MenuItems class="hidden lg:flex">
       <ul class="flex flex-col lg:flex-row lg:gap-5">
-        <li><a href="/blog" class="text-blue hover:text-rosewater">Blog</a></li>
+        <li class="text-blue hover:text-rosewater"><a href="/blog">Blog</a></li>
         <li>
           <Dropdown class="group">
-            <button class="flex items-center">
-              <span>
-                <a href="" class="text-blue hover:text-rosewater"
-                  >Me <Icon name="lucide:chevron-down" class="inline" /></a
-                >
-              </span>
+            <button class="flex items-center text-blue hover:text-rosewater">
+              <span class="pr-1"> Me </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                class="w-3 h-3 mt-0.5 group-open:rotate-180">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+              </svg>
             </button>
             <DropdownItems class="relative">
-              <div class="absolute top-0">
+              <div class="absolute top-0 bg-mantle p-3 shadow-md shadow-crust min-w-[250px] border border-overlay0">
                 <ul>
-                  <li>Menu 1</li>
-                  <li>Menu 2</li>
-                  <li>Menu 3</li>
+                  <li class="text-blue hover:text-rosewater">Menu 1</li>
+                  <li class="text-blue hover:text-rosewater">Menu 2</li>
+                  <li class="text-blue hover:text-rosewater">Menu 3</li>
                 </ul>
               </div>
             </DropdownItems>
           </Dropdown>
         </li>
-        <li>
+				<li>
           <Dropdown class="group">
-            <button class="flex items-center">
-              <spa>
-                <a href="" class="text-blue hover:text-rosewater"
-                  >Fandom <Icon name="lucide:chevron-down" class="inline" /></a
-                ></spa
-              >
+            <button class="flex items-center text-blue hover:text-rosewater">
+              <span class="pr-1"> Fandom </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                class="w-3 h-3 mt-0.5 group-open:rotate-180">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+              </svg>
             </button>
             <DropdownItems class="relative">
-              <div class="absolute top-0">
+              <div class="absolute top-0 bg-mantle p-3 shadow-md shadow-crust min-w-[250px] border border-overlay0">
                 <ul>
-                  <li>Menu 1</li>
-                  <li>Menu 2</li>
-                  <li>Menu 3</li>
+                  <li class="text-blue hover:text-rosewater">Menu 1</li>
+                  <li class="text-blue hover:text-rosewater">Menu 2</li>
+                  <li class="text-blue hover:text-rosewater">Menu 3</li>
                 </ul>
               </div>
             </DropdownItems>
           </Dropdown>
         </li>
-        <li>
+				<li>
           <Dropdown class="group">
-            <button class="flex items-center">
-              <span>
-                <a href="" class="text-blue hover:text-rosewater"
-                  >Tech <Icon name="lucide:chevron-down" class="inline" /></a
-                ></span
-              >
+            <button class="flex items-center text-blue hover:text-rosewater">
+              <span class="pr-1"> Tech </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                class="w-3 h-3 mt-0.5 group-open:rotate-180">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+              </svg>
             </button>
             <DropdownItems class="relative">
-              <div class="absolute top-0">
+              <div class="absolute top-0 bg-mantle p-3 shadow-md shadow-crust min-w-[250px] border border-overlay0">
                 <ul>
-                  <li>Menu 1</li>
-                  <li>Menu 2</li>
-                  <li>Menu 3</li>
+                  <li class="text-blue hover:text-rosewater">Menu 1</li>
+                  <li class="text-blue hover:text-rosewater">Menu 2</li>
+                  <li class="text-blue hover:text-rosewater">Menu 3</li>
                 </ul>
               </div>
             </DropdownItems>
           </Dropdown>
         </li>
-        <li>
+				<li>
           <Dropdown class="group">
-            <button class="flex items-center">
-              <span>
-                <a href="" class="text-blue hover:text-rosewater"
-                  >Other <Icon name="lucide:chevron-down" class="inline" /></a
-                ></span
-              >
+            <button class="flex items-center text-blue hover:text-rosewater">
+              <span class="pr-1"> Other </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                class="w-3 h-3 mt-0.5 group-open:rotate-180">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+              </svg>
             </button>
             <DropdownItems class="relative">
-              <div class="absolute top-0">
+              <div class="absolute top-0 bg-mantle p-3 shadow-md shadow-crust min-w-[250px] border border-overlay0">
                 <ul>
-                  <li>Menu 1</li>
-                  <li>Menu 2</li>
-                  <li>Menu 3</li>
+                  <li class="text-blue hover:text-rosewater"><a href="/letter">Exchange Letter</a></li>
+                  <li class="text-blue hover:text-rosewater">Menu 2</li>
+                  <li class="text-blue hover:text-rosewater">Menu 3</li>
                 </ul>
               </div>
             </DropdownItems>
