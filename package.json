@@ -12,6 +12,7 @@
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.3",
     "@fontsource/unica-one": "^5.1.0",
+    "@iconify-json/simple-icons": "^1.2.16",
     "astro": "^5.0.6",
     "astro-expressive-code": "^0.38.3",
     "astro-icon": "^1.1.4",
