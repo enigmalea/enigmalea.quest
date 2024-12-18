@@ -1,3 +1,9 @@
+---
+import Header from "../components/Header.astro";
+import Socials from "../components/Socials.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +14,14 @@
     <title>enigmalea.quest</title>
   </head>
   <body class="bg-base text-text">
-    <slot />
+    <header class="sticky top-0 z-50 mx-auto w-[95vw] md:max-w-[800px] bg-base">
+      <Header />
+      <Socials />
+      <Navbar />
+    </header>
+    <article class="mx-auto w-[95vw] px-3 md:max-w-[800px]">
+      <slot />
+    </article>
   </body>
 </html>
 
