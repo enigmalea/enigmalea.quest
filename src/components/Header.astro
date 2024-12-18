@@ -1,15 +1,19 @@
 ---
 import "@fontsource/unica-one";
+import Socials from "../components/Socials.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
-<div
-  class="mx-auto block w-fit pb-10 pt-14 font-title text-[16vw] leading-10 sm:text-[7rem]"
->
-  <span
-    class="via-orange bg-gradient-to-r from-red to-yellow bg-clip-text text-transparent"
-    >enig</span
-  ><span
-    class="bg-gradient-to-r from-green via-blue to-lavender bg-clip-text text-transparent"
-    >malea</span
-  >
-</div>
+<header class="sticky top-0 z-50 mx-auto w-[95vw] bg-base md:max-w-[800px]">
+  <div class="mx-auto mb-[-20px] w-fit font-title text-[16vw] sm:text-[7rem]">
+    <span
+      class="via-orange bg-gradient-to-r from-red to-yellow bg-clip-text text-transparent"
+      >enig</span
+    ><span
+      class="bg-gradient-to-r from-green via-blue to-lavender bg-clip-text text-transparent"
+      >malea</span
+    >
+  </div>
+  <Socials />
+  <Navbar />
+</header>
