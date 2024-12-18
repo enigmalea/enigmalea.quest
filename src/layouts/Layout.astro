@@ -13,10 +13,12 @@ import Footer from "../components/Footer.astro";
     <meta name="generator" content={Astro.generator} />
     <title>enigmalea.quest</title>
   </head>
-  <body class="h-screen bg-base text-text">
-		<Navbar />
+  <body class="h-screen bg-base">
+    <Navbar />
     <Header />
-    <article class="mx-auto w-[95vw] px-3 pb-14 md:max-w-[800px]">
+    <article
+      class="prose mx-auto w-[95vw] px-3 pb-14 prose-headings:font-mono md:max-w-[800px]"
+    >
       <slot />
     </article>
     <Footer />

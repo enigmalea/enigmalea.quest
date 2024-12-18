@@ -7,9 +7,34 @@ export default {
     extend: {
       fontFamily: {
         title: ['"Unica One"', ...defaultTheme.fontFamily.sans],
+        sans: ['"Atkinson Hyperlegible"', ...defaultTheme.fontFamily.sans],
+        mono: ['"Monaspace Neon"', ...defaultTheme.fontFamily.mono],
       },
       boxShadow: {
         footer: "0 -25px 12px rgba(24,25,38,0.25)",
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: "#cad3f5",
+            strong: { color: "#a6da95" },
+            em: { color: "#91d7e3" },
+            h1: { color: "#ed8796" },
+            h2: { color: "#f5a97f" },
+            h3: { color: "#eed49f" },
+            h4: { color: "#a6da95" },
+            a: {
+              color: "#8aadf4",
+              textDecoration: "underline wavy",
+              textUnderlineOffset: "0.3em",
+              fontWeight: "normal",
+              "&:hover": {
+                color: "#f4dbd6",
+                textDecoration: "none",
+              },
+            },
+          },
+        },
       },
     },
   },
@@ -17,5 +42,6 @@ export default {
     require("@catppuccin/tailwindcss")({
       defaultFlavour: "macchiato",
     }),
+    require("@tailwindcss/typography"),
   ],
 };

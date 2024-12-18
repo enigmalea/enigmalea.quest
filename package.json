@@ -11,6 +11,8 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.3",
+    "@fontsource/atkinson-hyperlegible": "^5.1.0",
+    "@fontsource/monaspace-neon": "^5.1.0",
     "@fontsource/unica-one": "^5.1.0",
     "@iconify-json/lucide": "^1.2.19",
     "@iconify-json/simple-icons": "^1.2.16",
@@ -25,6 +27,7 @@
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
     "@eslint/js": "^9.17.0",
+    "@tailwindcss/typography": "^0.5.15",
     "eslint": "^9.17.0",
     "eslint-plugin-astro": "^1.3.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
