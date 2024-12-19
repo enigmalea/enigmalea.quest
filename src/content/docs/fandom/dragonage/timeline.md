@@ -89,6 +89,6 @@ checkmark.
 
 I've been attempting to archive the free DA media to the Internet Archive as
 much as possible between other projects (see
-[Dragon Age Archives](/docs/mine/archives)). If something has an archive
-link, it's provided in case the other link goes dead or missing, with the hopes
-that the Media Timeline will be usable well into the future.
+[Dragon Age Archives](/docs/mine/archives)). If something has an archive link,
+it's provided in case the other link goes dead or missing, with the hopes that
+the Media Timeline will be usable well into the future.

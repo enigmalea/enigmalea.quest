@@ -2,9 +2,9 @@
 title: Obsidian
 ---
 
-[Obsidian.md](https://obsidian.md) is free personal wiki or knowledge bank (think
-OneNote, Evernote, or Google Keep) where you can store reference information,
-organize your life, or just take notes.
+[Obsidian.md](https://obsidian.md) is free personal wiki or knowledge bank
+(think OneNote, Evernote, or Google Keep) where you can store reference
+information, organize your life, or just take notes.
 
 ## What I'm Using It For
 

@@ -13,6 +13,7 @@ primary language.
 ### Themes I'm Using
 
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin)
+
   - **Used For:** Main Vault & Shared Writing Vault
 
 - [Blue Topaz](https://forum.obsidian.md/t/theme-blue-topaz-v5-5-updated-20211218-for-v0-13-12-and-mobile-v1-0-5/6425)
@@ -30,7 +31,8 @@ I'm interested in something different.
 - [Dracula](https://github.com/dracula/obsidian)
 - [Catpuccin](https://github.com/catppuccin/obsidian)
 - [Ebullientworks Theme](https://github.com/ebullient/obsidian-theme-ebullientworks)
-- [Obsidian Minimal](https://github.com/kepano/obsidian-minimal) with [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings)
+- [Obsidian Minimal](https://github.com/kepano/obsidian-minimal) with
+  [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings)
 
 ## Extensions & Snippets
 
