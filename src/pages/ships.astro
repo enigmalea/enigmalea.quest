@@ -1,22 +1,56 @@
 ---
 import { getCollection } from "astro:content";
-import ShipCard from "../components/ShipCard.astro";
 import Layout from "../layouts/Layout.astro";
 
-const ships = await getCollection("ships");
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  fandom: string;
+  ship: string;
+  image: ImageMetadata;
+  credits: string;
+}
+
+const allShips = await getCollection("ships");
 ---
 
 <Layout>
+  <h1>Owned Ships</h1>
+
+  <p>
+    Below are the ships I've purchased from <a href="https://www.robinboob.com/"
+      >RobinBoob</a
+    >. They're mine and only mine*!
+  </p>
+
+  <p class="text-sm text-overlay0">
+    *This is a joke, but RobinBoob isn't. Check it out to get your own ship
+    certificates and support <a href="http://fujocoded.com">FujoCoded, LLC</a> a
+    small business focused on making the internet a better place for fandom.
+  </p>
+
   {
-    ships.map(async (ship) => {
-      return (
-        <ShipCard
-          fandom={ship.data.fandom}
-          image={ship.data.image}
-          ship={ship.data.ship}
-          credits={ship.data.credits}
+    allShips.map((ship) => (
+      <div>
+        <Image
+          src={ship.data.image}
+          alt={`Robinboob Certificate of Ownership for ${ship.data.ship}`}
+					format="png"
+          quality={50}
+          class="rounded mb-2 transition-all duration-300 ease-in-out"
+          loading="lazy"
         />
-      );
-    })
+        <span class="block text-center text-xl text-sky">
+          {ship.data.fandom}
+        </span>
+        <span class="block text-center text-lg text-text">
+          {ship.data.ship}
+        </span>
+        <span class="text-mono block text-center text-lg italic text-overlay0">
+          {ship.data.credits}
+        </span>
+      </div>
+    ))
   }
 </Layout>
