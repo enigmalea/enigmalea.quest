@@ -15,12 +15,12 @@ const ships = defineCollection({
     }),
 });
 
-const docs = defineCollection ({
-	loader: docsLoader(),
-	schema: docsSchema(),
-})
+const docs = defineCollection({
+  loader: docsLoader(),
+  schema: docsSchema(),
+});
 
 export const collections = {
   ships,
-	docs,
+  docs,
 };

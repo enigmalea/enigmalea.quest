@@ -53,9 +53,7 @@ export default defineConfig({
     metaTags(),
     starlight({
       title: "My delightful docs site",
-			plugins: [
-        catppuccin({ dark: "macchiato-blue", light: "latte-blue" })
-      ]
+      plugins: [catppuccin({ dark: "macchiato-blue", light: "latte-blue" })],
     }),
   ],
 });
