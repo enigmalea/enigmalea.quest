@@ -1,3 +1,4 @@
+import catppuccin from "starlight-theme-catppuccin";
 // @ts-check
 import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
@@ -7,7 +8,6 @@ import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
-import catppuccin from "starlight-theme-catppuccin";
 
 // https://astro.build/config
 export default defineConfig({
@@ -52,7 +52,12 @@ export default defineConfig({
     }),
     metaTags(),
     starlight({
-      title: "My delightful docs site",
+      title: "enigmalea",
+      // logo: {
+      //   src: "./favicon.svg",
+      //   replacesTitle: true,
+      // },
+      customCss: ["./src/assets/css/starlight.css"],
       plugins: [catppuccin({ dark: "macchiato-blue", light: "latte-blue" })],
     }),
   ],
