@@ -2,6 +2,7 @@ import catppuccin from "starlight-theme-catppuccin";
 // @ts-check
 import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
+import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import icon from "astro-icon";
 import metaTags from "astro-meta-tags";
 import robotsTxt from "astro-robots-txt";
@@ -17,7 +18,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap(),
-    expressiveCode(),
+    expressiveCode({ plugins: [pluginLineNumbers()] }),
     icon(),
     robotsTxt({
       policy: [
@@ -53,12 +54,22 @@ export default defineConfig({
     metaTags(),
     starlight({
       title: "enigmalea",
-      // logo: {
-      //   src: "./favicon.svg",
-      //   replacesTitle: true,
-      // },
+      logo: {
+        light: "./src/assets/img/light-home.svg",
+        dark: "./src/assets/img/dark-home.svg",
+        replacesTitle: true,
+      },
       customCss: ["./src/assets/css/starlight.css"],
       plugins: [catppuccin({ dark: "macchiato-blue", light: "latte-blue" })],
+      expressiveCode: {
+        themes: ["catppuccin-macchiato", "catppuccin-latte"],
+        plugins: [pluginLineNumbers()],
+      },
+      social: {
+        blueSky: "https://bsky.app/profile/enigmalea.quest",
+        mastodon: "https://easymode.im/@enigmalea",
+        github: "https://github.com/enigmalea",
+      },
     }),
   ],
 });

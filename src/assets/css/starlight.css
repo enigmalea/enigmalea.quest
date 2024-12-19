@@ -1,11 +1,11 @@
 :root[data-theme="light"] {
   --sl-color-teal: #179299;
-	--sl-color-yellow: #df8e1d;
+  --sl-color-yellow: #df8e1d;
 }
 
 :root[data-theme="dark"] {
   --sl-color-teal: #8bd5ca;
-	--sl-color-yellow: #eed49f;
+  --sl-color-yellow: #eed49f;
 }
 
 body {
@@ -36,7 +36,7 @@ h3 {
 }
 
 h4 {
-	color: var(--sl-color-green) !important;
+  color: var(--sl-color-green) !important;
 }
 
 strong,
