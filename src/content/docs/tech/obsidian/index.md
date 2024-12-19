@@ -1,5 +1,5 @@
 ---
-title: Obsidian
+title: Getting Started
 ---
 
 [Obsidian.md](https://obsidian.md) is free personal wiki or knowledge bank

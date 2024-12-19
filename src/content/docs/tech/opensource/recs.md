@@ -1,5 +1,5 @@
 ---
-title: Open Source Recs
+title: Recs
 ---
 
 - [Calibre](https://calibre-ebook.com)
