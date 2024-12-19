@@ -5,6 +5,7 @@ import icon from "astro-icon";
 import metaTags from "astro-meta-tags";
 import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
+import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
@@ -49,5 +50,8 @@ export default defineConfig({
       ],
     }),
     metaTags(),
+    starlight({
+      title: 'My delightful docs site',
+    }),
   ],
 });
