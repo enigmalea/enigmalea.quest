@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import ShipCard from "../components/ShipCard.astro";
+import Layout from "../layouts/Layout.astro";
+
+const ships = await getCollection("ships");
+---
+
+<Layout>
+  {
+    ships.map(async (ship) => {
+      return (
+        <ShipCard
+          fandom={ship.data.fandom}
+          image={ship.data.image}
+          ship={ship.data.ship}
+          credits={ship.data.credits}
+        />
+      );
+    })
+  }
+</Layout>

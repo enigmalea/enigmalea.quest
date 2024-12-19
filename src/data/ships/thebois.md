@@ -1,5 +1,6 @@
 ---
 fandom: Dragon Age
 ship: The Bois (Solas/Cullen Rutherford/Anders/Dorian Pavus/The Iron Bull)
-image: '../../../assets/img/ship/thebois.png'
+image: "./img/thebois.png"
+credits: "art by foxinboots"
 ---
