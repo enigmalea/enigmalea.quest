@@ -1,5 +1,5 @@
 ---
-title: Site Skins, Userscripts and More!
+title: Site Skins, Userscripts & More!
 ---
 
 ## Site Skins
