@@ -11,7 +11,7 @@ export default {
         mono: ['"Monaspace Neon"', ...defaultTheme.fontFamily.mono],
       },
       boxShadow: {
-        footer: "0 -25px 12px rgba(24,25,38,0.25)",
+        footer: "0 -10px 12px rgba(24,25,38,0.5)",
       },
       typography: {
         DEFAULT: {
