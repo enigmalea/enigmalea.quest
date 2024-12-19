@@ -7,6 +7,7 @@ import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
+import catppuccin from "starlight-theme-catppuccin";
 
 // https://astro.build/config
 export default defineConfig({
@@ -51,7 +52,10 @@ export default defineConfig({
     }),
     metaTags(),
     starlight({
-      title: 'My delightful docs site',
+      title: "My delightful docs site",
+			plugins: [
+        catppuccin({ dark: "macchiato-blue", light: "latte-blue" })
+      ]
     }),
   ],
 });
