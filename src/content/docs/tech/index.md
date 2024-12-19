@@ -1,5 +1,5 @@
 ---
-title: My docs
+title: Index
 description: Learn more about my project in this docs site built with Starlight.
 ---
 

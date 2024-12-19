@@ -9,6 +9,7 @@ import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
+import starlightSidebarTopics from "starlight-sidebar-topics";
 
 // https://astro.build/config
 export default defineConfig({
@@ -60,7 +61,52 @@ export default defineConfig({
         replacesTitle: true,
       },
       customCss: ["./src/assets/css/starlight.css"],
-      plugins: [catppuccin({ dark: "macchiato-blue", light: "latte-blue" })],
+      plugins: [
+        catppuccin({ dark: "macchiato-blue", light: "latte-blue" }),
+        starlightSidebarTopics([
+          {
+            label: "Fandom",
+            link: "/fandom/",
+            id: "fandom",
+            icon: "heart",
+            items: [
+              {
+                label: "General",
+                items: [
+                  {
+                    label: "AO3",
+                    autogenerate: { directory: "/fandom/general/ao3" },
+                  },
+                ],
+              },
+              {
+                label: "Dragon Age",
+                autogenerate: { directory: "/fandom/dragonage/" },
+              },
+            ],
+          },
+          {
+            label: "Tech",
+            link: "/tech/",
+            id: "tech",
+            icon: "laptop",
+            items: [
+              {
+                label: "Tutorials",
+                autogenerate: { directory: "/tech/tutorials/" },
+              },
+							{
+                label: "Open Source",
+                autogenerate: { directory: "/tech/opensource/" },
+              },
+							{
+                label: "Obsidian",
+                autogenerate: { directory: "/tech/obsidian/" },
+              },
+            ],
+          },
+        ]),
+      ],
       expressiveCode: {
         themes: ["catppuccin-macchiato", "catppuccin-latte"],
         plugins: [pluginLineNumbers()],
