@@ -35,18 +35,18 @@ edit the code.
 
    :::
 
-   ![](/img/docs/tutorials/extensions/workspace.png)
+   ![](../../../../assets/img/extensions/workspace.png)
 
 2. At the top click the "Untitled Base" to change the name to "Extension
    Requests". You can also set the icon and color to your liking.
 
-   ![](/img/docs/tutorials/extensions/basecustomization.png)
+   ![](../../../../assets/img/extensions/basecustomization.png)
 
-   ![](/img/docs/tutorials/extensions/basename.png)
+   ![](../../../../assets/img/extensions/basename.png)
 
 3. Rename "Table 1" to "Extensions".
 
-   ![](/img/docs/tutorials/extensions/tablename.png))
+   ![](../../../../assets/img/extensions/tablename.png)
 
 **🎉 Congrats! You've set up your first base and are ready to customize your
 fields.**
@@ -65,7 +65,7 @@ All bases come pre-populated with four fields. You can edit the four initial
 fields and create three more for a total of seven. In the end you should end up
 with the following fields:
 
-![](/img/docs/tutorials/extensions/fields.png))
+![](../../../../assets/img/extensions/fields.png)
 
 <details><summary>Field Details</summary>
 
@@ -94,11 +94,11 @@ forms of communication, i.e. Twitter username, Dreamwidth username, etc.
 
 1. Click on the down caret and select "Edit field".
 
-   ![](/img/docs/tutorials/extensions/editfield.png)
+   ![](../../../../assets/img/extensions/editfield.png)
 
 2. Update the name, select a new field type, or change options, as needed.
 
-   ![](/img/docs/tutorials/extensions/fieldsettings.png)
+   ![](../../../../assets/img/extensions/fieldsettings.png)
 
 </details>
 
@@ -106,7 +106,7 @@ forms of communication, i.e. Twitter username, Dreamwidth username, etc.
 
 1. Click the large plus at the end of the existing fields.
 
-   ![](/img/docs/tutorials/extensions/addfield.png)
+   ![](../../../../assets/img/extensions/addfield.png)
 
 2. Add the Field Name, select the type, and complete any options that appear.
 
@@ -162,7 +162,7 @@ walk you through a step-by-step set-up, but I will give you some hints and tips!
 - **Set all fields as required.** Because the email and username fields are
   conditional, they are only required if they are displayed!
 
-![](/img/docs/tutorials/extensions/extensionform.png)
+![](../../../../assets/img/extensions/extensionform.png)
 
 #### Adding Help Text
 
@@ -171,7 +171,7 @@ You'll notice that the date field has additional information/instructions.
 To add this, click on the field in the form view and complete the "Add some help
 text" section.
 
-![](/img/docs/tutorials/extensions/helptext.png)
+![](../../../../assets/img/extensions/helptext.png)
 
 #### Making A Field Conditional
 
@@ -181,7 +181,7 @@ Set your condition to "When Method of Communication is" and the name of the
 field. For example, for the email field you'd select "When Method of
 Communication is Email".
 
-![](/img/docs/tutorials/extensions/conditionalfield.png)
+![](../../../../assets/img/extensions/conditionalfield.png)
 
 I recommend you do this for all emails and usernames you request as someone only
 needs to provide you one.
@@ -213,7 +213,7 @@ your exchange information just like any other link can. This menu also allows
 you to get code for an iframe embed, or to turn the form off so that it no
 longer can accept responses (a good idea between exchanges).
 
-![](/img/docs/tutorials/extensions/shareform.png)
+![](../../../../assets/img/extensions/shareform.png)
 
 </details>
 
@@ -243,7 +243,7 @@ display it!
 
 :::
 
-![](/img/docs/tutorials/extensions/calendarlabel.png)
+![](../../../../assets/img/extensions/calendarlabel.png)
 
 #### Filtering By Status
 
@@ -255,13 +255,13 @@ sure that it's been at least approved. Then click "Add condition" and set the
 second condition to "And Status is not Fulfilled" to exclude completed
 extensions.
 
-![](/img/docs/tutorials/extensions/calendarfilter.png)
+![](../../../../assets/img/extensions/calendarfilter.png)
 
 #### Syncing To Your Calendar
 
 To sync to your calendar, click "Share view" on the main toolbar, and then
 select "Sync to an external calendar".
 
-![](/img/docs/tutorials/extensions/calendarsync.png)
+![](../../../../assets/img/extensions/calendarsync.png)
 
 </details>
