@@ -10,6 +10,9 @@ import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 import starlightSidebarTopics from "starlight-sidebar-topics";
+import starlightImageZoom from "starlight-image-zoom";
+
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -62,6 +65,7 @@ export default defineConfig({
       },
       customCss: ["./src/assets/css/starlight.css"],
       plugins: [
+        starlightImageZoom(),
         catppuccin({ dark: "macchiato-blue", light: "latte-blue" }),
         starlightSidebarTopics([
           {
@@ -117,5 +121,6 @@ export default defineConfig({
         github: "https://github.com/enigmalea",
       },
     }),
+    mdx(),
   ],
 });
