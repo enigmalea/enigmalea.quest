@@ -1,11 +1,13 @@
 :root[data-theme="light"] {
   --sl-color-teal: #179299;
   --sl-color-yellow: #df8e1d;
+	--starlight-image-zoom-backdrop-bg: rgba(220, 224, 232, 0.75);
 }
 
 :root[data-theme="dark"] {
   --sl-color-teal: #8bd5ca;
   --sl-color-yellow: #eed49f;
+	--starlight-image-zoom-backdrop-bg: rgba(24, 25, 38, 0.75);
 }
 
 body {
