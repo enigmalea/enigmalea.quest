@@ -17,9 +17,9 @@ have a site skin caused them to be oversized. This was fixed by AO3 in Jan 2021!
    appropriately!
 
 4. Under `Work Text`, click the `Rich Text` button.
-   ![](/img/docs/ao3/art_rich_text.png)
+   ![](../../../../../assets/img/ao3/art_insert_form.png)
 
-5. Click the `Insert/Edit Image` button. ![](/img/docs/ao3/art_insert_img.png)
+5. Click the `Insert/Edit Image` button. ![](../../../../../assets/img/ao3/art_insert_img.png)
 
 6. Complete the form that pops up.
 
@@ -28,6 +28,6 @@ have a site skin caused them to be oversized. This was fixed by AO3 in Jan 2021!
    - _Image Description:_ alternate text/image id for the image, used by screen
      readers and other accessibility tools.
    - _Size:_ prefills! You can change this if the default size of your image is
-     larger than you want it to be. ![](/img/docs/ao3/art_insert_form.png)
+     larger than you want it to be. ![](../../../../../assets/img/ao3/art_insert_form.png)
 
 7. Click `Save`.

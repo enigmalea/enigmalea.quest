@@ -11,7 +11,7 @@ Decide who will post the work. _All other creators_ should make sure their
 preferences are set correctly. Head to "My Preferences" and be sure that
 `Allow others to invite me to be a co-creator.` is checked.
 
-![](/img/docs/ao3/authors_prefs.png)
+![](../../../../../assets/img/ao3/authors_prefs.png)
 
 ## Posting The Work
 
@@ -22,7 +22,7 @@ preferences are set correctly. Head to "My Preferences" and be sure that
 3. Type in the username you want to add. The username should pop-up for you.
    Click it to add. Repeat this step as many times as needed.
 
-![](/img/docs/ao3/authors_add.png)
+![](../../../../../assets/img/ao3/authors_add.png)
 
 4. Once you post as a Draft OR post as a live work, co-creators will be emailed
    to confirm.

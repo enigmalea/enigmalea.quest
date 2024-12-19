@@ -12,7 +12,7 @@ title: How to Post a Translation
    box.
 
    - If the work is not on AO3, list the URL, Title, and Author name.
-     ![](/img/docs/ao3/translation.png)
+     ![](../../../../../assets/img/ao3/translation.png)
 
 4. Finish Posting. An email will be sent to the creator so they can confirm the
    link.
@@ -25,4 +25,4 @@ title: How to Post a Translation
 2. Click Confirm.
 
 3. AO3 automatically adds a Note to each work linking the two!
-   ![](/img/docs/ao3/translation_note.png)
+   ![](../../../../../assets/img/ao3/translation_note.png)

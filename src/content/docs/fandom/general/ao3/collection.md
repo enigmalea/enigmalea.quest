@@ -16,7 +16,7 @@ There are two ways to post to a collection:
 
 2. Click the `Post to Collection` button.
 
-!['screenshot from AO3 of the collection page with the Post to Collection button highlighted'](/img/docs/ao3/collections_profile.png)
+!['screenshot from AO3 of the collection page with the Post to Collection button highlighted'](../../../../../assets/img/ao3/collections_profile.png)
 
 3. Create your new work as usual!
 
@@ -27,7 +27,7 @@ There are two ways to post to a collection:
 2. Under Associations, click in the _Post to Collections/Challenges_ field and
    type the shortname of the collection. Sometimes, the collection will appear
    in a pop-up. If so, you can select it. If not, hit tab.
-   !['screenshot from AO3 new works page with the Post to Collection field completed'](/img/docs/ao3/collections_new_work.png)
+   !['screenshot from AO3 new works page with the Post to Collection field completed'](../../../../../assets/img/ao3/collections_new_work.png)
 
 3. Complete the other fields as normal.
 
