@@ -1,6 +1,5 @@
 ---
 title: Media Timeline
-
 ---
 
 **Link:** [Media Timeline](https://archiveofourown.org/works/26353378)

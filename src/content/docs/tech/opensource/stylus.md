@@ -2,8 +2,6 @@
 title: Stylus
 ---
 
-# Stylus
-
 Stylus is an open-source fork of Stylish for Chromium browsers and Firefox. It's
 used to install custom user CSS that changes the way websites look for you, by
 overwriting the default styles of the web page.

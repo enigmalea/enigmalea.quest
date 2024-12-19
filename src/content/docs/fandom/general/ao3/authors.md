@@ -2,8 +2,6 @@
 title: Adding More Than One Creator
 ---
 
-# Adding More Than One Creator
-
 On AO3, works can be shared between more than one Creator to reflect that a work
 was a collaboration.
 

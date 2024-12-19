@@ -2,8 +2,6 @@
 title: Themes, Extensions, & Snippets
 ---
 
-# Themes, Extensions, & Snippets
-
 Obsidian is highly customizable. Each vault you create is it's own environment
 and can be catered to its uses; this allows you to - for example - have a
 notebook specifically to learn another language which uses the multiple

@@ -2,8 +2,6 @@
 title: Extension Request Tutorial
 ---
 
-# Extension Request Tutorial
-
 This tutorial focuses on creating an extension request form for your fanworks
 exchange so that people can complete a form to ask for an extension. It also
 provides you with a way to track extensions easier.

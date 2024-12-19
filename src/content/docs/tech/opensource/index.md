@@ -2,8 +2,6 @@
 title: Open Source Recs
 ---
 
-# Open Source Recs
-
 - [Calibre](https://calibre-ebook.com)
   - eBook library and management system
 - [Raindrop.io](https://github.com/raindropio)

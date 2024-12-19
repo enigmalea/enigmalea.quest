@@ -2,8 +2,6 @@
 title: Post Art
 ---
 
-# Post Art
-
 Although AO3 does not host image files, fanart is welcome and encouraged to be
 posted on the site! Posting fanart used to be more complicated, as it wasn't
 optimized for mobile, so viewing images on tablets or art on works which did not

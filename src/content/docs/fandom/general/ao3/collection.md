@@ -2,8 +2,6 @@
 title: Post To A Collection
 ---
 
-# Post To A Collection
-
 Posting to a collection (one owned by you or someone else) is an easy way to
 group works with like themes or events together. Collections can allow someone
 who wants to read about a certain ship, trope, or type of character find more

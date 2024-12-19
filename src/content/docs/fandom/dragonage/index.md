@@ -2,8 +2,6 @@
 title: Dragon Age Resources
 ---
 
-# Dragon Age Resources
-
 In this section of my website, you'll find a collection of resources
 specifically for Dragon Age fans - resources for canon materials, meta, and
 more! The list below is for resources from other people.

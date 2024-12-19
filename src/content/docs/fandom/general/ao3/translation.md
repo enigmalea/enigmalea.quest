@@ -2,8 +2,6 @@
 title: How to Post a Translation
 ---
 
-# How to Post a Translation
-
 1. Create a `New Work`.
 
 2. Under *Associations* click the `This work is a remix, a translation, a podfic, or was inspired by another work` checkbox.
