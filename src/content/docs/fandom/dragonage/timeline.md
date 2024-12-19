@@ -48,8 +48,8 @@ Below is more information on potential media sources!
 
   I have compiled the short stories as eBooks for easier reading. Old copies are
   available for download on my [Google Drive](https://bit.ly/3nBBndu). I'm
-  currently working on re-typesetting and formatting these in various fonts. More
-  info coming soon!
+  currently working on re-typesetting and formatting these in various fonts.
+  More info coming soon!
 
 - **Comics**
 

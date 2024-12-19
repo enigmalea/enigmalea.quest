@@ -1,13 +1,13 @@
 :root[data-theme="light"] {
   --sl-color-teal: #179299;
   --sl-color-yellow: #df8e1d;
-	--starlight-image-zoom-backdrop-bg: rgba(220, 224, 232, 0.75);
+  --starlight-image-zoom-backdrop-bg: rgba(220, 224, 232, 0.75);
 }
 
 :root[data-theme="dark"] {
   --sl-color-teal: #8bd5ca;
   --sl-color-yellow: #eed49f;
-	--starlight-image-zoom-backdrop-bg: rgba(24, 25, 38, 0.75);
+  --starlight-image-zoom-backdrop-bg: rgba(24, 25, 38, 0.75);
 }
 
 body {
@@ -27,17 +27,17 @@ pre {
 
 h1 {
   color: var(--sl-color-red) !important;
-	font-size: 2.25em !important;
+  font-size: 2.25em !important;
 }
 
 h2 {
   color: var(--sl-color-orange) !important;
-	font-size: 1.5em !important;
+  font-size: 1.5em !important;
 }
 
 h3 {
   color: var(--sl-color-yellow) !important;
-	font-size: 1.25em !important;
+  font-size: 1.25em !important;
 }
 
 h4 {
@@ -55,5 +55,5 @@ i {
 }
 
 a.site-title img {
-	width: 20px;
+  width: 20px;
 }
