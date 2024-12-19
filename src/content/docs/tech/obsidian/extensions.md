@@ -29,7 +29,7 @@ The themes below are themes I've used in the past or swap into occasionally when
 I'm interested in something different.
 
 - [Dracula](https://github.com/dracula/obsidian)
-- [Catpuccin](https://github.com/catppuccin/obsidian)
+- [Catppuccin](https://github.com/catppuccin/obsidian)
 - [Ebullientworks Theme](https://github.com/ebullient/obsidian-theme-ebullientworks)
 - [Obsidian Minimal](https://github.com/kepano/obsidian-minimal) with
   [Minimal Theme Settings](https://github.com/kepano/obsidian-minimal-settings)

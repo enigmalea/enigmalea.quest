@@ -9,7 +9,7 @@ title: Open Source Recs
     across platforms.
 - [Dracula Dark Theme](https://draculatheme.com)
   - A Dark theme for hundreds of apps and sites.
-- [Catpuccin](https://catppuccin.com)
+- [Catppuccin](https://catppuccin.com)
   - Soothing pastel theme(s) for the high-spirited. With four different
     "flavors" (color options).
 - [Stylus](/docs/opensource/stylus/)

@@ -14,9 +14,9 @@ overwriting the default styles of the web page.
 
 ## Recommended Styles
 
-- [Catpuccin Github](https://github.com/catppuccin/github)
+- [Catppuccin Github](https://github.com/catppuccin/github)
   - Soothing pastel theme for high-spirited people adapted for Github.
-- [Catpuccin Mastoon](https://github.com/catppuccin/mastodon)
+- [Catppuccin Mastodon](https://github.com/catppuccin/mastodon)
   - Soothing pastel theme for high-spirited people adapted for Mastodon.
 - [Fandom (Clean) (Updated)](https://userstyles.world/style/4456/fandom-clean-updated)
   - Removes excessive ads, moving parts, and the yellow sidebar from fandom.com
@@ -31,4 +31,4 @@ overwriting the default styles of the web page.
 ### My Styles
 
 - [Dracula for AutoAO3App](https://draculatheme.com/auto-ao3-app)
-- [Dreamwidth Catpuccin - Macchiato](https://github.com/enigmalea/dw-catpuccin)
+- [Dreamwidth Catppuccin - Macchiato](https://github.com/enigmalea/dw-Catppuccin)
