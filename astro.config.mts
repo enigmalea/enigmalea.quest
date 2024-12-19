@@ -95,11 +95,11 @@ export default defineConfig({
                 label: "Tutorials",
                 autogenerate: { directory: "/tech/tutorials/" },
               },
-							{
+              {
                 label: "Open Source",
                 autogenerate: { directory: "/tech/opensource/" },
               },
-							{
+              {
                 label: "Obsidian",
                 autogenerate: { directory: "/tech/obsidian/" },
               },
