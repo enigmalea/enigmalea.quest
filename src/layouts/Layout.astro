@@ -14,7 +14,7 @@ import CornerBuddy from "../components/CornerBuddy.astro";
     <meta name="generator" content={Astro.generator} />
     <title>enigmalea.quest</title>
   </head>
-  <body class="h-screen bg-base">
+  <body class="h-screen bg-base cursor-coffee prose-a:cursor-coffee prose-a:hover:cursor-cselect">
     <Navbar />
     <Header />
     <main
@@ -34,4 +34,12 @@ import CornerBuddy from "../components/CornerBuddy.astro";
     width: 100%;
     height: 100%;
   }
+
+	a:any-link {
+		cursor: url(coffee.cur), url(coffee.png), auto !important;
+	}
+
+	a:hover {
+		cursor: url(coffee_select.cur), url(coffee_select.png), auto !important;
+	}
 </style>

@@ -36,6 +36,10 @@ export default {
           },
         },
       },
+			cursor: {
+        'coffee': 'url(coffee.cur), url(coffee.png), auto',
+				'cselect': 'url(coffee_select.cur), url(coffee_select.png), auto',
+      }
     },
   },
   plugins: [

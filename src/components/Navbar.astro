@@ -20,7 +20,7 @@ import { Icon } from "astro-icon/components";
         ><Icon name="lucide:home" /></a
       >
       <div class="block lg:hidden">
-        <MenuIcon class="h-4 w-4 text-text" />
+        <MenuIcon class="h-4 w-4 text-text cursor-cselect" />
       </div>
     </div>
     <MenuItems class="hidden lg:flex">
@@ -28,7 +28,7 @@ import { Icon } from "astro-icon/components";
         <li class="text-blue hover:text-rosewater"><a href="/blog">Blog</a></li>
         <li>
           <Dropdown class="group">
-            <button class="flex items-center text-blue hover:text-rosewater">
+            <button class="flex items-center text-blue hover:text-rosewater hover:cursor-cselect">
               <span class="pr-1"> Me </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ import { Icon } from "astro-icon/components";
         </li>
         <li>
           <Dropdown class="group">
-            <button class="flex items-center text-blue hover:text-rosewater">
+            <button class="flex items-center text-blue hover:text-rosewater hover:cursor-cselect">
               <span class="pr-1"> Other </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
