@@ -24,8 +24,8 @@ const projects = defineCollection({
       description: z.string(),
       status: z.enum(["complete", "wip", "ongoing", "released"]),
       links: SocialLinks,
-      categories: z.array(z.string()).optional(),
-      tags: z.array(z.string()).optional(),
+      categories: z.array(z.string()).default([]),
+      tags: z.array(z.string()).default([]),
       image: image().optional(),
     }),
 });
