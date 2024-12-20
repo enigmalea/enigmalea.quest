@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+
+const badges = Object.values(
+  import.meta.glob("../assets/img/badges/*", { eager: true })
+);
+
+const banners = Object.values(
+  import.meta.glob("../assets/img/banners/*", { eager: true })
+);
+---
+
+<section class="not-prose mx-auto w-fit text-center">
+  {
+    banners.map((banner) => (
+      <div class="mr-3 inline-block">
+        <Image src={banner.default} alt="" />
+      </div>
+    ))
+  }
+  {
+    badges.map((badge) => (
+      <div class="mr-3 inline-block">
+        <Image src={badge.default} alt="" />
+      </div>
+    ))
+  }
+</section>
