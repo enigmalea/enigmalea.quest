@@ -17,6 +17,7 @@
     "@fontsource/atkinson-hyperlegible": "^5.1.0",
     "@fontsource/monaspace-neon": "^5.1.0",
     "@fontsource/unica-one": "^5.1.0",
+    "@fujocoded/zod-transform-socials": "^0.0.11",
     "@iconify-json/lucide": "^1.2.19",
     "@iconify-json/simple-icons": "^1.2.16",
     "astro": "^5.0.6",
