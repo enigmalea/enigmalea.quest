@@ -12,15 +12,19 @@
 
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
-	cursor: url(../coffee.cur), url(../coffee.png), auto !important;
+  cursor: url(../coffee.cur), url(../coffee.png), auto !important;
 }
 
 a:any-link {
-	cursor: url(../coffee.cur), url(../coffee.png), auto !important;
+  cursor: url(../coffee.cur), url(../coffee.png), auto !important;
 }
 
-a:hover, summary, select, option, button {
-	cursor: url(../coffee_select.cur), url(../coffee_select.png), auto !important;
+a:hover,
+summary,
+select,
+option,
+button {
+  cursor: url(../coffee_select.cur), url(../coffee_select.png), auto !important;
 }
 
 h1,

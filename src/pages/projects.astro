@@ -8,17 +8,20 @@ const allProjects = await getCollection("projects");
 
 <Layout>
   <h1>Projects</h1>
-  <div class="md:columns-2 space-y-5 gap-4">
+  <div class="gap-4 space-y-5 md:columns-2">
     {
       allProjects.map((project) => (
         <div class="rounded border border-overlay2 bg-crust p-4">
-					<div class="flex flex-row gap-2">
-            <img
-            class:list={{ hidden: !project.data.image}}
-						class="m-0 p-0 w-7 h-7"
-						src={project.data.image?.src}
-            /><h2 class="mb-2 mt-0 pt-0">{project.data.title}</h2>
-					</div>
+          <div class="flex flex-row gap-2">
+            <>
+              <img
+                class:list={{ hidden: !project.data.image }}
+                class="m-0 h-7 w-7 p-0"
+                src={project.data.image?.src}
+              />
+              <h2 class="mb-2 mt-0 pt-0">{project.data.title}</h2>
+            </>
+          </div>
           <ul
             class:list={{ hidden: project.data.links.length == 0 }}
             class="m-0 flex items-center gap-x-2 p-0"
@@ -39,31 +42,34 @@ const allProjects = await getCollection("projects");
               </li>
             ))}
           </ul>
-					<div class="grid grid-flow-col items-start">
-					<div
-            class:list={{ hidden: project.data.categories.length == 0 }}
-            class="flex items-center gap-1"
-          >
-            <div class="m-0 w-fit rounded bg-surface0 p-2">
-              <Icon name="lucide:book-marked" class="text-lg text-mauve" />
-            </div>
+          <div class="grid grid-flow-col items-start">
+            <div
+              class:list={{ hidden: project.data.categories.length == 0 }}
+              class="flex items-center gap-1"
+            >
+              <div class="m-0 w-fit rounded bg-surface0 p-2">
+                <Icon name="lucide:book-marked" class="text-lg text-mauve" />
+              </div>
 
-            <ul class="m-0 inline list-none p-0">
-              {project.data.categories.map((category, index) => (
-                <li class="inline-block w-fit text-wrap break-words">
-                  {index - (project.data.categories.length - 1)
-                    ? category + ",\xa0"
-                    : category}
-                </li>
-              ))}
-            </ul>
-          </div>
-					<div class="flex w-full justify-end">
-              <div class="badge max-w-fit rounded border px-2 py-1 text-sm" data-name={project.data.status}>
+              <ul class="m-0 inline list-none p-0">
+                {project.data.categories.map((category, index) => (
+                  <li class="inline-block w-fit text-wrap break-words">
+                    {index - (project.data.categories.length - 1)
+                      ? category + ",\xa0"
+                      : category}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="flex w-full justify-end">
+              <div
+                class="badge max-w-fit rounded border px-2 py-1 text-sm"
+                data-name={project.data.status}
+              >
                 {project.data.status}
               </div>
             </div>
-					</div>
+          </div>
           <p class="my-2 italic">{project.data.description}</p>
           <div
             class:list={{ hidden: project.data.tags.length == 0 }}
@@ -88,15 +94,15 @@ const allProjects = await getCollection("projects");
 </Layout>
 
 <style>
-	.badge[data-name*="ongoing"] {
-		border-color: rgb(116, 199, 236);
-		color: rgb(116, 199, 236);
-		background-color: rgba(116, 199, 236, 0.25);
-	}
+  .badge[data-name*="ongoing"] {
+    border-color: rgb(116, 199, 236);
+    color: rgb(116, 199, 236);
+    background-color: rgba(116, 199, 236, 0.25);
+  }
 
-	.badge[data-name*="released"] {
-		border-color: rgb(166, 227, 161);
-		color: rgb(166, 227, 161);
-		background-color: rgba(166, 227, 161, 0.25);
-	}
+  .badge[data-name*="released"] {
+    border-color: rgb(166, 227, 161);
+    color: rgb(166, 227, 161);
+    background-color: rgba(166, 227, 161, 0.25);
+  }
 </style>
