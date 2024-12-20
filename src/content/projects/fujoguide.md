@@ -1,9 +1,9 @@
 ---
 title: The Fujoshi Guide to Web Development
 description:
-  "This is an upcoming series of instructional zines about coding. Our mission
-  is to empower more people (especially from fandom spaces) to actively create
-  the internet they want to inhabit."
+  "An upcoming series of educational zines about coding designed to empower
+  more people (especially from fandom) to actively create the internet
+  they want to inhabit."
 status: ongoing
 links:
   - https://github.com/fujowebdev/fujowebdev/
