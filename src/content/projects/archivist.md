@@ -7,7 +7,7 @@ status: released
 links:
   - https://archivist.com
 categories:
-  - Coding
+  - Tech
 tags:
   - discord
   - bot

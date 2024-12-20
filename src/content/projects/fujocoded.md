@@ -16,7 +16,7 @@ links:
     platform: livejournal
 categories:
   - Fandom
-  - Coding
+  - Tech
 tags:
   - volunteer
   - writing

@@ -13,7 +13,7 @@ links:
     platform: mastodon
 categories:
   - Fandom
-  - Coding
+  - Tech
 tags:
   - volunteer
   - writing
