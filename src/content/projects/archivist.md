@@ -12,4 +12,5 @@ tags:
   - discord
   - bot
   - ao3
+image: "../../assets/img/projects/archivist.png"
 ---

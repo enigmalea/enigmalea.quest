@@ -17,4 +17,5 @@ categories:
 tags:
   - volunteer
   - writing
+image: "../../assets/img/projects/fujoguide.png"
 ---

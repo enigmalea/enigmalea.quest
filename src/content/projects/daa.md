@@ -18,4 +18,5 @@ tags:
   - zine
   - writing
   - design
+image: "../../assets/img/projects/daa.png"
 ---

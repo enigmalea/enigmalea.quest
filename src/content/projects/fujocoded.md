@@ -21,4 +21,5 @@ tags:
   - volunteer
   - writing
   - coding
+image: "../../assets/img/projects/fujocoded.png"
 ---

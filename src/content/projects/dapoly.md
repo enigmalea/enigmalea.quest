@@ -18,4 +18,5 @@ tags:
   - event
   - exchange
   - writing
+image: "../../assets/img/projects/dapoly.png"
 ---
