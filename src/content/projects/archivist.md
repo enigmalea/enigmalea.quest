@@ -6,6 +6,10 @@ description:
 status: released
 links:
   - https://archivist.com
-categories: Coding
-tags: discord, bot, ao3
+categories:
+  - Coding
+tags:
+  - discord
+  - bot
+  - ao3
 ---
