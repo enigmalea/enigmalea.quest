@@ -9,7 +9,8 @@ links:
   - https://dapolyshipping.neocities.org/
   - https://dapolyshipping.tumblr.com/
   - https://bsky.app/profile/dapolyshipping.bsky.social
-  - https://discord.gg/VUaGepeJmff
+  - url: https://discord.gg/VUaGepeJmff
+    platform: discord
 categories:
   - Fandom
 tags:

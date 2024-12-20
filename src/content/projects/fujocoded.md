@@ -12,7 +12,8 @@ links:
   - https://bsky.app/profile/fujocoded.bsky.social
   - url: https://blorbo.social/@fujocoded
     platform: mastodon
-  - https://fujocoded.dreamwidth.org/
+  - url: https://fujocoded.dreamwidth.org/
+    platform: livejournal
 categories:
   - Fandom
   - Coding

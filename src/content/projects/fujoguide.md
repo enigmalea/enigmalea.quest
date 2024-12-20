@@ -9,7 +9,8 @@ links:
   - https://github.com/fujowebdev/fujowebdev/
   - https://fujowebdev.tumblr.com/
   - https://twitter.com/fujowebdev
-  - https://blorbo.social/@fujowebdev
+  - url: https://blorbo.social/@fujowebdev
+    platform: mastodon
 categories:
   - Fandom
   - Coding

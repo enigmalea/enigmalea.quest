@@ -8,7 +8,8 @@ links:
   - https://arlathanxchange.neocities.org/
   - https://arlathanxchange.tumblr.com/
   - https://bsky.app/profile/arlathanxchange.bsky.social
-  - https://discord.gg/F73NDYMeGC
+  - url: https://discord.gg/F73NDYMeGC
+    platform: discord
 categories:
   - Fandom
 tags:

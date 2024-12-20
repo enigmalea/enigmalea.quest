@@ -9,7 +9,8 @@ links:
   - https://dragonageannual.tumblr.com/
   - https://twitter.com/DragonAgeAnnual/
   - https://www.instagram.com/dragonageannual/
-  - https://da-annual.itch.io/
+  - url: https://da-annual.itch.io/
+    platform: itchdotio
 categories:
   - Fandom
 tags:
