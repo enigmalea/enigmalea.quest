@@ -18,13 +18,13 @@ const banners = Object.values(
       </div>
     ))
   }
-	<div>
-  {
-    badges.map((badge) => (
-      <div class="mr-3 inline-block">
-        <Image src={badge.default} alt="" />
-      </div>
-    ))
-  }
-	</div>
+  <div>
+    {
+      badges.map((badge) => (
+        <div class="mr-3 inline-block">
+          <Image src={badge.default} alt="" />
+        </div>
+      ))
+    }
+  </div>
 </section>
