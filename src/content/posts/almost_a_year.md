@@ -6,7 +6,7 @@ description: I've been updating and maintaining the site for almost a year!
 tags:
   - site update
   - color scheme
-  - future plans]
+  - future plans
 category:
   - Tech
 ---

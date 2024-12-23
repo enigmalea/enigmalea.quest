@@ -6,7 +6,7 @@ description:
 draft: false
 tags:
   - site update
-  - new page]
+  - new page
 category:
   - Tech
 ---
