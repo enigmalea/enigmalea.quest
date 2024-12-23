@@ -3,8 +3,10 @@ title: Minor Updates & Major Experimentation
 published: 2023-02-13
 draft: false
 description: I've rearranged my site and renamed things.
-tags: [site update]
-category: Tech
+tags:
+  - site update
+category:
+  - Tech
 ---
 
 A few weeks ago, I added some new sections to my old "Vault" section and updated

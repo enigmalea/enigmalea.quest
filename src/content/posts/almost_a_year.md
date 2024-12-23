@@ -3,8 +3,12 @@ title: Almost A Year
 published: 2023-07-04
 draft: false
 description: I've been updating and maintaining the site for almost a year!
-tags: [site update, color scheme, future plans]
-category: Tech
+tags:
+  - site update
+  - color scheme
+  - future plans]
+category:
+  - Tech
 ---
 
 I just did a small update to the site. While working on

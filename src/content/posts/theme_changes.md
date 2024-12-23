@@ -3,8 +3,11 @@ title: Theme Changes
 published: 2022-09-22
 draft: false
 description: Catppucccin is my new best friend.
-tags: [site update, color scheme]
-category: Tech
+tags:
+  - site update
+  - color scheme
+category:
+  - Tech
 ---
 
 I've been wanting to update my themes for a bit and a few weeks ago while

@@ -4,8 +4,11 @@ published: 2022-11-22
 draft: false
 description:
   In the last week or so, I've done some major updates to things around here.
-tags: [site update, hosting]
-category: Tech
+tags:
+  - site update
+  - hosting
+category:
+  - Tech
 ---
 
 Whew. I've been a busy bee. In the last week or so, I've done some major updates

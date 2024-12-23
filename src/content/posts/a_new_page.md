@@ -4,8 +4,11 @@ published: 2022-09-21
 description:
   I finally pushed a bunch of changes I was holding back for some reason.
 draft: false
-tags: [site update, new page]
-category: Tech
+tags:
+  - site update
+  - new page]
+category:
+  - Tech
 ---
 
 I finally pushed a bunch of changes I was holding back for some reason.

@@ -3,8 +3,11 @@ title: Make It Kawaii
 published: 2023-03-23
 draft: false
 description: I've made my site cuter!
-tags: [site update, color scheme]
-category: Tech
+tags:
+  - site update
+  - color scheme]
+category:
+  - Tech
 ---
 
 I've actually done two major updates since the last update log. The first made

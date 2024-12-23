@@ -3,7 +3,11 @@ title: Netlify CMS
 published: 2022-11-28
 draft: false
 description: Adding Netlify CMS to my docusaurus site.
-tags: [site update, technical]
+tags:
+  - site update
+  - technical
+category:
+  - Tech
 ---
 
 This is my first post from [Netlify CMS](https://www.netlifycms.org). Initial

@@ -3,8 +3,10 @@ title: First Design Update
 published: 2022-07-15
 draft: false
 description: See my first big site update.
-tags: [site update]
-category: Tech
+tags:
+  - site update
+category:
+  - Tech
 ---
 
 <figure>

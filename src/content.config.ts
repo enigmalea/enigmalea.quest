@@ -37,10 +37,10 @@ const posts = defineCollection({
     published: z.date(),
     updated: z.date().optional(),
     draft: z.boolean().optional().default(false),
-    description: z.string().optional().default(""),
-    image: z.string().optional().default(""),
-    tags: z.array(z.string()).optional().default([]),
-    category: z.string().optional().default(""),
+    description: z.string(),
+    image: z.string().optional(),
+    tags: z.array(z.string()),
+    category: z.array(z.string()),
   }),
 });
 

@@ -3,8 +3,10 @@ title: "Refresh: Landing Page Update"
 published: 2023-07-08
 draft: false
 description: I've updated my landing page.
-tags: [site update]
-category: Tech
+tags:
+  - site update
+category:
+  - Tech
 ---
 
 I've finally updated my landing page text to talk a lot more about what my

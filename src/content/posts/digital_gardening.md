@@ -3,8 +3,10 @@ title: Digital Gardening
 published: 2023-06-21
 draft: false
 description: Doing some digital gardening to add content to the site.
-tags: [site update]
-category: Tech
+tags:
+  - site update
+category:
+  - Tech
 ---
 
 It's spring time <strike>forget that it's summer</strike> and I finally decided

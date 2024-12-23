@@ -3,8 +3,12 @@ title: Halloween 2023 Deco
 published: 2023-10-07
 draft: false
 description: I decorated for Halloween!
-tags: [site update, fandom coders, holiday]
-category: Tech
+tags:
+  - site update
+  - fandom coders
+  - holiday
+category:
+  - Tech
 ---
 
 For the first time ever, [Fandom Coders](https://fancoders.com) decided to host

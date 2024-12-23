@@ -3,8 +3,11 @@ title: Projects Page
 published: 2023-06-09
 draft: false
 description: I've finally created a projects page.
-tags: [site update, new page]
-category: tech
+tags:
+  - site update
+  - new page
+category:
+  - Tech
 ---
 
 I've been wanting to add a projects page for a long time. I started work on this
