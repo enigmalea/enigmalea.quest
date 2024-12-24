@@ -1,0 +1,84 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+export async function getStaticPaths() {
+  const blog = await getCollection("posts");
+  return blog.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await render(post);
+---
+
+<Layout pageTitle={post.data.title}>
+  <div class="my-5 rounded-3xl bg-crust p-4">
+    <div class="border-b-2 border-dashed border-base">
+			<div class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-surface2">
+				<div class="m-0 w-fit rounded bg-surface0 p-2">
+          <Icon name="lucide:align-left" class="text-lg" />
+        </div>
+				{remarkPluginFrontmatter.words === 1 ? (
+					(remarkPluginFrontmatter.words) + " word"
+				) : (remarkPluginFrontmatter.words) + " words"
+				}
+        <div class="m-0 w-fit rounded bg-surface0 p-2">
+          <Icon name="lucide:clock-3" class="text-lg" />
+        </div>
+				{remarkPluginFrontmatter.minutes === 1 ? (
+					(remarkPluginFrontmatter.minutes) + " minute"
+				) : (remarkPluginFrontmatter.minutes) + " minutes"
+				}
+      </div>
+
+      <h1 class="mb-4 mt-0">{post.data.title}</h1>
+
+      <div class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+        <div class="m-0 w-fit rounded bg-surface0 p-2 text-teal">
+          <Icon name="lucide:calendar" class="text-lg" />
+        </div>
+        {
+          post.data.published.toLocaleDateString("en-us", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })
+        }
+
+        {
+          post.data.updated &&
+            (<div class="m-0 w-fit rounded bg-surface0 p-2">
+              <Icon name="lucide:calendar-clock" class="text-lg text-sky" />
+            </div>)(post.data.updated).toLocaleDateString("en-us", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })
+        }
+
+        <div class="m-0 w-fit rounded bg-surface0 p-2">
+          <Icon name="lucide:book-marked" class="text-lg text-mauve" />
+        </div>
+        {post.data.category}
+        <div class="mt-1 w-fit rounded bg-surface0 p-2">
+          <Icon name="lucide:hash" class="text-lg text-flamingo" />
+        </div>
+
+        <ul class="m-0 inline list-none p-0">
+          {
+            post.data.tags.map((tag, index) => (
+              <li class="inline-block w-fit text-wrap break-words">
+                {index - (post.data.tags.length - 1) ? tag + " /" : tag}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <Content />
+  </div>
+</Layout>

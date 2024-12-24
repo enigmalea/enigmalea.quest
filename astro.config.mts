@@ -2,23 +2,28 @@ import catppuccin from "starlight-theme-catppuccin";
 // @ts-check
 import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
-import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import icon from "astro-icon";
+import mdx from "@astrojs/mdx";
 import metaTags from "astro-meta-tags";
+import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
+import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
 import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
-import tailwind from "@astrojs/tailwind";
-import starlightSidebarTopics from "starlight-sidebar-topics";
 import starlightImageZoom from "starlight-image-zoom";
-
-import mdx from "@astrojs/mdx";
+import starlightSidebarTopics from "starlight-sidebar-topics";
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://enigmalea.quest",
   base: "/",
   trailingSlash: "never",
+  markdown: {
+		remarkPlugins: [
+      remarkReadingTime,
+    ],
+  },
   integrations: [
     tailwind(),
     sitemap(),

@@ -37,8 +37,8 @@ export default {
         },
       },
       cursor: {
-        coffee: "url(coffee.cur), url(coffee.png), auto",
-        coffee_select: "url(coffee_select.cur), url(coffee_select.png), auto",
+        coffee: "url('/images/coffee.cur'), url('/images/coffee.png'), auto",
+        coffee_select: "url('/images/coffee_select.cur'), url('/images/coffee_select.png'), auto",
       },
     },
   },
