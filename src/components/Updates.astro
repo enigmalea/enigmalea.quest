@@ -1,0 +1,24 @@
+---
+import { getUpdates } from "../utils/blog-utils";
+
+const allUpdates = await getUpdates();
+---
+
+{
+  allUpdates.map((update) => (
+    <div class="flex items-center gap-2">
+      <div class="font-mono text-sm text-green">
+        [
+        {update.data.published.toLocaleDateString("en-us", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })}
+        ]:
+      </div>
+      <a href={`/blog/posts/${update.id}`} class="no-underline hover:underline">
+        {update.data.title}
+      </a>
+    </div>
+  ))
+}
