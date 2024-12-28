@@ -20,8 +20,6 @@ const { id, post, title, published, updated, tags, category, description } =
 const { remarkPluginFrontmatter } = await render(post);
 ---
 
-<!-- {
-  posts.map((post) => ( -->
 <div class="mb-5 rounded-3xl bg-crust p-4">
   <a href=`/blog/posts/${id}` class="no-underline">
     <h2 class="m-0 p-2 leading-none hover:text-rosewater hover:underline">
@@ -82,7 +80,9 @@ const { remarkPluginFrontmatter } = await render(post);
     {description}
   </div>
 
-  <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-surface2 text-sm">
+  <div
+    class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-surface2"
+  >
     <div>
       {
         remarkPluginFrontmatter.words === 1
