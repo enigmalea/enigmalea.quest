@@ -1,6 +1,6 @@
 ---
 import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
-import Layout from "../../layouts/Layout.astro";
+import BlogLayout from "../../layouts/BlogLayout.astro";
 import BlogPage from "../../components/blog/BlogPage.astro";
 import { getSortedPosts } from "../../utils/blog-utils";
 const pageTitle = "Blog";
@@ -16,7 +16,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props;
 ---
 
-<Layout pageTitle={pageTitle}>
+<BlogLayout pageTitle={pageTitle}>
   <h1>Blog</h1>
   <BlogPage page={page} />
 
@@ -83,4 +83,4 @@ const { page } = Astro.props;
       )
     }
   </div>
-</Layout>
+</BlogLayout>

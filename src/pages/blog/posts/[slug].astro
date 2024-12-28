@@ -1,6 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
-import Layout from "../../../layouts/Layout.astro";
+import BlogLayout from "../../../layouts/BlogLayout.astro";
 import { Icon } from "astro-icon/components";
 import EntryNav from "../../../components/blog/EntryNav.astro";
 
@@ -16,7 +16,7 @@ const { post } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(post);
 ---
 
-<Layout pageTitle={post.data.title}>
+<BlogLayout pageTitle={post.data.title}>
   <div class="my-5 rounded-3xl bg-crust p-4">
     <div class="border-b-2 border-dashed border-base">
       <div
@@ -87,4 +87,4 @@ const { Content, remarkPluginFrontmatter } = await render(post);
     <Content />
   </div>
 	<EntryNav />
-</Layout>
+</BlogLayout>
