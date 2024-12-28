@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+import EntryNav from "../../../components/EntryNav.astro";
 
 export async function getStaticPaths() {
   const blog = await getCollection("posts");
@@ -85,4 +86,5 @@ const { Content, remarkPluginFrontmatter } = await render(post);
     </div>
     <Content />
   </div>
+	<EntryNav />
 </Layout>

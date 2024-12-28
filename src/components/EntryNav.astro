@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+const blog = (await getCollection("posts")).sort(
+  (a, b) => b.data.published.valueOf() - a.data.published.valueOf()
+);
+
+const currentPostIndex = blog.findIndex((post) => post.id == Astro.params.slug);
+const previousPost =
+  currentPostIndex + 1 === blog.length ? undefined : blog[currentPostIndex + 1];
+const nextPost =
+  currentPostIndex === 0 ? undefined : blog[currentPostIndex - 1];
+---
+
+{
+  (previousPost || nextPost) && (
+    <nav class="mb-4 flex w-full flex-col justify-between gap-4 overflow-hidden sm:flex-row">
+      {nextPost ? (
+        <a
+          href={`/blog/posts/${nextPost.id}`}
+          class="w-full overflow-hidden text-lg font-bold text-text no-underline hover:text-text active:scale-95"
+        >
+          <div class="flex h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-surface0 px-4 hover:bg-surface2">
+            <Icon name="lucide:chevron-left" class="text-4xl text-blue" />
+            <div class="m-0 flex flex-col p-0 truncate">
+              <div class="m-0 p-0 text-sm uppercase leading-tight">Next</div>
+
+              {nextPost.data.title}
+            </div>
+          </div>
+        </a>
+      ) : (
+        <div class="hidden sm:flex  h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-transparent px-4">
+          {" "}
+        </div>
+      )}
+      {previousPost ? (
+        <a
+          href={`/blog/posts/${previousPost.id}`}
+          class="w-full text-lg font-bold text-text no-underline hover:text-text active:scale-95"
+        >
+          <div class="flex h-[3.75rem] w-full max-w-full items-center !justify-end gap-4 rounded-2xl bg-surface0 px-4 text-right hover:bg-surface2">
+            <div class="m-0 flex flex-col-reverse p-0 text-right truncate">
+              {previousPost.data.title}
+              <div class="m-0 p-0 text-sm uppercase leading-tight">Prev</div>
+            </div>
+            <Icon name="lucide:chevron-right" class="text-4xl text-blue" />
+          </div>
+        </a>
+      ) : (
+        <div class="hidden sm:flex h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-transparent px-4">
+          {" "}
+        </div>
+      )}
+    </nav>
+  )
+}
