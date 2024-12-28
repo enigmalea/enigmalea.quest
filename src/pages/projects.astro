@@ -11,16 +11,14 @@ const allProjects = await getCollection("projects");
   <div class="gap-4 space-y-5 md:columns-2">
     {
       allProjects.map((project) => (
-        <div class="rounded border border-overlay2 bg-crust p-4">
+        <div class="rounded border border-overlay2 bg-crust p-4 break-inside-avoid-column">
           <div class="flex flex-row gap-2">
-            <>
               <img
                 class:list={{ hidden: !project.data.image }}
                 class="m-0 h-7 w-7 p-0"
                 src={project.data.image?.src}
               />
               <h2 class="mb-2 mt-0 pt-0">{project.data.title}</h2>
-            </>
           </div>
           <ul
             class:list={{ hidden: project.data.links.length == 0 }}
