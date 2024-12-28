@@ -12,11 +12,11 @@
 
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
-  cursor: url(../'/images/coffee.cur'), url(../'/images/coffee.png'), auto !important;
+  cursor: url(../"/images/coffee.cur"), url(../"/images/coffee.png"), auto !important;
 }
 
 a:any-link {
-  cursor: url(../'/images/coffee.cur'), url(../'/images/coffee.png'), auto !important;
+  cursor: url(../"/images/coffee.cur"), url(../"/images/coffee.png"), auto !important;
 }
 
 a:hover,
@@ -24,7 +24,8 @@ summary,
 select,
 option,
 button {
-  cursor: url(../'/images/coffee_select.cur'), url(../'/images/coffee_select.png'), auto !important;
+  cursor: url(../"/images/coffee_select.cur"),
+    url(../"/images/coffee_select.png"), auto !important;
 }
 
 h1,
