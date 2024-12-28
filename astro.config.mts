@@ -20,9 +20,7 @@ export default defineConfig({
   base: "/",
   trailingSlash: "never",
   markdown: {
-		remarkPlugins: [
-      remarkReadingTime,
-    ],
+    remarkPlugins: [remarkReadingTime],
   },
   integrations: [
     tailwind(),
