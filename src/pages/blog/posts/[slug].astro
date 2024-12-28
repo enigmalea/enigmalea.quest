@@ -1,6 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
 export async function getStaticPaths() {
@@ -18,21 +18,25 @@ const { Content, remarkPluginFrontmatter } = await render(post);
 <Layout pageTitle={post.data.title}>
   <div class="my-5 rounded-3xl bg-crust p-4">
     <div class="border-b-2 border-dashed border-base">
-			<div class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-surface2">
-				<div class="m-0 w-fit rounded bg-surface0 p-2">
+      <div
+        class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-surface2"
+      >
+        <div class="m-0 w-fit rounded bg-surface0 p-2">
           <Icon name="lucide:align-left" class="text-lg" />
         </div>
-				{remarkPluginFrontmatter.words === 1 ? (
-					(remarkPluginFrontmatter.words) + " word"
-				) : (remarkPluginFrontmatter.words) + " words"
-				}
+        {
+          remarkPluginFrontmatter.words === 1
+            ? remarkPluginFrontmatter.words + " word"
+            : remarkPluginFrontmatter.words + " words"
+        }
         <div class="m-0 w-fit rounded bg-surface0 p-2">
           <Icon name="lucide:clock-3" class="text-lg" />
         </div>
-				{remarkPluginFrontmatter.minutes === 1 ? (
-					(remarkPluginFrontmatter.minutes) + " minute"
-				) : (remarkPluginFrontmatter.minutes) + " minutes"
-				}
+        {
+          remarkPluginFrontmatter.minutes === 1
+            ? remarkPluginFrontmatter.minutes + " minute"
+            : remarkPluginFrontmatter.minutes + " minutes"
+        }
       </div>
 
       <h1 class="mb-4 mt-0">{post.data.title}</h1>

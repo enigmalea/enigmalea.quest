@@ -1,0 +1,86 @@
+---
+import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+import BlogPage from "../../components/BlogPage.astro";
+import { getSortedPosts } from "../../utils/content-utils";
+const pageTitle = "Blog";
+import { Icon } from "astro-icon/components";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const allBlogPosts = await getSortedPosts();
+  return paginate(allBlogPosts, { pageSize: 5 });
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { page } = Astro.props;
+---
+
+<Layout pageTitle={pageTitle}>
+  <h1>Blog</h1>
+  <BlogPage page={page} />
+
+  <div class="mb-10 flex flex-row items-center justify-center gap-3">
+    {
+      page.url.first ? (
+        <a
+          href={page.url.first}
+          class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+        >
+          <Icon name="lucide:chevrons-left" class="text-2xl" />
+        </a>
+      ) : (
+        <div class="rounded-lg bg-surface0 p-3 text-surface2 hover:text-surface2">
+          <Icon name="lucide:chevrons-left" class="text-2xl" />
+        </div>
+      )
+    }
+    {
+      page.url.prev ? (
+        <a
+          href={page.url.prev}
+          class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+        >
+          <Icon name="lucide:chevron-left" class="text-2xl" />
+        </a>
+      ) : (
+        <div class="rounded-lg bg-surface0 p-3 text-surface2 hover:text-surface2">
+          <Icon name="lucide:chevron-left" class="text-2xl" />
+        </div>
+      )
+    }
+    <div
+      class="flex h-11 w-11 items-center justify-center rounded-lg bg-blue text-2xl text-base font-bold"
+    >
+      {page.currentPage}
+    </div>
+    {
+      page.url.next ? (
+        <a
+          href={page.url.next}
+          class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+        >
+          <Icon name="lucide:chevron-right" class="text-2xl" />
+        </a>
+      ) : (
+        <div class="rounded-lg bg-surface0 p-3 text-surface2 hover:text-surface2">
+          <Icon name="lucide:chevron-right" class="text-2xl" />
+        </div>
+      )
+    }
+    {
+      page.url.last ? (
+        <a
+          href={page.url.last}
+          class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+        >
+          <Icon name="lucide:chevrons-right" class="text-2xl" />
+        </a>
+      ) : (
+        <div class="rounded-lg bg-surface0 p-3 text-surface2 hover:text-surface2">
+          <Icon name="lucide:chevrons-right" class="text-2xl" />
+        </div>
+      )
+    }
+  </div>
+</Layout>

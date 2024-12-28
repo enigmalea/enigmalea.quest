@@ -1,69 +1,80 @@
 ---
-import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
 
-const posts = (await getCollection("posts"))
-  .toSorted((a, b) => a.data.published - b.data.published)
-  .reverse();
-
-export async function getStaticPaths() {
-  return Promise.all(
-    posts.map(async (post) => ({
-      params: {
-        slug: post.id,
-      },
-    }))
-  );
+interface Props {
+  id: string;
+  class?: string;
+  title: string;
+  published: Date;
+  updated?: Date;
+  tags: string[];
+  category: string[];
+  description: string;
+  draft: boolean;
 }
+const { id, title, published, updated, tags, category, description } =
+  Astro.props;
 ---
 
-{
-  posts.map((post) => (
-    <div class="mb-5 rounded-3xl bg-crust p-4">
-      <a href=`/posts/${post.id}` class="no-underline">
-        <h2 class="m-0 p-2 leading-none hover:text-rosewater hover:underline">
-          {post.data.title}
-        </h2>
-      </a>
-      <div class="flex flex-wrap items-center gap-4 gap-x-4 gap-y-2">
-        <div class="m-0 w-fit rounded bg-surface0 p-2 text-teal">
-          <Icon name="lucide:calendar" class="text-lg" />
-        </div>
-        {post.data.published.toLocaleDateString("en-us", {
+<!-- {
+  posts.map((post) => ( -->
+<div class="mb-5 rounded-3xl bg-crust p-4">
+  <a href=`/blog/posts/${id}` class="no-underline">
+    <h2 class="m-0 p-2 leading-none hover:text-rosewater hover:underline">
+      {title}
+    </h2>
+  </a>
+  <div class="flex flex-wrap items-center gap-4 gap-x-4 gap-y-2">
+    <div class="m-0 w-fit rounded bg-surface0 p-2 text-teal">
+      <Icon name="lucide:calendar" class="text-lg" />
+    </div>
+    {
+      published.toLocaleDateString("en-us", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+    }
+
+    {
+      updated &&
+        (<div class="m-0 w-fit rounded bg-surface0 p-2">
+          <Icon name="lucide:calendar-clock" class="text-lg text-sky" />
+        </div>)(updated).toLocaleDateString("en-us", {
           year: "numeric",
           month: "short",
           day: "numeric",
-        })}
+        })
+    }
 
-        {post.data.updated &&
-          (<div class="m-0 w-fit rounded bg-surface0 p-2">
-            <Icon name="lucide:calendar-clock" class="text-lg text-sky" />
-          </div>)(post.data.updated).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })}
-
-        <div class="m-0 w-fit rounded bg-surface0 p-2">
-          <Icon name="lucide:book-marked" class="text-lg text-mauve" />
-        </div>
-        {post.data.category}
-        <div class="mt-1 w-fit rounded bg-surface0 p-2">
-          <Icon name="lucide:hash" class="text-lg text-flamingo" />
-        </div>
-
-        <ul class="m-0 inline list-none p-0">
-          {post.data.tags.map((tag, index) => (
-            <li class="inline-block w-fit text-wrap break-words">
-              {index - (post.data.tags.length - 1) ? tag + " /" : tag}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div class="my-3.5 line-clamp-2 pr-4 transition md:line-clamp-1">
-        {post.data.description}
-      </div>
+    <div class="m-0 w-fit rounded bg-surface0 p-2">
+      <Icon name="lucide:book-marked" class="text-lg text-mauve" />
     </div>
-  ))
-}
+    <ul class="m-0 inline list-none p-0">
+      {
+        category.map((cat, index) => (
+          <li class="inline-block w-fit text-wrap break-words">
+            {index - (category.length - 1) ? cat + ", " : cat}
+          </li>
+        ))
+      }
+    </ul>
+    <div class="mt-1 w-fit rounded bg-surface0 p-2">
+      <Icon name="lucide:hash" class="text-lg text-flamingo" />
+    </div>
+
+    <ul class="m-0 inline list-none p-0">
+      {
+        tags.map((tag, index) => (
+          <li class="inline-block w-fit text-wrap break-words">
+            {index - (tags.length - 1) ? tag + " /" : tag}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class="my-3.5 line-clamp-2 pr-4 transition md:line-clamp-1">
+    {description}
+  </div>
+</div>
