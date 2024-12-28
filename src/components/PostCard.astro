@@ -1,8 +1,10 @@
 ---
+import { render } from "astro:content";
 import { Icon } from "astro-icon/components";
 
 interface Props {
   id: string;
+  post: object;
   class?: string;
   title: string;
   published: Date;
@@ -12,8 +14,10 @@ interface Props {
   description: string;
   draft: boolean;
 }
-const { id, title, published, updated, tags, category, description } =
+const { id, post, title, published, updated, tags, category, description } =
   Astro.props;
+
+const { remarkPluginFrontmatter } = await render(post);
 ---
 
 <!-- {
@@ -76,5 +80,23 @@ const { id, title, published, updated, tags, category, description } =
 
   <div class="my-3.5 line-clamp-2 pr-4 transition md:line-clamp-1">
     {description}
+  </div>
+
+  <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-surface2 text-sm">
+    <div>
+      {
+        remarkPluginFrontmatter.words === 1
+          ? remarkPluginFrontmatter.words + " word"
+          : remarkPluginFrontmatter.words + " words"
+      }
+    </div>
+    <div>|</div>
+    <div>
+      {
+        remarkPluginFrontmatter.minutes === 1
+          ? remarkPluginFrontmatter.minutes + " minute"
+          : remarkPluginFrontmatter.minutes + " minutes"
+      }
+    </div>
   </div>
 </div>
