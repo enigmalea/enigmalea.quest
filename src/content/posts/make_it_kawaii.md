@@ -5,7 +5,7 @@ draft: false
 description: I've made my site cuter!
 tags:
   - site update
-  - color scheme]
+  - color scheme
 category:
   - Tech
 ---
