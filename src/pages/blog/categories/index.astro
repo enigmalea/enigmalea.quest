@@ -1,0 +1,37 @@
+---
+import BlogLayout from "../../../layouts/BlogLayout.astro";
+import { getCategoryList } from "../../../utils/blog-utils";
+
+const categories = await getCategoryList();
+---
+
+<BlogLayout pageTitle="All Categories">
+  <h1 class="mt-5">All Categories</h1>
+  <div class="mb-5 rounded-3xl bg-crust p-4">
+    <div>
+      <div class="flex h-[3.75rem] w-full flex-row items-center p-3 text-xl">
+        <div class="w-1/2 text-center font-mono uppercase text-peach">
+          Category
+        </div>
+        <div class="w-1/2 text-center font-mono uppercase text-peach">
+          Post Count
+        </div>
+      </div>
+    </div>
+    {
+      categories.map((c) => (
+        <div>
+          <div class="flex h-[3.75rem] w-full flex-row items-center p-3 text-xl">
+            <a
+              href={`/blog/categories/${c.name}`}
+              class="group flex h-10 w-full items-center gap-4 rounded-lg px-3 no-underline hover:bg-surface0"
+            >
+              <div class="w-1/2 text-center">{c.name}</div>
+              <div class="flex w-1/2 justify-center">{String(c.count)}</div>
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</BlogLayout>

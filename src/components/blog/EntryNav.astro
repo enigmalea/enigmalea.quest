@@ -23,7 +23,7 @@ const nextPost =
         >
           <div class="flex h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-surface0 px-4 hover:bg-surface2">
             <Icon name="lucide:chevron-left" class="text-4xl text-blue" />
-            <div class="m-0 flex flex-col p-0 truncate">
+            <div class="m-0 flex flex-col truncate p-0">
               <div class="m-0 p-0 text-sm uppercase leading-tight">Next</div>
 
               {nextPost.data.title}
@@ -31,7 +31,7 @@ const nextPost =
           </div>
         </a>
       ) : (
-        <div class="hidden sm:flex  h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-transparent px-4">
+        <div class="hidden h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-transparent px-4 sm:flex">
           {" "}
         </div>
       )}
@@ -41,7 +41,7 @@ const nextPost =
           class="w-full text-lg font-bold text-text no-underline hover:text-text active:scale-95"
         >
           <div class="flex h-[3.75rem] w-full max-w-full items-center !justify-end gap-4 rounded-2xl bg-surface0 px-4 text-right hover:bg-surface2">
-            <div class="m-0 flex flex-col-reverse p-0 text-right truncate">
+            <div class="m-0 flex flex-col-reverse truncate p-0 text-right">
               {previousPost.data.title}
               <div class="m-0 p-0 text-sm uppercase leading-tight">Prev</div>
             </div>
@@ -49,7 +49,7 @@ const nextPost =
           </div>
         </a>
       ) : (
-        <div class="hidden sm:flex h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-transparent px-4">
+        <div class="hidden h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-transparent px-4 sm:flex">
           {" "}
         </div>
       )}

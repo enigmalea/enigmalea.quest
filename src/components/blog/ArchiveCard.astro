@@ -1,0 +1,125 @@
+---
+import { getSortedPosts } from "../../utils/blog-utils";
+
+interface Props {
+  tags?: string[];
+  categories?: string[];
+}
+const { tags, categories } = Astro.props;
+
+let posts = await getSortedPosts();
+
+if (Array.isArray(tags) && tags.length > 0) {
+  posts = posts.filter(
+    (post) =>
+      Array.isArray(post.data.tags) &&
+      post.data.tags.some((tag) => tags.includes(tag))
+  );
+}
+
+if (Array.isArray(categories) && categories.length > 0) {
+  posts = posts.filter(
+    (post) =>
+      Array.isArray(post.data.category) &&
+      post.data.category.some((category) => categories.includes(category))
+  );
+}
+
+const groups: { year: number; posts: typeof posts }[] = (() => {
+  const groupedPosts = posts.reduce(
+    (grouped: { [year: number]: typeof posts }, post) => {
+      const year = post.data.published.getFullYear();
+      if (!grouped[year]) {
+        grouped[year] = [];
+      }
+      grouped[year].push(post);
+      return grouped;
+    },
+    {}
+  );
+
+  // convert the object to an array
+  const groupedPostsArray = Object.keys(groupedPosts).map((key) => ({
+    year: Number.parseInt(key),
+    posts: groupedPosts[Number.parseInt(key)],
+  }));
+
+  // sort years by latest first
+  groupedPostsArray.sort((a, b) => b.year - a.year);
+  return groupedPostsArray;
+})();
+
+function formatDate(date: Date) {
+  const formattedDate = date.toLocaleDateString("en-us", {
+    month: "short",
+    day: "2-digit",
+  });
+  return formattedDate;
+}
+
+function formatTag(tag: string[]) {
+  return tag.map((t) => `#${t}`).join(", ");
+}
+---
+
+<div class="mb-5 rounded-3xl bg-crust p-4">
+  {
+    groups.map((group) => (
+      <div>
+        <div class="flex h-[3.75rem] w-full flex-row items-center">
+          <div class="text-75 w-[15%] text-right text-2xl font-bold text-peach transition md:w-[10%]">
+            {group.year}
+          </div>
+          <div class="w-[15%] md:w-[10%]">
+            <div class="outline-3 z-50 mx-auto h-3 w-3 rounded-full bg-none outline -outline-offset-[2px] outline-green" />
+          </div>
+          <div class="text-50 w-[70%] text-left text-subtext1 transition md:w-[80%]">
+            {group.posts.length === 1
+              ? group.posts.length + " post"
+              : group.posts.length + " posts"}
+          </div>
+        </div>
+        {group.posts.map((post) => (
+          <a
+            href={`/blog/posts/${post.id}`}
+            aria-label={post.data.title}
+            class="group !block h-10 w-full rounded-lg text-text no-underline hover:bg-surface0 hover:text-text"
+          >
+            <div class="flex h-full flex-row items-center justify-start">
+              {/* date */}
+              <div class="text-50 w-[15%] text-right transition md:w-[10%]">
+                {formatDate(post.data.published)}
+              </div>
+              {/* dot and line */}
+              <div class="dash-line relative flex h-full w-[15%] items-center md:w-[10%]">
+                <div class="z-50 mx-auto h-1 w-1 rounded bg-text outline outline-4 outline-crust transition-all group-hover:h-5 group-hover:bg-green group-hover:outline-surface0 group-active:outline-surface0" />
+              </div>
+              {/* post title */}
+              <div class="text-75 w-[70%] overflow-hidden overflow-ellipsis whitespace-nowrap pr-8 text-left font-bold transition-all group-hover:translate-x-1 group-hover:text-text md:w-[65%] md:max-w-[65%]">
+                {post.data.title}
+              </div>
+              {/* tag list */}
+              <div class="text-30 hidden truncate whitespace-nowrap text-left text-sm text-subtext0 transition md:block md:w-[15%]">
+                {formatTag(post.data.tags)}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .dash-line::before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    left: calc(50% - 1px);
+    border-left: 2px dashed #363a4f;
+    pointer-events: none;
+    transition: all 0.3s;
+    transform: translateY(-50%);
+  }
+</style>

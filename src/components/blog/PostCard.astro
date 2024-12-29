@@ -4,7 +4,8 @@ import { Icon } from "astro-icon/components";
 
 interface Props {
   id: string;
-  post: object;
+  url: string;
+  post: any;
   class?: string;
   title: string;
   published: Date;
@@ -14,14 +15,14 @@ interface Props {
   description: string;
   draft: boolean;
 }
-const { id, post, title, published, updated, tags, category, description } =
+const { url, post, title, published, updated, tags, category, description } =
   Astro.props;
 
 const { remarkPluginFrontmatter } = await render(post);
 ---
 
 <div class="mb-5 rounded-3xl bg-crust p-4">
-  <a href=`/blog/posts/${id}` class="no-underline">
+  <a href={url} class="no-underline">
     <h2 class="m-0 p-2 leading-none hover:text-rosewater hover:underline">
       {title}
     </h2>
@@ -52,28 +53,62 @@ const { remarkPluginFrontmatter } = await render(post);
     <div class="m-0 w-fit rounded bg-surface0 p-2">
       <Icon name="lucide:book-marked" class="text-lg text-mauve" />
     </div>
-    <ul class="m-0 inline list-none p-0">
+    <div class="flex flex-row flex-nowrap items-center">
       {
-        category.map((cat, index) => (
-          <li class="inline-block w-fit text-wrap break-words">
-            {index - (category.length - 1) ? cat + ", " : cat}
-          </li>
-        ))
+        category && category.length > 0 ? (
+          category.map((cat, i) => (
+            <div class="!inline-flex items-center">
+              <div
+                class:list={[
+                  { hidden: i == 0 },
+                  "mx-1.5 text-sm text-surface2",
+                ]}
+              >
+                /
+              </div>
+              <a
+                href={`/blog/categories/${cat}`}
+                class="whitespace-nowrap rounded-md p-1 no-underline transition hover:bg-surface0"
+              >
+                {cat}
+              </a>
+            </div>
+          ))
+        ) : (
+          <div class="text-50 text-sm font-medium transition" />
+        )
       }
-    </ul>
+    </div>
+
     <div class="mt-1 w-fit rounded bg-surface0 p-2">
       <Icon name="lucide:hash" class="text-lg text-flamingo" />
     </div>
-
-    <ul class="m-0 inline list-none p-0">
+    <div class="flex flex-row flex-nowrap items-center">
       {
-        tags.map((tag, index) => (
-          <li class="inline-block w-fit text-wrap break-words">
-            {index - (tags.length - 1) ? tag + " /" : tag}
-          </li>
-        ))
+        tags && tags.length > 0
+          ? tags.map((tag, i) => (
+              <div class="!inline-flex items-center">
+                <div
+                  class:list={[
+                    { hidden: i == 0 },
+                    "mx-1.5 text-sm text-surface2",
+                  ]}
+                >
+                  /
+                </div>
+                <a
+                  href={`/blog/tags/${tag}`}
+                  class="whitespace-nowrap rounded-md p-1 no-underline transition hover:bg-surface0"
+                >
+                  {tag}
+                </a>
+              </div>
+            ))
+          : !(tags && tags.length > 0) && (
+              <div class="text-50 text-sm font-medium transition" />
+            )
       }
-    </ul>
+    </div>
   </div>
 
   <div class="my-3.5 line-clamp-2 pr-4 transition md:line-clamp-1">

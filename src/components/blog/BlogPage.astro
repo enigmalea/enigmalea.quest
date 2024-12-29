@@ -24,6 +24,7 @@ const { page } = Astro.props;
           <PostCard
             post={post}
             id={post.id}
+            url={`/blog/posts/${post.id}`}
             title={post.data.title}
             tags={post.data.tags}
             category={post.data.category}

@@ -1,0 +1,35 @@
+---
+import BlogLayout from "../../../layouts/BlogLayout.astro";
+import { getTagList } from "../../../utils/blog-utils";
+
+const tags = await getTagList();
+---
+
+<BlogLayout pageTitle="All Categories">
+  <h1 class="mt-5">All Tags</h1>
+  <div class="mb-5 rounded-3xl bg-crust p-4">
+    <div>
+      <div class="flex h-[3.75rem] w-full flex-row items-center p-3 text-xl">
+        <div class="w-1/2 text-center font-mono uppercase text-peach">Tags</div>
+        <div class="w-1/2 text-center font-mono uppercase text-peach">
+          Post Count
+        </div>
+      </div>
+    </div>
+    {
+      tags.map((tag) => (
+        <div>
+          <div class="flex h-[3.75rem] w-full flex-row items-center p-3 text-xl">
+            <a
+              href={`/blog/tags/${tag.name}`}
+              class="group flex h-10 w-full items-center gap-4 rounded-lg px-3 no-underline hover:bg-surface0"
+            >
+              <div class="w-1/2 text-center">{tag.name}</div>
+              <div class="flex w-1/2 justify-center">{String(tag.count)}</div>
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</BlogLayout>

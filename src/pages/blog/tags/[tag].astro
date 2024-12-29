@@ -1,0 +1,29 @@
+---
+import ArchiveCard from "../../../components/blog/ArchiveCard.astro";
+import BlogLayout from "../../../layouts/BlogLayout.astro";
+import { getSortedPosts } from "../../../utils/blog-utils";
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts();
+
+  const allTags = posts.reduce<Set<string>>((acc, post) => {
+    post.data.tags.forEach((tag) => acc.add(tag));
+    return acc;
+  }, new Set());
+
+  const allTagsArray = Array.from(allTags);
+
+  return allTagsArray.map((tag) => ({
+    params: {
+      tag: tag,
+    },
+  }));
+}
+
+const tag = Astro.params.tag as string;
+---
+
+<BlogLayout pageTitle=`Posts Tagged ${tag}`>
+  <h1 class="mt-5">Posts Tagged "{tag}"</h1>
+  <ArchiveCard tags={[tag]} />
+</BlogLayout>
