@@ -17,6 +17,7 @@ const { Content, remarkPluginFrontmatter } = await render(post);
 ---
 
 <BlogLayout pageTitle={post.data.title}>
+	<h1>Blog</h1>
   <div class="my-5 rounded-3xl bg-crust p-4">
     <div class="border-b-2 border-dashed border-base">
       <div
@@ -83,14 +84,14 @@ const { Content, remarkPluginFrontmatter } = await render(post);
                   </div>
                   <a
                     href={`/blog/categories/${cat}`}
-                    class="whitespace-nowrap rounded-md p-1 no-underline transition hover:bg-surface0"
+                    class="whitespace-nowrap rounded-md p-1 no-underline hover:bg-surface0"
                   >
                     {cat}
                   </a>
                 </div>
               ))
             ) : (
-              <div class="text-50 text-sm font-medium transition" />
+              <div class="text-50 text-sm font-medium" />
             )
           }
         </div>
@@ -113,14 +114,14 @@ const { Content, remarkPluginFrontmatter } = await render(post);
                     </div>
                     <a
                       href={`/blog/tags/${tag}`}
-                      class="whitespace-nowrap rounded-md p-1 no-underline transition hover:bg-surface0"
+                      class="whitespace-nowrap rounded-md p-1 no-underline hover:bg-surface0"
                     >
                       {tag}
                     </a>
                   </div>
                 ))
               : !(post.data.tags && post.data.tags.length > 0) && (
-                  <div class="text-50 text-sm font-medium transition" />
+                  <div class="text-50 text-sm font-medium" />
                 )
           }
         </div>
