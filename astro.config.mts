@@ -61,6 +61,7 @@ export default defineConfig({
     metaTags(),
     starlight({
       title: "enigmalea",
+			titleDelimiter: "★",
       logo: {
         light: "./src/assets/img/light-home.svg",
         dark: "./src/assets/img/dark-home.svg",

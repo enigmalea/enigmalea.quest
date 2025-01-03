@@ -8,7 +8,7 @@ import BlogFooter from "../components/blog/BlogFooter.astro";
 import CornerBuddy from "../components/CornerBuddy.astro";
 import Sidebar from "../components/blog/Sidebar.astro";
 
-const { pageTitle } = Astro.props;
+const { pageTitle, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,25 +16,78 @@ const { pageTitle } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={Astro.url.toString()} />
+
+    <!-- MetaData -->
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle} ★ enigmalea</title>
+    <meta name="theme-color" content="#a6da95" />
+    <meta name="author" content="enigmalea" />
+    <meta
+      name="title"
+      content={pageTitle ? `${pageTitle} ★ enigmalea` : "enigmalea"}
+    />
+    <meta name="description" content={description ? `${description}` : ""} />
+
+    <!-- OG Tags -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content={pageTitle ? `${pageTitle} ★ enigmalea` : "enigmalea"}
+    />
+    <meta property="og:url" content={Astro.url.toString()} />
+    <meta
+      property="og:description"
+      content={description ? `${description}` : ""}
+    />
+    <meta property="og:site_name" content="enigmalea" />
+    <meta
+      property="og:image"
+      content={new URL("/assets/img/enigmalea.png", Astro.site)}
+    />
+    <meta
+      property="og:image:secure_url"
+      content={new URL("/assets/img/enigmalea.png", Astro.site)}
+    />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- Twitter Tags -->
+    <meta property="twitter:domain" content="https://enigmalea.quest" />
+    <meta property="twitter:url" content={Astro.url.toString()} />
+    <meta
+      name="twitter:title"
+      content={pageTitle ? `${pageTitle} ★ enigmalea` : "enigmalea"}
+    />
+    <meta
+      name="twitter:description"
+      content={description ? `${description}` : ""}
+    />
+
+    <!-- Title -->
+    <title>{pageTitle ? `${pageTitle} ★ enigmalea` : "enigmalea"}</title>
   </head>
   <body
     class="cursor-coffee bg-base prose-a:cursor-coffee prose-a:hover:cursor-coffee_select"
   >
     <BlogNavbar />
     <Header />
-		<div class="flex justify-center">
-			<div class="prose max-w-none grid grid-flow-row gap-0 m-0 p-0 min-[860px]:grid-flow-col justify-start">
-			<Sidebar />
-			<main
-				class="mx-auto px-3 pb-14 prose-headings:font-mono order-first !min-[860px]:order-last min-[860px]:place-self-start"
-			>
-				<slot />
-			</main>
-		</div>
-	</div>
+    <div class="flex justify-center">
+      <div
+        class="prose m-0 grid max-w-none grid-flow-row justify-start gap-0 p-0 min-[860px]:grid-flow-col"
+      >
+        <Sidebar />
+        <main
+          class="!min-[860px]:order-last order-first mx-auto px-3 pb-14 prose-headings:font-mono min-[860px]:place-self-start"
+        >
+          <slot />
+        </main>
+      </div>
+    </div>
     <CornerBuddy />
     <BlogFooter />
   </body>
