@@ -11,7 +11,7 @@ category:
 
 <figure>
 
-![Say good-bye to this design](./imgs/20220715.png)
+![Say good-bye to this design](./img/20220715.png)
 
 <figcaption>Say good-bye to this design</figcaption>
 

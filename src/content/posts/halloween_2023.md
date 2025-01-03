@@ -23,13 +23,13 @@ find screenshots of the updates and resources below the Read More...
 
 ## Screenshots
 
-![](./imgs/lightmodetop.png)
+![](./img/lightmodetop.png)
 
-![](./imgs/lightmodebottom.png)
+![](./img/lightmodebottom.png)
 
-![](./imgs/darkmodetop.png)
+![](./img/darkmodetop.png)
 
-![](./imgs/darkmodebottom.png)
+![](./img/darkmodebottom.png)
 
 ## Resources
 

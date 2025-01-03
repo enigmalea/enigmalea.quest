@@ -22,7 +22,7 @@ The old color schemes below are being retired.
 
 <figure>
 
-![Old Light Theme](./imgs/20220922-light.png)
+![Old Light Theme](./img/20220922-light.png)
 
 <figcaption>Old Light Theme</figcaption>
 
@@ -30,7 +30,7 @@ The old color schemes below are being retired.
 
 <figure>
 
-![Old Dark Theme](./imgs/20220922-dark.png)
+![Old Dark Theme](./img/20220922-dark.png)
 
 <figcaption>Old Dark Theme</figcaption>
 
