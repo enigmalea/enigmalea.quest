@@ -4,13 +4,13 @@ import Tag from "./Tags.astro";
 import Categories from "./Categories.astro";
 ---
 
-<div class="mx-auto w-[95vw] max-w-none min-[860px]:max-w-[17.9rem] mb-24 min-[860px]:pt-20 min-[860px]:mb-36 order-last min-[860px]:order-first">
+<div
+  class="order-last mx-auto mb-24 w-[95vw] max-w-none min-[860px]:order-first min-[860px]:mb-36 min-[860px]:max-w-[17.9rem] min-[860px]:pt-20"
+>
   <div class="mb-4 flex flex-col gap-4">
     <BlogLinks />
   </div>
-  <div
-    class="top-4 flex w-full flex-col gap-4"
-  >
+  <div class="top-4 flex w-full flex-col gap-4">
     <Categories />
     <Tag />
   </div>

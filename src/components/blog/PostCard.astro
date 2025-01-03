@@ -21,7 +21,9 @@ const { url, post, title, published, updated, tags, category, description } =
 const { remarkPluginFrontmatter } = await render(post);
 ---
 
-<div class="prose mb-5 rounded-3xl bg-crust p-4 min-[860px]:max-w-prose w-[95vw] max-w-none mx-auto">
+<div
+  class="prose mx-auto mb-5 w-[95vw] max-w-none rounded-3xl bg-crust p-4 min-[860px]:max-w-prose"
+>
   <a href={url} class="no-underline">
     <h2 class="m-0 p-2 leading-none hover:text-rosewater hover:underline">
       {title}

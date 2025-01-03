@@ -17,8 +17,10 @@ const { Content, remarkPluginFrontmatter } = await render(post);
 ---
 
 <BlogLayout pageTitle={post.data.title} description={post.data.description}>
-	<h1>Blog</h1>
-  <div class="prose mb-5 rounded-3xl bg-crust p-4 min-[860px]:max-w-prose w-[95vw] max-w-none mx-auto">
+  <h1>Blog</h1>
+  <div
+    class="prose mx-auto mb-5 w-[95vw] max-w-none rounded-3xl bg-crust p-4 min-[860px]:max-w-prose"
+  >
     <div class="border-b-2 border-dashed border-base">
       <div
         class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-subtext0"

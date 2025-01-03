@@ -20,13 +20,13 @@ const { page } = Astro.props;
   <h1>Blog</h1>
   <BlogPage page={page} />
 
-  <div class="mb-0 lg:mb-10 flex flex-row items-center justify-center gap-3">
+  <div class="mb-0 flex flex-row items-center justify-center gap-3 lg:mb-10">
     {
       page.url.first ? (
         <a
           href={page.url.first}
           class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
-					aria-label="First Entry"
+          aria-label="First Entry"
         >
           <Icon name="lucide:chevrons-left" class="text-2xl" />
         </a>
@@ -41,7 +41,7 @@ const { page } = Astro.props;
         <a
           href={page.url.prev}
           class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
-					aria-label="Previous Entry"
+          aria-label="Previous Entry"
         >
           <Icon name="lucide:chevron-left" class="text-2xl" />
         </a>
@@ -61,7 +61,7 @@ const { page } = Astro.props;
         <a
           href={page.url.next}
           class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
-					aria-label="Next Entry"
+          aria-label="Next Entry"
         >
           <Icon name="lucide:chevron-right" class="text-2xl" />
         </a>
@@ -76,7 +76,7 @@ const { page } = Astro.props;
         <a
           href={page.url.last}
           class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
-					aria-label="Last Entry"
+          aria-label="Last Entry"
         >
           <Icon name="lucide:chevrons-right" class="text-2xl" />
         </a>

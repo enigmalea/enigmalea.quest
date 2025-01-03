@@ -79,7 +79,7 @@ a.site-title img {
 [class*="markdown-content"] ul li::before {
   content: "★";
   padding-right: 0.3rem;
-	color: var(--sl-color-yellow);
+  color: var(--sl-color-yellow);
 }
 
 [class*="markdown-content"] ul li p {
