@@ -26,6 +26,7 @@ const { page } = Astro.props;
         <a
           href={page.url.first}
           class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+					aria-label="First Entry"
         >
           <Icon name="lucide:chevrons-left" class="text-2xl" />
         </a>
@@ -40,6 +41,7 @@ const { page } = Astro.props;
         <a
           href={page.url.prev}
           class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+					aria-label="Previous Entry"
         >
           <Icon name="lucide:chevron-left" class="text-2xl" />
         </a>
@@ -59,6 +61,7 @@ const { page } = Astro.props;
         <a
           href={page.url.next}
           class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+					aria-label="Next Entry"
         >
           <Icon name="lucide:chevron-right" class="text-2xl" />
         </a>
@@ -73,6 +76,7 @@ const { page } = Astro.props;
         <a
           href={page.url.last}
           class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+					aria-label="Last Entry"
         >
           <Icon name="lucide:chevrons-right" class="text-2xl" />
         </a>
