@@ -3,14 +3,26 @@ import Socials from "../components/Socials.astro";
 ---
 
 <header class="mx-auto w-[95vw] bg-base md:max-w-[800px]">
-  <div class="mx-auto mb-[-20px] w-fit font-title text-[16vw] sm:text-[7rem]">
-    <span
-      class="via-orange bg-gradient-to-r from-red to-yellow bg-clip-text text-transparent"
-      >enig</span
-    ><span
-      class="bg-gradient-to-r from-green via-blue to-lavender bg-clip-text text-transparent"
-      >malea</span
-    >
+  <div class="title mx-auto mb-[-20px] w-fit font-title text-[16vw] sm:text-[7rem]">
+    enigmalea
   </div>
   <Socials />
 </header>
+
+<style>
+	.title {
+  background: #ed8796;
+  background: linear-gradient(
+    to right,
+    #ed8796 0%,
+    #f5a97f 17%,
+    #eed49f 34%,
+    #a6da95 51%,
+    #8aadf4 68%,
+    #b7bdf8 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>

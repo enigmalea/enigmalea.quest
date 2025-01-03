@@ -21,10 +21,10 @@ const { Content, remarkPluginFrontmatter } = await render(post);
   <div class="prose mb-5 rounded-3xl bg-crust p-4 min-[860px]:max-w-prose w-[95vw] max-w-none mx-auto">
     <div class="border-b-2 border-dashed border-base">
       <div
-        class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-surface2"
+        class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-subtext0"
       >
         <div class="m-0 w-fit rounded bg-surface0 p-2">
-          <Icon name="lucide:align-left" class="text-lg" />
+          <Icon name="lucide:align-left" />
         </div>
         {
           remarkPluginFrontmatter.words === 1
@@ -32,7 +32,7 @@ const { Content, remarkPluginFrontmatter } = await render(post);
             : remarkPluginFrontmatter.words + " words"
         }
         <div class="m-0 w-fit rounded bg-surface0 p-2">
-          <Icon name="lucide:clock-3" class="text-lg" />
+          <Icon name="lucide:clock-3" />
         </div>
         {
           remarkPluginFrontmatter.minutes === 1

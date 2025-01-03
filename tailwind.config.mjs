@@ -1,3 +1,4 @@
+import { InlineStyleAnnotation } from "astro-expressive-code";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
@@ -33,6 +34,12 @@ export default {
                 textDecoration: "none",
               },
             },
+            ul: { listStyleType: "none" },
+            li: {},
+            "li::before": { content: '"★"', paddingRight: "0.3rem", color: "#eed49f" },
+						"li p": { display: "inline", },
+						p: {},
+						"p img": { padding: "0", margin: "0", },
           },
         },
       },

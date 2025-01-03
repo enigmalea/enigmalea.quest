@@ -71,3 +71,17 @@ i {
 a.site-title img {
   width: 20px;
 }
+
+[class*="markdown-content"] ul {
+  list-style-type: none;
+}
+
+[class*="markdown-content"] ul li::before {
+  content: "★";
+  padding-right: 0.3rem;
+	color: var(--sl-color-yellow);
+}
+
+[class*="markdown-content"] ul li p {
+  display: inline;
+}

@@ -15,13 +15,13 @@ const nextPost =
 
 {
   (previousPost || nextPost) && (
-    <nav class="mb-4 flex w-full flex-col justify-between gap-4 overflow-hidden sm:flex-row">
+    <nav class="mb-4 flex flex-col justify-between gap-4 overflow-hidden sm:flex-row min-[860px]:max-w-prose w-[95vw] max-w-none mx-auto prose">
       {nextPost ? (
         <a
           href={`/blog/posts/${nextPost.id}`}
-          class="w-full overflow-hidden text-lg font-bold text-text no-underline hover:text-text active:scale-95"
+          class="w-full sm:w-1/2 overflow-hidden text-lg font-bold text-text no-underline hover:text-text"
         >
-          <div class="flex h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-surface0 px-4 hover:bg-surface2">
+          <div class="flex h-[3.75rem] items-center !justify-start gap-4 rounded-2xl bg-surface0 px-4 text-right hover:bg-surface2">
             <Icon name="lucide:chevron-left" class="text-4xl text-blue" />
             <div class="m-0 flex flex-col truncate p-0">
               <div class="m-0 p-0 text-sm uppercase leading-tight">Next</div>
@@ -31,16 +31,16 @@ const nextPost =
           </div>
         </a>
       ) : (
-        <div class="hidden h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-transparent px-4 sm:flex">
+        <div class="hidden h-[3.75rem] w-1/2 flex-none items-center !justify-start gap-4 rounded-2xl bg-transparent px-4 sm:flex">
           {" "}
         </div>
       )}
       {previousPost ? (
         <a
           href={`/blog/posts/${previousPost.id}`}
-          class="w-full text-lg font-bold text-text no-underline hover:text-text active:scale-95"
+          class="w-full sm:w-1/2 overflow-hidden text-lg font-bold text-text no-underline hover:text-text"
         >
-          <div class="flex h-[3.75rem] w-full max-w-full items-center !justify-end gap-4 rounded-2xl bg-surface0 px-4 text-right hover:bg-surface2">
+          <div class="flex h-[3.75rem] items-center !justify-end gap-4 rounded-2xl bg-surface0 px-4 text-right hover:bg-surface2">
             <div class="m-0 flex flex-col-reverse truncate p-0 text-right">
               {previousPost.data.title}
               <div class="m-0 p-0 text-sm uppercase leading-tight">Prev</div>
@@ -49,7 +49,7 @@ const nextPost =
           </div>
         </a>
       ) : (
-        <div class="hidden h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl bg-transparent px-4 sm:flex">
+        <div class="hidden h-[3.75rem] w-1/2 flex-none items-center !justify-start gap-4 rounded-2xl bg-transparent px-4 sm:flex">
           {" "}
         </div>
       )}
