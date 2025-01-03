@@ -13,6 +13,7 @@ import starlight from "@astrojs/starlight";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightSidebarTopics from "starlight-sidebar-topics";
 import tailwind from "@astrojs/tailwind";
+import favicons from "astro-favicons";
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,6 +28,7 @@ export default defineConfig({
     sitemap(),
     expressiveCode({ plugins: [pluginLineNumbers()] }),
     icon(),
+    favicons(),
     robotsTxt({
       policy: [
         {
@@ -61,7 +63,7 @@ export default defineConfig({
     metaTags(),
     starlight({
       title: "enigmalea",
-			titleDelimiter: "★",
+      titleDelimiter: "★",
       logo: {
         light: "./src/assets/img/light-home.svg",
         dark: "./src/assets/img/dark-home.svg",
