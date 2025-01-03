@@ -23,13 +23,8 @@ find screenshots of the updates and resources below the Read More...
 
 ## Screenshots
 
-![](./img/lightmodetop.png)
-
-![](./img/lightmodebottom.png)
-
-![](./img/darkmodetop.png)
-
-![](./img/darkmodebottom.png)
+![A screenshot of my landing page from Halloween 2023 with seasonal decorations in light mode.](./img/lightmodetop.png)
+![A screenshot of my landing page from Halloween 2023 with seasonal decorations in dark mode.](./img/darkmodetop.png)
 
 ## Resources
 
