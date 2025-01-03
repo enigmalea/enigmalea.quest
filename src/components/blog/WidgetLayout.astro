@@ -1,0 +1,17 @@
+---
+interface Props {
+  name?: string;
+}
+const { name } = Astro.props;
+---
+
+<widget-layout class="prose max-w-none bg-crust pb-4 rounded-2xl">
+  <div
+    class="relative mb-2 ml-8 mt-4 font-mono text-2xl font-bold text-peach before:absolute before:left-[-16px] before:top-[5.5px] before:h-4 before:w-1 before:rounded-md before:bg-green"
+  >
+    {name}
+  </div>
+  <div  class="collapse-wrapper overflow-hidden px-4">
+    <slot />
+  </div>
+</widget-layout>

@@ -24,6 +24,6 @@ const category = Astro.params.category as string;
 ---
 
 <BlogLayout pageTitle=`${category} Category`>
-  <h1>"{category}" Category</h1>
+  <div class="max-w-prose"><h1>"{category}" Category</h1></div>
   <ArchiveCard categories={[category]} />
 </BlogLayout>

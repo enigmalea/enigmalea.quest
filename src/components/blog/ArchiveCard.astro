@@ -62,7 +62,7 @@ function formatTag(tag: string[]) {
 }
 ---
 
-<div class="mb-5 rounded-3xl bg-crust p-4">
+<div class="prose mb-5 rounded-3xl bg-crust p-4 min-[860px]:max-w-prose min-[860px]:min-w-prose w-[95vw] max-w-none mx-auto">
   {
     groups.map((group) => (
       <div>
@@ -87,7 +87,7 @@ function formatTag(tag: string[]) {
           >
             <div class="flex h-full flex-row items-center justify-start">
               {/* date */}
-              <div class="text-50 w-[15%] text-right md:w-[10%]">
+              <div class="text-sm sm:text-[1rem] w-[15%] text-right md:w-[10%]">
                 {formatDate(post.data.published)}
               </div>
               {/* dot and line */}

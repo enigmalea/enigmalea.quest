@@ -1,0 +1,26 @@
+---
+import WidgetLayout from "./WidgetLayout.astro";
+import { getCategoryList } from "../../utils/blog-utils";
+
+const categories = await getCategoryList();
+---
+
+<WidgetLayout name="Categories">
+  {
+    categories.map((cat) => (
+      <div>
+        <a
+          href={`/blog/categories/${cat.name}`}
+          class="no-underline hover:text-blue"
+        >
+          <div class="mb-1 flex h-10 w-full items-center gap-4 rounded-lg px-3 hover:bg-surface0">
+            <div class="w-full">{cat.name}</div>
+            <div class="flex h-8 w-8 justify-center rounded-md bg-blue text-center text-crust">
+              {String(cat.count)}
+            </div>
+          </div>
+        </a>
+      </div>
+    ))
+  }
+</WidgetLayout>

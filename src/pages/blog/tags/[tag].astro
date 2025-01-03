@@ -24,6 +24,6 @@ const tag = Astro.params.tag as string;
 ---
 
 <BlogLayout pageTitle=`Posts Tagged ${tag}`>
-  <h1>Posts Tagged "{tag}"</h1>
+  <div class="max-w-prose"><h1>Posts Tagged "{tag}"</h1></div>
   <ArchiveCard tags={[tag]} />
 </BlogLayout>

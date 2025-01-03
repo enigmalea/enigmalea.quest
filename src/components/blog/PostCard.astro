@@ -21,7 +21,7 @@ const { url, post, title, published, updated, tags, category, description } =
 const { remarkPluginFrontmatter } = await render(post);
 ---
 
-<div class="mb-5 rounded-3xl bg-crust p-4">
+<div class="prose mb-5 rounded-3xl bg-crust p-4 min-[860px]:max-w-prose w-[95vw] max-w-none mx-auto">
   <a href={url} class="no-underline">
     <h2 class="m-0 p-2 leading-none hover:text-rosewater hover:underline">
       {title}
@@ -29,7 +29,7 @@ const { remarkPluginFrontmatter } = await render(post);
   </a>
   <div class="flex flex-wrap items-center gap-4 gap-x-4 gap-y-2">
     <div class="m-0 w-fit rounded bg-surface0 p-2 text-teal">
-      <Icon name="lucide:calendar" class="text-lg" />
+      <Icon name="lucide:calendar" class="text-md" />
     </div>
     {
       published.toLocaleDateString("en-us", {
@@ -42,7 +42,7 @@ const { remarkPluginFrontmatter } = await render(post);
     {
       updated &&
         (<div class="m-0 w-fit rounded bg-surface0 p-2">
-          <Icon name="lucide:calendar-clock" class="text-lg text-sky" />
+          <Icon name="lucide:calendar-clock" class="text-md text-sky" />
         </div>)(updated).toLocaleDateString("en-us", {
           year: "numeric",
           month: "short",
@@ -51,7 +51,7 @@ const { remarkPluginFrontmatter } = await render(post);
     }
 
     <div class="m-0 w-fit rounded bg-surface0 p-2">
-      <Icon name="lucide:book-marked" class="text-lg text-mauve" />
+      <Icon name="lucide:book-marked" class="text-md text-mauve" />
     </div>
     <div class="flex flex-row flex-nowrap items-center">
       {
@@ -68,20 +68,20 @@ const { remarkPluginFrontmatter } = await render(post);
               </div>
               <a
                 href={`/blog/categories/${cat}`}
-                class="whitespace-nowrap rounded-md p-1 no-underline transition hover:bg-surface0"
+                class="whitespace-nowrap rounded-md p-1 no-underline hover:bg-surface0"
               >
                 {cat}
               </a>
             </div>
           ))
         ) : (
-          <div class="text-50 text-sm font-medium transition" />
+          <div class="text-50 text-sm font-medium" />
         )
       }
     </div>
 
     <div class="mt-1 w-fit rounded bg-surface0 p-2">
-      <Icon name="lucide:hash" class="text-lg text-flamingo" />
+      <Icon name="lucide:hash" class="text-md text-flamingo" />
     </div>
     <div class="flex flex-row flex-nowrap items-center">
       {
@@ -98,20 +98,20 @@ const { remarkPluginFrontmatter } = await render(post);
                 </div>
                 <a
                   href={`/blog/tags/${tag}`}
-                  class="whitespace-nowrap rounded-md p-1 no-underline transition hover:bg-surface0"
+                  class="whitespace-nowrap rounded-md p-1 no-underline hover:bg-surface0"
                 >
                   {tag}
                 </a>
               </div>
             ))
           : !(tags && tags.length > 0) && (
-              <div class="text-50 text-sm font-medium transition" />
+              <div class="text-50 text-sm font-medium" />
             )
       }
     </div>
   </div>
 
-  <div class="my-3.5 line-clamp-2 pr-4 transition md:line-clamp-1">
+  <div class="my-3.5 line-clamp-2 pr-4 min-[860px]:line-clamp-1">
     {description}
   </div>
 

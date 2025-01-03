@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+import BackToTop from "../BackToTop.astro";
+---
+
+<footer
+  class="fixed bottom-0 left-0 right-0 z-50 mx-auto w-[95vw] border-t border-overlay0 bg-base px-4 py-2 text-center text-text shadow-footer min-[860px]:w-[860px]"
+>
+  Copyright &copy; {new Date().getFullYear()} enigmalea. <a
+    href="/credits"
+    class="text-blue hover:text-rosewater">Made</a
+  > with <Icon name="lucide:heart" class="mt-[-2px] inline text-pink" /> using <a
+    href="https://astro.build"
+    ><Icon
+      name="simple-icons:astro"
+      class="mt-[-2px] inline text-lavender"
+    /></a
+  >
+
+  <BackToTop />
+</footer>

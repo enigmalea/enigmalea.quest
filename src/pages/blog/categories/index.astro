@@ -6,8 +6,8 @@ const categories = await getCategoryList();
 ---
 
 <BlogLayout pageTitle="All Categories">
-  <h1 class="mt-5">All Categories</h1>
-  <div class="mb-5 rounded-3xl bg-crust p-4">
+  <h1>All Categories</h1>
+  <div class="prose mb-5 rounded-3xl bg-crust p-4 min-[860px]:max-w-prose w-[95vw] max-w-none mx-auto">
     <div>
       <div class="flex h-[3.75rem] w-full flex-row items-center p-3 text-xl">
         <div class="w-1/2 text-center font-mono uppercase text-peach">
@@ -19,15 +19,15 @@ const categories = await getCategoryList();
       </div>
     </div>
     {
-      categories.map((c) => (
+      categories.map((cat) => (
         <div>
           <div class="flex h-[3.75rem] w-full flex-row items-center p-3 text-xl">
             <a
-              href={`/blog/categories/${c.name}`}
+              href={`/blog/categories/${cat.name}`}
               class="group flex h-10 w-full items-center gap-4 rounded-lg px-3 no-underline hover:bg-surface0"
             >
-              <div class="w-1/2 text-center">{c.name}</div>
-              <div class="flex w-1/2 justify-center">{String(c.count)}</div>
+              <div class="w-1/2 text-center truncate">{cat.name}</div>
+              <div class="flex w-1/2 justify-center">{String(cat.count)}</div>
             </a>
           </div>
         </div>

@@ -2,10 +2,11 @@
 import "@fontsource/unica-one";
 import "@fontsource/atkinson-hyperlegible";
 import "@fontsource/monaspace-neon";
-import Navbar from "../components/Navbar.astro";
+import BlogNavbar from "../components/blog/BlogNavbar.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BlogFooter from "../components/blog/BlogFooter.astro";
 import CornerBuddy from "../components/CornerBuddy.astro";
+import Sidebar from "../components/blog/Sidebar.astro";
 
 const { pageTitle } = Astro.props;
 ---
@@ -20,17 +21,22 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle} ★ enigmalea</title>
   </head>
   <body
-    class="h-screen cursor-coffee bg-base prose-a:cursor-coffee prose-a:hover:cursor-coffee_select"
+    class="cursor-coffee bg-base prose-a:cursor-coffee prose-a:hover:cursor-coffee_select"
   >
-    <Navbar />
+    <BlogNavbar />
     <Header />
-    <main
-      class="prose mx-auto w-[95vw] px-3 pb-14 prose-headings:font-mono md:max-w-[800px]"
-    >
-      <slot />
-    </main>
+		<div class="flex justify-center">
+			<div class="prose max-w-none grid grid-flow-row gap-0 m-0 p-0 min-[860px]:grid-flow-col justify-start">
+			<Sidebar />
+			<main
+				class="mx-auto px-3 pb-14 prose-headings:font-mono order-first !min-[860px]:order-last min-[860px]:place-self-start"
+			>
+				<slot />
+			</main>
+		</div>
+	</div>
     <CornerBuddy />
-    <Footer />
+    <BlogFooter />
   </body>
 </html>
 
