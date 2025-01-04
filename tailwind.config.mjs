@@ -1,4 +1,3 @@
-import { InlineStyleAnnotation } from "astro-expressive-code";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
@@ -17,20 +16,20 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            color: "#cad3f5",
-            strong: { color: "#a6da95" },
-            em: { color: "#91d7e3" },
-            h1: { color: "#ed8796" },
-            h2: { color: "#f5a97f" },
-            h3: { color: "#eed49f" },
-            h4: { color: "#a6da95" },
+            color: "rgb(var(--ctp-text))",
+            strong: { color: "rgb(var(--ctp-green))"},
+            em: { color: "rgb(var(--ctp-sky))" },
+            h1: { color: "rgb(var(--ctp-red))"},
+            h2: { color: "rgb(var(--ctp-peach))"},
+            h3: { color: "rgb(var(--ctp-yellow))"},
+            h4: { color: "rgb(var(--ctp-green))"},
             a: {
-              color: "#8aadf4",
+              color: "rgb(var(--ctp-blue))",
               textDecoration: "underline wavy",
               textUnderlineOffset: "0.3em",
               fontWeight: "normal",
               "&:hover": {
-                color: "#f4dbd6",
+                color: "rgb(var(--ctp-rosewater))",
                 textDecoration: "none",
               },
             },
@@ -39,7 +38,7 @@ export default {
             "li::before": {
               content: '"★"',
               paddingRight: "0.3rem",
-              color: "#eed49f",
+              color: "rgb(var(--ctp-yellow))",
             },
             "li p": { display: "inline" },
             p: {},
@@ -56,7 +55,7 @@ export default {
   },
   plugins: [
     require("@catppuccin/tailwindcss")({
-      defaultFlavour: "macchiato",
+      defaultFlavour: "latte",
     }),
     require("@tailwindcss/typography"),
   ],

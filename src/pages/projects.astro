@@ -96,15 +96,13 @@ const allProjects = await getCollection("projects");
 
 <style>
   .badge[data-name*="ongoing"] {
-    border-color: rgb(116, 199, 236);
-    color: rgb(116, 199, 236);
-    background-color: rgba(116, 199, 236, 0.25);
+    border-color: theme(colors.sapphire.DEFAULT);
+    color: theme(colors.sapphire.DEFAULT);
   }
 
   .badge[data-name*="released"] {
-    border-color: rgb(166, 227, 161);
-    color: rgb(166, 227, 161);
-    background-color: rgba(166, 227, 161, 0.25);
+    border-color: theme(colors.green.DEFAULT);
+    color: theme(colors.green.DEFAULT);
   }
 
   li::before {
