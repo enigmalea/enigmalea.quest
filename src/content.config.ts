@@ -5,29 +5,31 @@ import { docsLoader } from "@astrojs/starlight/loaders";
 import { docsSchema } from "@astrojs/starlight/schema";
 import { glob } from "astro/loaders";
 
-const ships = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/data/ships/" }),
+const badges = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/data/badges/" }),
   schema: ({ image }) =>
     z.object({
-      fandom: z.string(),
-      ship: z.string(),
+			order: z.number(),
       image: image(),
-      credits: z.string().optional(),
+			link: z.string().optional(),
+			alt: z.string(),
     }),
 });
 
-const projects = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/projects/" }),
+const banners = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/data/banners/" }),
   schema: ({ image }) =>
     z.object({
-      title: z.string(),
-      description: z.string(),
-      status: z.enum(["complete", "wip", "ongoing", "released"]),
-      links: SocialLinks,
-      categories: z.array(z.string()).default([]),
-      tags: z.array(z.string()).default([]),
-      image: image().optional(),
+			order: z.number(),
+      image: image(),
+			link: z.string().optional(),
+			alt: z.string(),
     }),
+});
+
+const docs = defineCollection({
+  loader: docsLoader(),
+  schema: docsSchema(),
 });
 
 const posts = defineCollection({
@@ -44,14 +46,36 @@ const posts = defineCollection({
   }),
 });
 
-const docs = defineCollection({
-  loader: docsLoader(),
-  schema: docsSchema(),
+const projects = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/projects/" }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      status: z.enum(["complete", "wip", "ongoing", "released"]),
+      links: SocialLinks,
+      categories: z.array(z.string()).default([]),
+      tags: z.array(z.string()).default([]),
+      image: image().optional(),
+    }),
+});
+
+const ships = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/data/ships/" }),
+  schema: ({ image }) =>
+    z.object({
+      fandom: z.string(),
+      ship: z.string(),
+      image: image(),
+      credits: z.string().optional(),
+    }),
 });
 
 export const collections = {
-  ships,
+	badges,
+	banners,
   docs,
-  projects,
   posts,
+  projects,
+  ships,
 };
