@@ -15,41 +15,41 @@ const nextPost =
 
 {
   (previousPost || nextPost) && (
-    <nav class="prose mx-auto mb-4 flex w-[95vw] max-w-none flex-col justify-between gap-4 overflow-hidden sm:flex-row min-[860px]:max-w-prose">
+    <nav class="prose mx-auto mb-4 flex w-[95vw] max-w-none flex-col justify-between gap-4 overflow-hidden min-[860px]:max-w-prose sm:flex-row">
       {nextPost ? (
         <a
           href={`/blog/posts/${nextPost.id}`}
-          class="w-full overflow-hidden text-lg font-bold text-text no-underline hover:text-text sm:w-1/2"
+          class="text-ctp-text hover:text-ctp-text w-full overflow-hidden text-lg font-bold no-underline sm:w-1/2"
         >
-          <div class="flex h-[3.75rem] items-center !justify-start gap-4 rounded-2xl bg-surface0 px-4 text-right hover:bg-surface2">
-            <Icon name="lucide:chevron-left" class="text-4xl text-blue" />
+          <div class="bg-ctp-surface0 hover:bg-ctp-surface2 flex h-15 items-center justify-start! gap-4 rounded-2xl px-4 text-right">
+            <Icon name="lucide:chevron-left" class="text-ctp-blue text-4xl" />
             <div class="m-0 flex flex-col truncate p-0">
-              <div class="m-0 p-0 text-sm uppercase leading-tight">Next</div>
+              <div class="m-0 p-0 text-sm leading-tight uppercase">Next</div>
 
               {nextPost.data.title}
             </div>
           </div>
         </a>
       ) : (
-        <div class="hidden h-[3.75rem] w-1/2 flex-none items-center !justify-start gap-4 rounded-2xl bg-transparent px-4 sm:flex">
+        <div class="hidden h-15 w-1/2 flex-none items-center justify-start! gap-4 rounded-2xl bg-transparent px-4 sm:flex">
           {" "}
         </div>
       )}
       {previousPost ? (
         <a
           href={`/blog/posts/${previousPost.id}`}
-          class="w-full overflow-hidden text-lg font-bold text-text no-underline hover:text-text sm:w-1/2"
+          class="text-ctp-text hover:text-ctp-text w-full overflow-hidden text-lg font-bold no-underline sm:w-1/2"
         >
-          <div class="flex h-[3.75rem] items-center !justify-end gap-4 rounded-2xl bg-surface0 px-4 text-right hover:bg-surface2">
+          <div class="bg-ctp-surface0 hover:bg-ctp-surface2 flex h-15 items-center justify-end! gap-4 rounded-2xl px-4 text-right">
             <div class="m-0 flex flex-col-reverse truncate p-0 text-right">
               {previousPost.data.title}
-              <div class="m-0 p-0 text-sm uppercase leading-tight">Prev</div>
+              <div class="m-0 p-0 text-sm leading-tight uppercase">Prev</div>
             </div>
-            <Icon name="lucide:chevron-right" class="text-4xl text-blue" />
+            <Icon name="lucide:chevron-right" class="text-ctp-blue text-4xl" />
           </div>
         </a>
       ) : (
-        <div class="hidden h-[3.75rem] w-1/2 flex-none items-center !justify-start gap-4 rounded-2xl bg-transparent px-4 sm:flex">
+        <div class="hidden h-15 w-1/2 flex-none items-center justify-start! gap-4 rounded-2xl bg-transparent px-4 sm:flex">
           {" "}
         </div>
       )}

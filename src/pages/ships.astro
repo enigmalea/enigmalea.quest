@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
 const allShips = await getCollection("ships");
 ---
@@ -10,7 +11,12 @@ const allShips = await getCollection("ships");
   pageTitle="Owned Ships"
   descriptions="All ship certificates for ships enigmalea has purchased from Robinboob."
 >
-  <h1>Owned Ships</h1>
+  <h1>
+    <Icon
+      name="openmoji:sparkling-heart"
+      class="mr-3 inline align-text-bottom text-5xl"
+    />Owned Ships
+  </h1>
 
   <p>
     Below are the ships I've purchased from <a href="https://www.robinboob.com/"
@@ -18,7 +24,7 @@ const allShips = await getCollection("ships");
     >. They're mine and only mine*!
   </p>
 
-  <p class="text-sm text-subtext0">
+  <p class="text-ctp-subtext0 text-sm">
     *This is a joke, but RobinBoob isn't. Check it out to get your own ship
     certificates and support <a href="http://fujocoded.com">FujoCoded, LLC</a> a
     small business focused on making the internet a better place for fandom.
@@ -35,13 +41,13 @@ const allShips = await getCollection("ships");
           class="mb-2 rounded"
           loading="lazy"
         />
-        <span class="block text-center text-xl text-sky">
+        <span class="text-ctp-sky block text-center text-xl">
           {ship.data.fandom}
         </span>
-        <span class="block text-center text-lg text-text">
+        <span class="text-ctp-text block text-center text-lg">
           {ship.data.ship}
         </span>
-        <span class="text-mono block text-center text-lg italic text-overlay1">
+        <span class="text-mono text-ctp-overlay1 block text-center text-lg italic">
           {ship.data.credits}
         </span>
       </div>

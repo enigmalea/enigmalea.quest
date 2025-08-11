@@ -7,7 +7,7 @@ const allUpdates = await getUpdates();
 {
   allUpdates.map((update) => (
     <div class="flex items-center gap-2">
-      <div class="font-mono text-sm text-green">
+      <div class="text-ctp-green font-mono text-sm">
         [
         {update.data.published.toLocaleDateString("en-us", {
           year: "numeric",

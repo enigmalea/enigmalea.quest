@@ -2,10 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import Badges from "../components/Badges.astro";
 import Updates from "../components/Updates.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout description="enigmalea's personal website.">
-  <h1>Welcome!</h1>
+  <h1>
+    <Icon
+      name="openmoji:cup-with-straw"
+      class="mr-3 inline align-baseline text-4xl"
+    />Welcome!
+  </h1>
 
   <p>
     You might be wondering what exactly this place is and how you got here. How
@@ -23,7 +29,12 @@ import Updates from "../components/Updates.astro";
 
   <p>In short, it's a peek into my chaotic, ADD brain.</p>
 
-  <h2>Where to Find Me</h2>
+  <h2>
+    <Icon
+      name="openmoji:globe-with-meridians"
+      class="mr-3 inline align-text-bottom text-3xl"
+    />Where to Find Me
+  </h2>
   <p>
     My social media are linked in the header. I tend to be most active on my
     various Discord servers, but I meander to other social media sometimes. Feel
@@ -32,7 +43,12 @@ import Updates from "../components/Updates.astro";
     my ADD, but I really am trying to get better about it.
   </p>
 
-  <h2>Site Updates</h2>
+  <h2>
+    <Icon
+      name="openmoji:spiral-notepad"
+      class="mr-3 inline align-text-bottom text-3xl"
+    />Site Updates
+  </h2>
   <p>
     <Updates />
   </p>

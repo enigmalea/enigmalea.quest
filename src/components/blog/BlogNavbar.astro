@@ -11,29 +11,29 @@ import { Icon } from "astro-icon/components";
 ---
 
 <StickyHeader
-  class="sticky top-0 z-50 m-auto w-[95vw] gap-5 border-b border-overlay0 p-5 py-3 shadow-xl shadow-crust backdrop-blur-lg transition-all min-[860px]:w-[860px] lg:flex"
+  class="border-overlay0 shadow-ctp-crust sticky top-0 z-50 m-auto w-[95vw] gap-5 border-b p-5 py-3 shadow-xl backdrop-blur-lg transition-all min-[860px]:w-[860px] lg:flex"
   scrollY={50}
 >
   <Astronav closeOnClick>
     <div class="flex w-full justify-between">
       <a
         href="/"
-        class="text-2xl text-green hover:text-rosewater"
+        class="text-ctp-green hover:text-ctp-rosewater text-2xl"
         aria-label="Home Link"><Icon name="lucide:home" /></a
       >
       <div class="block lg:hidden">
-        <MenuIcon class="h-4 w-4 cursor-coffee_select text-text" />
+        <MenuIcon class="cursor-coffee_select text-ctp-text h-4 w-4" />
       </div>
     </div>
     <MenuItems class="hidden lg:flex">
       <ul class="flex flex-col lg:flex-row lg:gap-5">
-        <li class="text-blue hover:text-rosewater">
+        <li class="text-ctp-blue hover:text-ctp-rosewater">
           <a href="/blog/1">Blog</a>
         </li>
         <li>
           <Dropdown class="group">
             <button
-              class="flex items-center text-blue hover:cursor-coffee_select hover:text-rosewater"
+              class="text-ctp-blue hover:cursor-coffee_select hover:text-ctp-rosewater flex items-center"
               arial-label="Me Menu"
             >
               <span class="pr-1"> Me </span>
@@ -53,10 +53,10 @@ import { Icon } from "astro-icon/components";
             </button>
             <DropdownItems class="relative">
               <div
-                class="absolute top-0 min-w-[250px] border border-overlay0 bg-mantle p-3 shadow-md shadow-crust"
+                class="border-overlay0 bg-ctp-mantle shadow-ctp-crust absolute top-0 min-w-[250px] border p-3 shadow-md"
               >
                 <ul>
-                  <li class="text-blue hover:text-rosewater">
+                  <li class="text-ctp-blue hover:text-ctp-rosewater">
                     <a href="/projects">Projects</a>
                   </li>
                 </ul>
@@ -64,16 +64,16 @@ import { Icon } from "astro-icon/components";
             </DropdownItems>
           </Dropdown>
         </li>
-        <li class="text-blue hover:text-rosewater">
+        <li class="text-ctp-blue hover:text-ctp-rosewater">
           <a href="/fandom">Fandom</a>
         </li>
-        <li class="text-blue hover:text-rosewater">
+        <li class="text-ctp-blue hover:text-ctp-rosewater">
           <a href="/tech">Tech</a>
         </li>
         <li>
           <Dropdown class="group">
             <button
-              class="flex items-center text-blue hover:cursor-coffee_select hover:text-rosewater"
+              class="text-ctp-blue hover:cursor-coffee_select hover:text-ctp-rosewater flex items-center"
               arial-label="Other Menu"
             >
               <span class="pr-1"> Other </span>
@@ -93,16 +93,16 @@ import { Icon } from "astro-icon/components";
             </button>
             <DropdownItems class="relative">
               <div
-                class="absolute top-0 min-w-[250px] border border-overlay0 bg-mantle p-3 shadow-md shadow-crust"
+                class="border-overlay0 bg-ctp-mantle shadow-ctp-crust absolute top-0 min-w-[250px] border p-3 shadow-md"
               >
                 <ul>
-                  <li class="text-blue hover:text-rosewater">
+                  <li class="text-ctp-blue hover:text-ctp-rosewater">
                     <a href="/letter">Exchange Letter</a>
                   </li>
-                  <li class="text-blue hover:text-rosewater">
+                  <li class="text-ctp-blue hover:text-ctp-rosewater">
                     <a href="/ships">Owned Ships</a>
                   </li>
-                  <li class="text-blue hover:text-rosewater">
+                  <li class="text-ctp-blue hover:text-ctp-rosewater">
                     <a href="https://myanimelist.net/animelist/enigmalea"
                       ><Icon
                         name="simple-icons:myanimelist"
@@ -110,7 +110,7 @@ import { Icon } from "astro-icon/components";
                       /> Anime</a
                     >
                   </li>
-                  <li class="text-blue hover:text-rosewater">
+                  <li class="text-ctp-blue hover:text-ctp-rosewater">
                     <a href="https://myanimelist.net/mangalist/enigmalea"
                       ><Icon
                         name="simple-icons:myanimelist"
@@ -118,7 +118,7 @@ import { Icon } from "astro-icon/components";
                       /> Manga</a
                     >
                   </li>
-                  <li class="text-blue hover:text-rosewater">
+                  <li class="text-ctp-blue hover:text-ctp-rosewater">
                     <a href="/credits">Credits</a>
                   </li>
                 </ul>

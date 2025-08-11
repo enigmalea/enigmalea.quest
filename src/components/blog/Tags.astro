@@ -11,7 +11,7 @@ const tags = await getTagList();
       tags.map((tag) => (
         <a
           href={`/blog/tags/${tag.name}`}
-          class="rounded-md bg-surface0 p-2 no-underline hover:bg-surface2 hover:text-blue"
+          class="bg-ctp-surface0 hover:bg-ctp-surface2 hover:text-ctp-blue rounded-md p-2 no-underline"
         >
           {tag.name}
         </a>

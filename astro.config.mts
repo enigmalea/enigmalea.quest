@@ -1,4 +1,4 @@
-import catppuccin from "starlight-theme-catppuccin";
+import catppuccin from "@catppuccin/starlight";
 // @ts-check
 import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
@@ -12,52 +12,35 @@ import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightSidebarTopics from "starlight-sidebar-topics";
-import tailwind from "@astrojs/tailwind";
 import favicons from "astro-favicons";
+
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://enigmalea.quest",
   base: "/",
   trailingSlash: "never",
-  markdown: {
-    remarkPlugins: [remarkReadingTime],
-  },
+  markdown: { remarkPlugins: [remarkReadingTime] },
+
   integrations: [
-    tailwind(),
     sitemap(),
     expressiveCode({ plugins: [pluginLineNumbers()] }),
     icon(),
     favicons(),
     robotsTxt({
       policy: [
-        {
-          userAgent: "*",
-          disallow: ["/search", "/_astro/"],
-          crawlDelay: 5,
-        },
+        { userAgent: "*", disallow: ["/search", "/_astro/"], crawlDelay: 5 },
         {
           userAgent: "Googlebot",
           allow: "/",
           disallow: ["/_astro/"],
           crawlDelay: 5,
         },
-        {
-          userAgent: "CCBot",
-          disallow: "/",
-        },
-        {
-          userAgent: "GPTBot",
-          disallow: "/",
-        },
-        {
-          userAgent: "ChatGPT-User",
-          disallow: "/",
-        },
-        {
-          userAgent: "Slurp",
-          crawlDelay: 30,
-        },
+        { userAgent: "CCBot", disallow: "/" },
+        { userAgent: "GPTBot", disallow: "/" },
+        { userAgent: "ChatGPT-User", disallow: "/" },
+        { userAgent: "Slurp", crawlDelay: 30 },
       ],
     }),
     metaTags(),
@@ -69,10 +52,21 @@ export default defineConfig({
         dark: "./src/assets/img/dark-home.svg",
         replacesTitle: true,
       },
-      customCss: ["./src/assets/css/starlight.css"],
+      customCss: [
+        "@fontsource/atkinson-hyperlegible/400.css",
+        "@fontsource/monaspace-neon/400.css",
+        "@fontsource/unica-one/400.css",
+        "./src/styles/starlight.css",
+      ],
+      components: {
+        SocialIcons: "./src/components/starlight/SocialIcons.astro",
+      },
       plugins: [
         starlightImageZoom(),
-        catppuccin({ dark: "macchiato-blue", light: "latte-blue" }),
+        catppuccin({
+          dark: { flavor: "macchiato", accent: "blue" },
+          light: { flavor: "latte", accent: "blue" },
+        }),
         starlightSidebarTopics([
           {
             label: "Fandom",
@@ -121,12 +115,26 @@ export default defineConfig({
         themes: ["catppuccin-macchiato", "catppuccin-latte"],
         plugins: [pluginLineNumbers()],
       },
-      social: {
-        blueSky: "https://bsky.app/profile/enigmalea.quest",
-        mastodon: "https://easymode.im/@enigmalea",
-        github: "https://github.com/enigmalea",
-      },
+      social: [
+        {
+          icon: "blueSky",
+          label: "BlueSky",
+          href: "https://bsky.app/profile/enigmalea.quest",
+        },
+        {
+          icon: "mastodon",
+          label: "Mastodon",
+          href: "https://easymode.im/@enigmalea",
+        },
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/enigmalea",
+        },
+      ],
     }),
     mdx(),
   ],
+
+  vite: { plugins: [tailwindcss()] },
 });

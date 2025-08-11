@@ -9,14 +9,12 @@ information, organize your life, or just take notes.
 ## What I'm Using It For
 
 - Language Learning: Swedish
-
   - Obsidian allows you to spell check with multiple languages, which makes it
     ideal for language learning or for people who are multilingual and take
     notes in various languages. No longer will you be plagued by the dreaded red
     squiggle because your spellchecker is English when you're typing in Swedish.
 
 - Coding Notes
-
   - Obsidian uses markdown and handles codeblocks very easily.
 
 - Shared Notebook: Writing & Projects

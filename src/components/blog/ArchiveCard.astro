@@ -63,19 +63,19 @@ function formatTag(tag: string[]) {
 ---
 
 <div
-  class="prose mx-auto mb-5 w-[95vw] max-w-none rounded-3xl bg-crust p-4 min-[860px]:max-w-prose"
+  class="prose bg-ctp-crust mx-auto mb-5 w-[95vw] max-w-none rounded-3xl p-4 min-[860px]:max-w-prose"
 >
   {
     groups.map((group) => (
       <div>
-        <div class="flex h-[3.75rem] w-full flex-row items-center">
-          <div class="text-75 w-[15%] text-right text-2xl font-bold text-peach md:w-[10%]">
+        <div class="flex h-15 w-full flex-row items-center">
+          <div class="text-75 text-ctp-peach w-[15%] text-right text-2xl font-bold md:w-[10%]">
             {group.year}
           </div>
           <div class="w-[15%] md:w-[10%]">
-            <div class="outline-3 z-50 mx-auto h-3 w-3 rounded-full bg-none outline -outline-offset-[2px] outline-green" />
+            <div class="outline-green z-50 mx-auto h-3 w-3 rounded-full bg-none outline-3 -outline-offset-2" />
           </div>
-          <div class="text-50 w-[70%] text-left text-subtext1 md:w-[80%]">
+          <div class="text-50 text-ctp-subtext1 w-[70%] text-left md:w-[80%]">
             {group.posts.length === 1
               ? group.posts.length + " post"
               : group.posts.length + " posts"}
@@ -85,23 +85,23 @@ function formatTag(tag: string[]) {
           <a
             href={`/blog/posts/${post.id}`}
             aria-label={post.data.title}
-            class="group !block h-10 w-full rounded-lg text-text no-underline hover:bg-surface0 hover:text-text"
+            class="group text-ctp-text hover:bg-ctp-surface0 hover:text-ctp-text block! h-10 w-full rounded-lg no-underline"
           >
             <div class="flex h-full flex-row items-center justify-start">
               {/* date */}
-              <div class="w-[15%] text-right text-sm text-overlay0 sm:text-[1rem] md:w-[10%]">
+              <div class="text-overlay0 w-[15%] text-right text-sm sm:text-[1rem] md:w-[10%]">
                 {formatDate(post.data.published)}
               </div>
               {/* dot and line */}
               <div class="dash-line relative flex h-full w-[15%] items-center md:w-[10%]">
-                <div class="z-50 mx-auto h-1 w-1 rounded bg-text outline outline-4 outline-crust group-hover:h-5 group-hover:bg-green group-hover:outline-surface0 group-active:outline-surface0" />
+                <div class="bg-ctp-text outline-crust group-hover:bg-ctp-green group-hover:outline-surface0 group-active:outline-surface0 z-50 mx-auto h-1 w-1 rounded outline-4 group-hover:h-5" />
               </div>
               {/* post title */}
-              <div class="text-75 w-[70%] overflow-hidden overflow-ellipsis whitespace-nowrap pr-8 text-left font-bold group-hover:translate-x-1 group-hover:text-text md:w-[65%] md:max-w-[65%]">
+              <div class="text-75 group-hover:text-ctp-text w-[70%] overflow-hidden pr-8 text-left font-bold text-ellipsis whitespace-nowrap group-hover:translate-x-1 md:w-[65%] md:max-w-[65%]">
                 {post.data.title}
               </div>
               {/* tag list */}
-              <div class="text-30 hidden truncate whitespace-nowrap text-left text-sm text-overlay0 md:block md:w-[15%]">
+              <div class="text-30 text-overlay0 hidden truncate text-left text-sm whitespace-nowrap md:block md:w-[15%]">
                 {formatTag(post.data.tags)}
               </div>
             </div>
@@ -119,7 +119,7 @@ function formatTag(tag: string[]) {
     width: 10%;
     height: 100%;
     left: calc(50% - 1px);
-    border-left: 2px dashed theme(colors.surface0.DEFAULT);
+    border-left: 2px dashed var(--color-ctp-surface0);
     pointer-events: none;
     transition: all 0.3s;
     transform: translateY(-50%);

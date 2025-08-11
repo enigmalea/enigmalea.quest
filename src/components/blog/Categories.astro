@@ -11,11 +11,11 @@ const categories = await getCategoryList();
       <div>
         <a
           href={`/blog/categories/${cat.name}`}
-          class="no-underline hover:text-blue"
+          class="hover:text-ctp-blue no-underline"
         >
-          <div class="mb-1 flex h-10 w-full items-center gap-4 rounded-lg px-3 hover:bg-surface0">
+          <div class="hover:bg-ctp-surface0 mb-1 flex h-10 w-full items-center gap-4 rounded-lg px-3">
             <div class="w-full">{cat.name}</div>
-            <div class="flex h-8 w-8 justify-center rounded-md bg-blue text-center text-crust">
+            <div class="bg-ctp-blue text-ctp-crust flex h-8 w-8 justify-center rounded-md text-center">
               {String(cat.count)}
             </div>
           </div>

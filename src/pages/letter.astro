@@ -1,12 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout
   pageTitle="Exchange Letter"
   description="enigmalea's general 'Dear Creator' letter used for fandom exchanges."
 >
-  <h1>Dear Creator</h1>
+  <h1>
+    <Icon
+      name="openmoji:love-letter"
+      class="mr-3 inline align-bottom text-5xl"
+    />Dear Creator
+  </h1>
   <p>
     Thanks so much for taking some time to read my letter to get a better feel
     for things I like and don't like. This is my general info, but more
@@ -26,22 +32,22 @@ import Layout from "../layouts/Layout.astro";
     they're only there to help you get started if you're having trouble. I
     welcome anything not on my DNWs!
   </p>
-  <p class="bold text-center text-lavender">Happy creating!</p>
+  <p class="bold text-ctp-lavender text-center">Happy creating!</p>
   <p class="text-center">
     Jump to: <a
       href="#likes"
-      class="px-2 text-green no-underline hover:bg-green hover:text-base"
+      class="text-ctp-green hover:bg-ctp-green hover:text-ctp-base px-2 no-underline"
       >Likes</a
     > ☆ <a
       href="#dnw"
-      class="px-2 text-red no-underline hover:bg-red hover:text-base"
+      class="text-ctp-red hover:bg-ctp-red hover:text-ctp-base px-2 no-underline"
       >Do Not Wants</a
     >
   </p>
   <hr />
   <section>
     <a id="likes"></a>
-    <h2 class="text-green">Likes</h2>
+    <h2 class="text-ctp-green"><Icon name="lucide:check" class="mr-2 inline align-middle text-3xl"/>Likes</h2>
     <p>
       Below are a few tags I find myself looking for often, or things I'm
       interested in seeing. These are in no way exclusive or exhaustive. If it's
@@ -107,10 +113,10 @@ import Layout from "../layouts/Layout.astro";
   </section>
   <hr />
   <section
-    class="prose-headings:text-red prose-strong:text-red prose-em:text-maroon"
+    class="prose-headings:text-ctp-red prose-strong:text-ctp-red prose-em:text-ctp-maroon"
   >
     <a id="dnw"></a>
-    <h2>Do Not Wants</h2>
+    <h2><Icon name="lucide:x" class="mr-2 inline align-text-bottom text-3xl"/>Do Not Wants</h2>
     <h3>DNW to Receive Under Any Circumstances</h3>
     <p>
       <strong>General:</strong> Character/Reader (or Second Person), character bashing,
@@ -151,9 +157,9 @@ import Layout from "../layouts/Layout.astro";
     </p>
   </section>
   <section
-    class="prose-headings:text-peach prose-strong:text-peach prose-em:text-yellow"
+    class="prose-headings:text-ctp-peach prose-strong:text-ctp-peach prose-em:text-ctp-yellow"
   >
-    <h3>Conditional DNWs</h3>
+    <h3><Icon name="lucide:circle-minus" class="mr-2 inline align-middle text-xl"/>Conditional DNWs</h3>
     <p>
       <em>
         Please proceed cautiously with the below tropes/topics. In some
