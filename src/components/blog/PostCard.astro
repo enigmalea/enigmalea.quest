@@ -22,15 +22,15 @@ const { remarkPluginFrontmatter } = await render(post);
 ---
 
 <div
-  class="prose mx-auto mb-5 w-[95vw] max-w-none rounded-3xl bg-crust p-4 min-[860px]:max-w-prose"
+  class="prose bg-ctp-crust mx-auto mb-5 w-[95vw] max-w-none rounded-3xl p-4 min-[860px]:max-w-prose"
 >
   <a href={url} class="no-underline">
-    <h2 class="m-0 p-2 leading-none hover:text-rosewater hover:underline">
+    <h2 class="hover:text-ctp-rosewater !mt-2 !mb-6 leading-none hover:underline">
       {title}
     </h2>
   </a>
   <div class="flex flex-wrap items-center gap-4 gap-x-4 gap-y-2">
-    <div class="m-0 w-fit rounded bg-surface0 p-2 text-teal">
+    <div class="bg-ctp-surface0 text-ctp-teal m-0 w-fit rounded p-2">
       <Icon name="lucide:calendar" class="text-md" />
     </div>
     {
@@ -43,8 +43,8 @@ const { remarkPluginFrontmatter } = await render(post);
 
     {
       updated &&
-        (<div class="m-0 w-fit rounded bg-surface0 p-2">
-          <Icon name="lucide:calendar-clock" class="text-md text-sky" />
+        (<div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
+          <Icon name="lucide:calendar-clock" class="text-md text-ctp-sky" />
         </div>)(updated).toLocaleDateString("en-us", {
           year: "numeric",
           month: "short",
@@ -52,25 +52,25 @@ const { remarkPluginFrontmatter } = await render(post);
         })
     }
 
-    <div class="m-0 w-fit rounded bg-surface0 p-2">
-      <Icon name="lucide:book-marked" class="text-md text-mauve" />
+    <div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
+      <Icon name="lucide:book-marked" class="text-md text-ctp-mauve" />
     </div>
     <div class="flex flex-row flex-nowrap items-center">
       {
         category && category.length > 0 ? (
           category.map((cat, i) => (
-            <div class="!inline-flex items-center">
+            <div class="inline-flex! items-center">
               <div
                 class:list={[
                   { hidden: i == 0 },
-                  "mx-1.5 text-sm text-surface2",
+                  "text-ctp-surface2 mx-1.5 text-sm",
                 ]}
               >
                 /
               </div>
               <a
                 href={`/blog/categories/${cat}`}
-                class="whitespace-nowrap rounded-md p-1 no-underline hover:bg-surface0"
+                class="hover:bg-ctp-surface0 rounded-md p-1 whitespace-nowrap no-underline"
               >
                 {cat}
               </a>
@@ -82,25 +82,25 @@ const { remarkPluginFrontmatter } = await render(post);
       }
     </div>
 
-    <div class="mt-1 w-fit rounded bg-surface0 p-2">
-      <Icon name="lucide:hash" class="text-md text-flamingo" />
+    <div class="bg-ctp-surface0 mt-1 w-fit rounded p-2">
+      <Icon name="lucide:hash" class="text-md text-ctp-flamingo" />
     </div>
     <div class="flex flex-row flex-nowrap items-center">
       {
         tags && tags.length > 0
           ? tags.map((tag, i) => (
-              <div class="!inline-flex items-center">
+              <div class="inline-flex! items-center">
                 <div
                   class:list={[
                     { hidden: i == 0 },
-                    "mx-1.5 text-sm text-surface2",
+                    "text-ctp-surface2 mx-1.5 text-sm",
                   ]}
                 >
                   /
                 </div>
                 <a
                   href={`/blog/tags/${tag}`}
-                  class="whitespace-nowrap rounded-md p-1 no-underline hover:bg-surface0"
+                  class="hover:bg-ctp-surface0 rounded-md p-1 whitespace-nowrap no-underline"
                 >
                   {tag}
                 </a>
@@ -118,7 +118,7 @@ const { remarkPluginFrontmatter } = await render(post);
   </div>
 
   <div
-    class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-surface2"
+    class="text-ctp-surface2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm"
   >
     <div>
       {

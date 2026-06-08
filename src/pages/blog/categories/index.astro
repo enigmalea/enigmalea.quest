@@ -8,14 +8,14 @@ const categories = await getCategoryList();
 <BlogLayout pageTitle="All Categories">
   <h1>All Categories</h1>
   <div
-    class="prose mx-auto mb-5 w-[95vw] max-w-none rounded-3xl bg-crust p-4 min-[860px]:max-w-prose"
+    class="prose bg-ctp-crust mx-auto mb-5 w-[95vw] max-w-none rounded-3xl p-4 min-[860px]:max-w-prose"
   >
     <div>
-      <div class="flex h-[3.75rem] w-full flex-row items-center p-3 text-xl">
-        <div class="w-1/2 text-center font-mono uppercase text-peach">
+      <div class="flex h-15 w-full flex-row items-center p-3 text-xl">
+        <div class="text-ctp-peach w-1/2 text-center font-mono uppercase">
           Category
         </div>
-        <div class="w-1/2 text-center font-mono uppercase text-peach">
+        <div class="text-ctp-peach w-1/2 text-center font-mono uppercase">
           Post Count
         </div>
       </div>
@@ -23,10 +23,10 @@ const categories = await getCategoryList();
     {
       categories.map((cat) => (
         <div>
-          <div class="flex h-[3.75rem] w-full flex-row items-center p-3 text-xl">
+          <div class="flex h-15 w-full flex-row items-center p-3 text-xl">
             <a
               href={`/blog/categories/${cat.name}`}
-              class="group flex h-10 w-full items-center gap-4 rounded-lg px-3 no-underline hover:bg-surface0"
+              class="group hover:bg-ctp-surface0 flex h-10 w-full items-center gap-4 rounded-lg px-3 no-underline"
             >
               <div class="w-1/2 truncate text-center">{cat.name}</div>
               <div class="flex w-1/2 justify-center">{String(cat.count)}</div>

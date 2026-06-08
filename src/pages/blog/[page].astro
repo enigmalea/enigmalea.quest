@@ -25,13 +25,13 @@ const { page } = Astro.props;
       page.url.first ? (
         <a
           href={page.url.first}
-          class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+          class="bg-ctp-surface0 hover:bg-ctp-surface2 rounded-lg p-3"
           aria-label="First Entry"
         >
           <Icon name="lucide:chevrons-left" class="text-2xl" />
         </a>
       ) : (
-        <div class="rounded-lg bg-surface0 p-3 text-surface2 hover:text-surface2">
+        <div class="bg-ctp-surface0 text-ctp-surface2 hover:text-ctp-surface2 rounded-lg p-3">
           <Icon name="lucide:chevrons-left" class="text-2xl" />
         </div>
       )
@@ -40,19 +40,19 @@ const { page } = Astro.props;
       page.url.prev ? (
         <a
           href={page.url.prev}
-          class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+          class="bg-ctp-surface0 hover:bg-ctp-surface2 rounded-lg p-3"
           aria-label="Previous Entry"
         >
           <Icon name="lucide:chevron-left" class="text-2xl" />
         </a>
       ) : (
-        <div class="rounded-lg bg-surface0 p-3 text-surface2 hover:text-surface2">
+        <div class="bg-ctp-surface0 text-ctp-surface2 hover:text-ctp-surface2 rounded-lg p-3">
           <Icon name="lucide:chevron-left" class="text-2xl" />
         </div>
       )
     }
     <div
-      class="flex h-11 w-11 items-center justify-center rounded-lg bg-blue text-2xl text-base font-bold"
+      class="bg-ctp-blue text-ctp-base flex h-11 w-11 items-center justify-center rounded-lg text-2xl font-bold"
     >
       {page.currentPage}
     </div>
@@ -60,13 +60,13 @@ const { page } = Astro.props;
       page.url.next ? (
         <a
           href={page.url.next}
-          class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+          class="bg-ctp-surface0 hover:bg-ctp-surface2 rounded-lg p-3"
           aria-label="Next Entry"
         >
           <Icon name="lucide:chevron-right" class="text-2xl" />
         </a>
       ) : (
-        <div class="rounded-lg bg-surface0 p-3 text-surface2 hover:text-surface2">
+        <div class="bg-ctp-surface0 text-ctp-surface2 hover:text-ctp-surface2 rounded-lg p-3">
           <Icon name="lucide:chevron-right" class="text-2xl" />
         </div>
       )
@@ -75,13 +75,13 @@ const { page } = Astro.props;
       page.url.last ? (
         <a
           href={page.url.last}
-          class="rounded-lg bg-surface0 p-3 hover:bg-surface2"
+          class="bg-ctp-surface0 hover:bg-ctp-surface2 rounded-lg p-3"
           aria-label="Last Entry"
         >
           <Icon name="lucide:chevrons-right" class="text-2xl" />
         </a>
       ) : (
-        <div class="rounded-lg bg-surface0 p-3 text-surface2 hover:text-surface2">
+        <div class="bg-ctp-surface0 text-ctp-surface2 hover:text-ctp-surface2 rounded-lg p-3">
           <Icon name="lucide:chevrons-right" class="text-2xl" />
         </div>
       )

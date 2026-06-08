@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import "@fontsource/unica-one";
 import "@fontsource/atkinson-hyperlegible";
 import "@fontsource/monaspace-neon";
@@ -72,7 +73,7 @@ const { pageTitle, description } = Astro.props;
     <title>{pageTitle ? `${pageTitle} ★ enigmalea` : "enigmalea"}</title>
   </head>
   <body
-    class="dark:macchiato cursor-coffee bg-base prose-a:cursor-coffee prose-a:hover:cursor-coffee_select"
+    class="cursor-coffee bg-ctp-base prose-a:cursor-coffee prose-a:hover:cursor-coffee_select"
   >
     <BlogNavbar />
     <Header />
@@ -83,7 +84,7 @@ const { pageTitle, description } = Astro.props;
       >
         <Sidebar />
         <main
-          class="!min-[860px]:order-last order-first mx-auto px-3 pb-14 prose-headings:font-mono min-[860px]:place-self-start"
+          class="!min-[860px]:order-last prose-headings:font-mono order-first mx-auto px-3 pb-14 min-[860px]:place-self-start"
         >
           <slot />
         </main>
@@ -102,11 +103,12 @@ const { pageTitle, description } = Astro.props;
   }
 
   a:any-link {
-    cursor: url("/images/coffee.cur"), url("/images/coffee.png"), auto !important;
+    cursor:
+      url("/images/coffee.cur"), url("/images/coffee.png"), auto !important;
   }
 
   a:hover {
-    cursor: url("/images/coffee_select.cur"), url("/images/coffee_select.png"),
-      auto !important;
+    cursor:
+      url("/images/coffee_select.cur"), url("/images/coffee_select.png"), auto !important;
   }
 </style>

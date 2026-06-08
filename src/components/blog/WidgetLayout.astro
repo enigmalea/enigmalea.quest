@@ -5,9 +5,9 @@ interface Props {
 const { name } = Astro.props;
 ---
 
-<widget-layout class="prose max-w-none rounded-2xl bg-crust pb-4">
+<widget-layout class="prose bg-ctp-crust max-w-none rounded-2xl pb-4">
   <div
-    class="relative mb-2 ml-8 mt-4 font-mono text-2xl font-bold text-peach before:absolute before:left-[-16px] before:top-[5.5px] before:h-4 before:w-1 before:rounded-md before:bg-green"
+    class="text-ctp-peach before:bg-ctp-green relative !mt-4 !mb-2 ml-8 font-mono text-2xl font-bold before:absolute before:top-[5.5px] before:left-[-16px] before:h-4 before:w-1 before:rounded-md"
   >
     {name}
   </div>

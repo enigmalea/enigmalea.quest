@@ -8,7 +8,6 @@ enough to require their own page. For more complex projects/efforts, they've
 received their own dedicated pages in the sidebar.
 
 - [Dragon Age Art Refs](http://bit.ly/artrefs)
-
   - Currently hosted on Google Drive (until I can find a better option), this is
     a collection of screenshots from all three games organized by character or
     location. I add to it every playthrough I complete. Artists are welcome to

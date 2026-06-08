@@ -13,11 +13,9 @@ primary language.
 ### Themes I'm Using
 
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin)
-
   - **Used For:** Main Vault & Shared Writing Vault
 
 - [Blue Topaz](https://forum.obsidian.md/t/theme-blue-topaz-v5-5-updated-20211218-for-v0-13-12-and-mobile-v1-0-5/6425)
-
   - **Used For:** Shared Projects
   - **Best With:**
     [Style Settings Extension](https://github.com/mgmeyers/obsidian-style-settings)

@@ -2,29 +2,11 @@
 import Socials from "../components/Socials.astro";
 ---
 
-<header class="mx-auto w-[95vw] bg-base md:max-w-[800px]">
+<header class="bg-ctp-base mx-auto w-[95vw] md:max-w-[800px]">
   <div
-    class="title mx-auto mb-[-20px] w-fit font-title text-[16vw] sm:text-[7rem]"
+    class="title font-title mx-auto mb-[-20px] w-fit text-[16vw] sm:text-[7rem]"
   >
     enigmalea
   </div>
   <Socials />
 </header>
-
-<style>
-  .title {
-    background: theme(colors.red.DEFAULT);
-    background: linear-gradient(
-      to right,
-      theme(colors.red.DEFAULT) 0%,
-      theme(colors.peach.DEFAULT) 17%,
-      theme(colors.yellow.DEFAULT) 34%,
-      theme(colors.green.DEFAULT) 51%,
-      theme(colors.blue.DEFAULT) 68%,
-      theme(colors.lavender.DEFAULT) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-</style>

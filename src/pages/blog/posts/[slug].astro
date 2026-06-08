@@ -19,13 +19,13 @@ const { Content, remarkPluginFrontmatter } = await render(post);
 <BlogLayout pageTitle={post.data.title} description={post.data.description}>
   <h1>Blog</h1>
   <div
-    class="prose mx-auto mb-5 w-[95vw] max-w-none rounded-3xl bg-crust p-4 min-[860px]:max-w-prose"
+    class="prose bg-ctp-crust mx-auto mb-5 w-[95vw] max-w-none rounded-3xl p-4 min-[860px]:max-w-prose"
   >
-    <div class="border-b-2 border-dashed border-base">
+    <div class="border-base border-b-2 border-dashed">
       <div
-        class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-subtext0"
+        class="text-ctp-subtext0 mb-4 flex flex-wrap items-center gap-x-3 gap-y-2"
       >
-        <div class="m-0 w-fit rounded bg-surface0 p-2">
+        <div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
           <Icon name="lucide:align-left" />
         </div>
         {
@@ -33,7 +33,7 @@ const { Content, remarkPluginFrontmatter } = await render(post);
             ? remarkPluginFrontmatter.words + " word"
             : remarkPluginFrontmatter.words + " words"
         }
-        <div class="m-0 w-fit rounded bg-surface0 p-2">
+        <div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
           <Icon name="lucide:clock-3" />
         </div>
         {
@@ -43,10 +43,10 @@ const { Content, remarkPluginFrontmatter } = await render(post);
         }
       </div>
 
-      <h1 class="mb-4 mt-0">{post.data.title}</h1>
+      <h1 class="mt-0 mb-4">{post.data.title}</h1>
 
       <div class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
-        <div class="m-0 w-fit rounded bg-surface0 p-2 text-teal">
+        <div class="bg-ctp-surface0 text-ctp-teal m-0 w-fit rounded p-2">
           <Icon name="lucide:calendar" class="text-lg" />
         </div>
         {
@@ -59,8 +59,8 @@ const { Content, remarkPluginFrontmatter } = await render(post);
 
         {
           post.data.updated &&
-            (<div class="m-0 w-fit rounded bg-surface0 p-2">
-              <Icon name="lucide:calendar-clock" class="text-lg text-sky" />
+            (<div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
+              <Icon name="lucide:calendar-clock" class="text-ctp-sky text-lg" />
             </div>)(post.data.updated).toLocaleDateString("en-us", {
               year: "numeric",
               month: "short",
@@ -68,25 +68,25 @@ const { Content, remarkPluginFrontmatter } = await render(post);
             })
         }
 
-        <div class="m-0 w-fit rounded bg-surface0 p-2">
-          <Icon name="lucide:book-marked" class="text-lg text-mauve" />
+        <div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
+          <Icon name="lucide:book-marked" class="text-ctp-mauve text-lg" />
         </div>
         <div class="flex flex-row flex-nowrap items-center">
           {
             post.data.category && post.data.category.length > 0 ? (
               post.data.category.map((cat, i) => (
-                <div class="!inline-flex items-center">
+                <div class="inline-flex! items-center">
                   <div
                     class:list={[
                       { hidden: i == 0 },
-                      "mx-1.5 text-sm text-surface2",
+                      "text-ctp-surface2 mx-1.5 text-sm",
                     ]}
                   >
                     /
                   </div>
                   <a
                     href={`/blog/categories/${cat}`}
-                    class="whitespace-nowrap rounded-md p-1 no-underline hover:bg-surface0"
+                    class="hover:bg-ctp-surface0 rounded-md p-1 whitespace-nowrap no-underline"
                   >
                     {cat}
                   </a>
@@ -98,25 +98,25 @@ const { Content, remarkPluginFrontmatter } = await render(post);
           }
         </div>
 
-        <div class="mt-1 w-fit rounded bg-surface0 p-2">
-          <Icon name="lucide:hash" class="text-lg text-flamingo" />
+        <div class="bg-ctp-surface0 mt-1 w-fit rounded p-2">
+          <Icon name="lucide:hash" class="text-ctp-flamingo text-lg" />
         </div>
         <div class="flex flex-row flex-nowrap items-center">
           {
             post.data.tags && post.data.tags.length > 0
               ? post.data.tags.map((tag, i) => (
-                  <div class="!inline-flex items-center">
+                  <div class="inline-flex! items-center">
                     <div
                       class:list={[
                         { hidden: i == 0 },
-                        "mx-1.5 text-sm text-surface2",
+                        "text-ctp-surface2 mx-1.5 text-sm",
                       ]}
                     >
                       /
                     </div>
                     <a
                       href={`/blog/tags/${tag}`}
-                      class="whitespace-nowrap rounded-md p-1 no-underline hover:bg-surface0"
+                      class="hover:bg-ctp-surface0 rounded-md p-1 whitespace-nowrap no-underline"
                     >
                       {tag}
                     </a>

@@ -4,17 +4,16 @@ import BackToTop from "../components/BackToTop.astro";
 ---
 
 <footer
-  class="fixed bottom-0 left-0 right-0 z-50 mx-auto w-[95vw] border-t border-overlay0 bg-base px-4 py-2 text-center text-text shadow-footer md:max-w-[800px]"
+  class="border-overlay0 bg-ctp-base text-ctp-text shadow-footer fixed right-0 bottom-0 left-0 z-50 mx-auto w-[95vw] border-t px-4 py-2 text-center md:max-w-[800px]"
 >
   Copyright &copy; {new Date().getFullYear()} enigmalea. <a
     href="/credits"
-    class="text-blue hover:text-rosewater">Made</a
-  > with <Icon name="lucide:heart" class="mt-[-2px] inline text-pink" /> using <a
-    href="https://astro.build"
-    aria-label="Astro"
+    class="text-ctp-blue hover:text-ctp-rosewater">Made</a
+  > with <Icon name="lucide:heart" class="text-ctp-pink mt-[-2px] inline" /> using
+  <a href="https://astro.build" aria-label="Astro"
     ><Icon
       name="simple-icons:astro"
-      class="mt-[-2px] inline text-lavender"
+      class="text-ctp-lavender mt-[-2px] inline"
     /></a
   >
 

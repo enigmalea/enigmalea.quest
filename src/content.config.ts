@@ -9,10 +9,10 @@ const badges = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/badges/" }),
   schema: ({ image }) =>
     z.object({
-			order: z.number(),
+      order: z.number(),
       image: image(),
-			link: z.string().optional(),
-			alt: z.string(),
+      link: z.string().optional(),
+      alt: z.string(),
     }),
 });
 
@@ -20,10 +20,10 @@ const banners = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/banners/" }),
   schema: ({ image }) =>
     z.object({
-			order: z.number(),
+      order: z.number(),
       image: image(),
-			link: z.string().optional(),
-			alt: z.string(),
+      link: z.string().optional(),
+      alt: z.string(),
     }),
 });
 
@@ -72,8 +72,8 @@ const ships = defineCollection({
 });
 
 export const collections = {
-	badges,
-	banners,
+  badges,
+  banners,
   docs,
   posts,
   projects,
