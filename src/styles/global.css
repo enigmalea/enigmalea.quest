@@ -3,6 +3,8 @@
 @plugin "@tailwindcss/typography";
 @config "../../tailwind.config.js";
 
+@custom-media --motionSafe (prefers-reduced-motion: no-preference);
+
 @theme inline {
   --font-title: "Unica One";
   --font-sans: "Atkinson Hyperlegible";

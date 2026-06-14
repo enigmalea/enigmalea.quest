@@ -1,40 +1,280 @@
-@layer base, starlight, theme, components, utilities;
+@layer preflight, starlight, theme, nova, utility;
 
+@import "@fontsource/atkinson-hyperlegible/latin-400.css";
+@import "@fontsource/monaspace-neon/latin-400.css";
+@import "@fontsource/unica-one/latin-400.css";
+@import "@catppuccin/tailwindcss/macchiato.css";
 @import "@astrojs/starlight-tailwind";
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
+@import "starlight-theme-nova/tailwind.css";
+
+@import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
 @config "../../tailwind.config.js";
 
-@theme inline {
-  --font-title: "Unica One";
-  --font-sans: "Atkinson Hyperlegible";
-  --font-mono: "Monaspace Neon";
+@theme {
+  --font-sans: "Atkinson Hyperlegible", sans-serif;
+  --font-mono: "Monaspace Neon", monospace;
+  --font-title: "Unica One", sans-serif;
+
+  /* --- Dark palette (macchiato) --- */
+  --color-macchiato-rosewater: #f4dbd6;
+  --color-macchiato-flamingo: #f0c6c6;
+  --color-macchiato-pink: #f5bde6;
+  --color-macchiato-mauve: #c6a0f6;
+  --color-macchiato-red: #ed8796;
+  --color-macchiato-maroon: #ee99a0;
+  --color-macchiato-peach: #f5a97f;
+  --color-macchiato-yellow: #eed49f;
+  --color-macchiato-green: #a6da95;
+  --color-macchiato-teal: #8bd5ca;
+  --color-macchiato-sky: #91d7e3;
+  --color-macchiato-sapphire: #7dc4e4;
+  --color-macchiato-blue: #8aadf4;
+  --color-macchiato-lavender: #b7bdf8;
+  --color-macchiato-text: #cad3f5;
+  --color-macchiato-subtext1: #cad3f5;
+  --color-macchiato-subtext0: #a5adcb;
+  --color-macchiato-overlay2: #939ab7;
+  --color-macchiato-overlay1: #8087a2;
+  --color-macchiato-overlay0: #6e738d;
+  --color-macchiato-surface2: #5b6078;
+  --color-macchiato-surface1: #494d64;
+  --color-macchiato-surface0: #363a4f;
+  --color-macchiato-base: #24273a;
+  --color-macchiato-mantle: #1e2030;
+  --color-macchiato-crust: #181926;
   --box-shadow-footer: "0 -10px 12px rgba(24,25,38,0.5)";
-  --cursor-coffee: "url('/images/coffee.cur'), url('/images/coffee.png'), auto";
+  --cursor-macchiato: "url('/images/macchiato.cur'), url('/images/macchiato.png'), auto";
   --cursor-coffee_select: "url('/images/coffee_select.cur'), url('/images/coffee_select.png'), auto";
 }
 
+/* ============================================================
+STARLIGHT TOKEN OVERRIDES — LIGHT (Latte)
+============================================================ */
 :root[data-theme="light"] {
-  --sl-color-teal: #179299;
-  --sl-color-yellow: #df8e1d;
-  --starlight-image-zoom-backdrop-bg: rgba(220, 224, 232, 0.75);
+  --font-sans: "Lexend Variable", sans-serif;
+  --font-mono: "Monaspace Krypton", monospace;
+  --font-serif: "Patrick Hand SC", sans-serif;
+  --sl-font: var(--font-sans);
+
+  --sl-color-bg: var(--color-ctp-base);
+  --sl-color-bg-nav: var(--color-ctp-mantle);
+  --sl-color-bg-sidebar: var(--color-ctp-mantle);
+  --sl-color-black: var(--color-ctp-mantle);
+  --sl-color-white: var(--color-ctp-text);
+  --sl-color-text: var(--color-ctp-text);
+  --sl-color-text-accent: var(--color-ctp-blue);
+  --sl-color-accent: var(--color-ctp-blue);
+  --sl-color-accent-high: var(--color-ctp-rosewater);
+  --sl-color-hairline: var(--color-ctp-mantle);
+  --sl-color-gray-1: var(--color-ctp-crust);
+  --sl-color-gray-2: var(--color-ctp-mantle);
+  --sl-color-gray-3: var(--color-ctp-mantle);
+  --sl-color-gray-4: var(--color-ctp-subtext1);
+  --sl-color-gray-5: var(--color-ctp-subtext-2);
+  --sl-color-gray-6: var(--color-ctp-text);
 }
 
+/* ============================================================
+STARLIGHT TOKEN OVERRIDES — DARK (macchiato)
+============================================================ */
 :root[data-theme="dark"] {
-  --sl-color-teal: #8bd5ca;
-  --sl-color-yellow: #eed49f;
-  --starlight-image-zoom-backdrop-bg: rgba(24, 25, 38, 0.75);
+  --font-sans: "Lexend Variable", sans-serif;
+  --font-mono: "Monaspace Krypton", monospace;
+  --font-serif: "Patrick Hand SC", sans-serif;
+  --sl-font: var(--font-sans);
+
+  --sl-color-bg: var(--color-macchiato-base);
+  --sl-color-bg-nav: var(--color-macchiato-crust);
+  --sl-color-bg-sidebar: var(--color-macchiato-mantle);
+  --sl-color-black: var(--color-macchiato-crust);
+  --sl-color-white: var(--color-macchiato-text);
+  --sl-color-text: var(--color-macchiato-text);
+  --sl-color-text-accent: var(--color-macchiato-blue);
+  --sl-color-accent: var(--color-macchiato-blue);
+  --sl-color-accent-high: var(--color-macchiato-rosewater);
+  --sl-color-hairline: var(--color-macchiato-crust);
+  --sl-color-gray-1: var(--color-macchiato-crust);
+  --sl-color-gray-2: var(--color-macchiato-mantle);
+  --sl-color-gray-3: var(--color-macchiato-overlay-0);
+  --sl-color-gray-4: var(--color-macchiato-subtext0);
+  --sl-color-gray-5: var(--color-macchiato-subtext1);
+  --sl-color-gray-6: var(--color-macchiato-text);
 }
+
+/* ============================================================
+NOVA / STARLIGHT STRUCTURAL OVERRIDES
+============================================================ */
 
 body {
-  font-family: "Atkinson Hyperlegible", sans-serif;
   cursor: url("/images/coffee.cur"), url("/images/coffee.png"), auto !important;
+}
+
+/* Strip borders from panels and sidebar — same as old theme */
+.content-panel,
+.sidebar-pane,
+details > ul > li,
+site-search button,
+.right-sidebar {
+  @apply border-0!;
+}
+
+.right-sidebar {
+  @apply border-s-0!;
+}
+
+#starlight__sidebar,
+header {
+  @apply border-0!;
+}
+
+/* Header */
+header {
+  @apply bg-transparent! backdrop-blur-3xl;
+}
+
+/* Sidebar */
+.sidebar {
+  @apply bg-ctp-mantle dark:bg-macchiato-mantle;
+}
+
+/* Content panel bottom padding */
+.content-panel {
+  @apply pb-0!;
+}
+
+/* ============================================================
+HEADER CHROME — icons, search, theme toggle
+============================================================ */
+header,
+site-search,
+site-search svg,
+site-search span,
+astro-theme-toggle,
+astro-theme-toggle svg,
+summary,
+summary svg {
+  @apply text-ctp-text dark:text-macchiato-text;
+}
+
+kbd {
+  @apply text-macchiato-text! dark:text-ctp-text!;
+}
+
+/* ============================================================
+TYPOGRAPHY
+============================================================ */
+
+/* Body copy */
+p,
+ul,
+ol,
+li {
+  @apply font-sans text-lg;
+}
+
+/* Headings — Patrick Hand SC, flat color */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply border-0! font-mono;
+}
+
+h1 {
+  @apply text-ctp-red text-macchiato-red;
+}
+h2 {
+  @apply text-ctp-peach text-macchiato-peach;
+}
+h3 {
+  @apply text-ctp-yellow text-macchiato-yellow;
+}
+h4 {
+  @apply text-ctp-green text-macchiato-green;
+}
+h5 {
+  @apply text-ctp-blue text-macchiato-blue;
+}
+h6 {
+  @apply text-ctp-lavender text-macchiato-lavender;
+}
+
+/* Bold / strong */
+b,
+strong {
+  @apply text-ctp-rosewater dark:text-macchiato-rosewater font-mono! text-base font-normal;
+}
+
+em,
+i {
+  @apply dark:text-macchiato-teal text-ctp-teal;
+}
+
+/* ============================================================
+LINKS
+============================================================ */
+a {
+  @apply text-ctp-blue hover:text-ctp-rosewater dark:text-macchiato-blue dark:hover:text-macchiato-rosewater no-underline hover:underline hover:decoration-dashed hover:underline-offset-8;
+}
+/* Active nav item */
+a[aria-current*="page"] {
+  @apply text-macchiato-base! bg-ctp-rosewater! dark:bg-macchiato-rosewater! dark:text-ctp-base! font-bold hover:no-underline!;
+}
+
+/* ============================================================
+SIDEBAR NAVIGATION
+============================================================ */
+
+/* Top-level section labels */
+.sidebar-content ul li a.large span {
+  @apply font-serif! text-2xl/tight font-normal;
+}
+/* Nav links */
+starlight-toc nav ul li a,
+.sidebar-content ul li a {
+  @apply text-ctp-text/75 hover:text-macchiato-base hover:bg-ctp-rosewater dark:text-macchiato-text/75 dark:hover:text-ctp-base dark:hover:bg-macchiato-rosewater font-mono no-underline;
+}
+
+starlight-toc nav ul li a {
+  @apply text-sm/tight!;
+}
+
+/* Nested nav link size */
+details > ul > li a {
+  @apply text-lg/tight;
+}
+
+.group-label span {
+  @apply text-ctp-subtext1 dark:text-macchiato-subtext1 font-serif! text-2xl/tight font-normal;
+}
+
+/* TOC heading */
+starlight-toc nav h2 {
+  @apply text-xl;
+}
+
+/* ============================================================
+CONTENT PANEL — list styling
+Keeps the ✦ marker from the old theme
+============================================================ */
+.content-panel ul li {
+  @apply dark:text-macchiato-subtext1 text-ctp-subtext1 list-none;
+}
+
+.content-panel ul li::marker {
+  @apply text-ctp-yellow dark:text-macchiato-yellow font-mono! text-base font-normal;
+  content: "★";
 }
 
 a:any-link {
-  cursor: url("/images/coffee.cur"), url("/images/coffee.png"), auto !important;
+  cursor:
+    url("/images/macchiato.cur"), url("/images/macchiato.png"), auto !important;
 }
 
 a:hover,
@@ -42,77 +282,6 @@ summary,
 select,
 option,
 button {
-  cursor: url("/images/coffee_select.cur"), url("/images/coffee_select.png"),
-    auto !important;
-}
-
-.content-panel {
-	border: none !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-code,
-pre {
-  font-family: var(--font-mono);
-}
-
-h1 {
-  color: var(--sl-color-red) !important;
-}
-
-h2 {
-  color: var(--sl-color-orange) !important;
-}
-
-h3 {
-  color: var(--sl-color-yellow) !important;
-}
-
-h4 {
-  color: var(--sl-color-green) !important;
-}
-
-strong,
-b {
-  color: var(--sl-color-green) !important;
-}
-
-em,
-i {
-  color: var(--sl-color-teal) !important;
-}
-
-a.site-title img {
-  width: 20px;
-}
-
-[class*="markdown-content"] ul {
-  list-style-type: none;
-}
-
-[class*="markdown-content"] ul li::before {
-  content: "★";
-  padding-right: 0.3rem;
-  color: var(--sl-color-yellow);
-}
-
-[class*="markdown-content"] ul li p {
-  display: inline;
-}
-
-main a:any-link {
-  color: var(--sl-color-blue);
-  text-decoration: underline wavy;
-  text-underline-offset: 0.3em;
-  font-weight: normal;
-}
-
-main a:hover {
-  color: var(--sl-color-rosewater);
-  text-decoration: none;
+  cursor:
+    url("/images/coffee_select.cur"), url("/images/coffee_select.png"), auto !important;
 }

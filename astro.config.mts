@@ -1,7 +1,6 @@
-import catppuccin from "@catppuccin/starlight";
-// @ts-check
 import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
+import favicons from "astro-favicons";
 import icon from "astro-icon";
 import mdx from "@astrojs/mdx";
 import metaTags from "astro-meta-tags";
@@ -12,11 +11,9 @@ import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightSidebarTopics from "starlight-sidebar-topics";
-import favicons from "astro-favicons";
-
+import starlightThemeNova from "starlight-theme-nova";
 import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://enigmalea.quest",
   base: "/",
@@ -62,11 +59,8 @@ export default defineConfig({
         SocialIcons: "./src/components/starlight/SocialIcons.astro",
       },
       plugins: [
+        starlightThemeNova(),
         starlightImageZoom(),
-        catppuccin({
-          dark: { flavor: "macchiato", accent: "blue" },
-          light: { flavor: "latte", accent: "blue" },
-        }),
         starlightSidebarTopics([
           {
             label: "Fandom",
@@ -79,13 +73,15 @@ export default defineConfig({
                 items: [
                   {
                     label: "AO3",
-                    autogenerate: { directory: "/fandom/general/ao3" },
+                    items: [
+                      { autogenerate: { directory: "/fandom/general/ao3" } },
+                    ],
                   },
                 ],
               },
               {
                 label: "Dragon Age",
-                autogenerate: { directory: "/fandom/dragonage/" },
+                items: [{ autogenerate: { directory: "/fandom/dragonage/" } }],
               },
             ],
           },
@@ -97,15 +93,15 @@ export default defineConfig({
             items: [
               {
                 label: "Tutorials",
-                autogenerate: { directory: "/tech/tutorials/" },
+                items: [{ autogenerate: { directory: "/tech/tutorials/" } }],
               },
               {
                 label: "Open Source",
-                autogenerate: { directory: "/tech/opensource/" },
+                items: [{ autogenerate: { directory: "/tech/opensource/" } }],
               },
               {
                 label: "Obsidian",
-                autogenerate: { directory: "/tech/obsidian/" },
+                items: [{ autogenerate: { directory: "/tech/obsidian/" } }],
               },
             ],
           },

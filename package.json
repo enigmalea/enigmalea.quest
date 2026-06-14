@@ -13,7 +13,6 @@
     "@astrojs/sitemap": "^3.7.3",
     "@astrojs/starlight": "^0.40.0",
     "@astrojs/starlight-tailwind": "^5.0.0",
-    "@catppuccin/starlight": "^2.0.1",
     "@expressive-code/plugin-line-numbers": "^0.43.1",
     "@fontsource/atkinson-hyperlegible": "^5.2.8",
     "@fontsource/monaspace-neon": "^5.2.5",
@@ -31,6 +30,7 @@
     "reading-time": "^1.5.0",
     "starlight-image-zoom": "^0.14.2",
     "starlight-sidebar-topics": "^0.8.0",
+    "starlight-theme-nova": "^0.11.11",
     "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
