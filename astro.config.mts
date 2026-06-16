@@ -69,15 +69,8 @@ export default defineConfig({
             icon: "heart",
             items: [
               {
-                label: "General",
-                items: [
-                  {
-                    label: "AO3",
-                    items: [
-                      { autogenerate: { directory: "/fandom/general/ao3" } },
-                    ],
-                  },
-                ],
+                label: "Ao3",
+                items: [{ autogenerate: { directory: "/fandom/ao3/" } }],
               },
               {
                 label: "Dragon Age",
