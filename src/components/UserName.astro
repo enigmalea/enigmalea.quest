@@ -4,14 +4,21 @@ import { Icon } from "astro-icon/components";
 
 interface Props {
   url: string;
+  class?: string;
+  iconClass?: string;
 }
 const { url } = Astro.props;
 const social = transformSocial({ url });
+const { url, class: className, iconClass } = Astro.props;
 
 const icon = social.icon ?? "pixelarticons:home-sharp";
 ---
 
-<a href={social.url} title={social.username ?? social.platform}>
-  <Icon name={icon} />
+<Icon name={icon} class={iconClass} />
+<a
+  href={social.url}
+  title={social.username ?? social.platform}
+  class:list={[className]}
+>
+  {social.username ?? social.platform}
 </a>
-<span>{social.username ?? social.platform}</span>

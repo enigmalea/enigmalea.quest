@@ -1,18 +1,15 @@
 ---
-import { transformSocial } from "@fujocoded/zod-transform-socials";
-import { Icon } from "astro-icon/components";
-
-interface Props {
+import { Icon } from 'astro-icon/components';
+import { transformSocial } from '@fujocoded/zod-transform-socials/zod4';
+interface Props { 
   url: string;
+  class?: string;
+  iconClass?: string;
 }
-const { url, class:className } = Astro.props;
+const { url,  class: className, iconClass } = Astro.props;
 const social = transformSocial({ url });
-
 const icon = social.icon ?? "pixelarticons:home-sharp";
-
-const iconClasses = [className];
 ---
-
-<a href={social.url} title={social.username ?? social.platform} class:list={iconClasses}>
-  <Icon name={icon} />
+<a href={social.url} title={social.username ?? social.platform} class:list={[className]}>
+  <Icon name={icon} class:list={[iconClass]} />
 </a>
