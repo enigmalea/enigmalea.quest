@@ -18,6 +18,7 @@
     "@fontsource/monaspace-neon": "^5.2.5",
     "@fontsource/unica-one": "^5.2.8",
     "@fujocoded/zod-transform-socials": "^0.1.0",
+    "@iconify-json/pixelarticons": "^1.2.6",
     "@tailwindcss/vite": "^4.3.1",
     "astro": "^6.4.6",
     "astro-expressive-code": "^0.43.1",
@@ -36,7 +37,6 @@
   "devDependencies": {
     "@catppuccin/tailwindcss": "^1.0.0",
     "@eslint/js": "^10.0.1",
-    "@iconify-json/lucide": "^1.2.112",
     "@iconify-json/openmoji": "^1.2.27",
     "@iconify-json/simple-icons": "^1.2.86",
     "@tailwindcss/typography": "^0.5.20",

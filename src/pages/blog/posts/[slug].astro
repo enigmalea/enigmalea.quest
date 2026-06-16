@@ -26,7 +26,7 @@ const { Content, remarkPluginFrontmatter } = await render(post);
         class="text-ctp-subtext0 mb-4 flex flex-wrap items-center gap-x-3 gap-y-2"
       >
         <div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
-          <Icon name="lucide:align-left" />
+          <Icon name="pixelarticons:align-left" />
         </div>
         {
           remarkPluginFrontmatter.words === 1
@@ -34,7 +34,7 @@ const { Content, remarkPluginFrontmatter } = await render(post);
             : remarkPluginFrontmatter.words + " words"
         }
         <div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
-          <Icon name="lucide:clock-3" />
+          <Icon name="pixelarticons:clock" />
         </div>
         {
           remarkPluginFrontmatter.minutes === 1
@@ -47,7 +47,7 @@ const { Content, remarkPluginFrontmatter } = await render(post);
 
       <div class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
         <div class="bg-ctp-surface0 text-ctp-teal m-0 w-fit rounded p-2">
-          <Icon name="lucide:calendar" class="text-lg" />
+          <Icon name="pixelarticons:calendar" class="text-lg" />
         </div>
         {
           post.data.published.toLocaleDateString("en-us", {
@@ -60,7 +60,7 @@ const { Content, remarkPluginFrontmatter } = await render(post);
         {
           post.data.updated &&
             (<div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
-              <Icon name="lucide:calendar-clock" class="text-ctp-sky text-lg" />
+              <Icon name="pixelarticons:calendar-2" class="text-ctp-sky text-lg" />
             </div>)(post.data.updated).toLocaleDateString("en-us", {
               year: "numeric",
               month: "short",
@@ -69,7 +69,7 @@ const { Content, remarkPluginFrontmatter } = await render(post);
         }
 
         <div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
-          <Icon name="lucide:book-marked" class="text-ctp-mauve text-lg" />
+          <Icon name="pixelarticons:book" class="text-ctp-mauve text-lg" />
         </div>
         <div class="flex flex-row flex-nowrap items-center">
           {
@@ -99,7 +99,7 @@ const { Content, remarkPluginFrontmatter } = await render(post);
         </div>
 
         <div class="bg-ctp-surface0 mt-1 w-fit rounded p-2">
-          <Icon name="lucide:hash" class="text-ctp-flamingo text-lg" />
+          <Icon name="pixelarticons:hash" class="text-ctp-flamingo text-lg" />
         </div>
         <div class="flex flex-row flex-nowrap items-center">
           {
