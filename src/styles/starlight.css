@@ -47,7 +47,7 @@
   --color-macchiato-mantle: #1e2030;
   --color-macchiato-crust: #181926;
   --box-shadow-footer: "0 -10px 12px rgba(24,25,38,0.5)";
-  --cursor-macchiato: "url('/images/macchiato.cur'), url('/images/macchiato.png'), auto";
+  --cursor-macchiato: "url('/images/coffee.cur'), url('/images/coffee.png'), auto";
   --cursor-coffee_select: "url('/images/coffee_select.cur'), url('/images/coffee_select.png'), auto";
 }
 
@@ -128,7 +128,7 @@ site-search button,
 
 #starlight__sidebar,
 header {
-  @apply border-0!;
+  @apply border-0! rounded-tr-3xl;
 }
 
 /* Header */
@@ -274,7 +274,7 @@ Keeps the ✦ marker from the old theme
 
 a:any-link {
   cursor:
-    url("/images/macchiato.cur"), url("/images/macchiato.png"), auto !important;
+    url("/images/coffee.cur"), url("/images/coffee.png"), auto !important;
 }
 
 a:hover,
