@@ -23,7 +23,44 @@ export default defineConfig({
   integrations: [
     sitemap(),
     expressiveCode({ plugins: [pluginLineNumbers()] }),
-    icon(),
+    icon({
+      include: {
+        openmoji: [
+          "artist-palette",
+          "bookmark",
+          "card-file-box",
+          "card-index-dividers",
+          "cup-with-straw",
+          "globe-with-meridians",
+          "input-latin-letters",
+          "love-letter",
+          "memo",
+          "rainbow-hexagon",
+          "sparkling-heart",
+          "spiral-notepad",
+          "sports-medal",
+        ],
+        pixelarticons: [
+          "align-left",
+          "book",
+          "calendar",
+          "calendar-2",
+          "check",
+          "chevron-down",
+          "chevron-left",
+          "chevron-right",
+          "chevron-up",
+          "clock",
+          "close",
+          "hash",
+          "heart",
+          "home-sharp",
+          "mail",
+          "minus-box",
+        ],
+        simpleIcons: ["*"],
+      },
+    }),
     favicons(),
     robotsTxt({
       policy: [
@@ -50,7 +87,7 @@ export default defineConfig({
         replacesTitle: true,
       },
       customCss: [
-        "@fontsource/atkinson-hyperlegible/400.css",
+        "@fontsource-variable/atkinson-hyperlegible-next/wght.css",
         "@fontsource/monaspace-neon/400.css",
         "@fontsource/unica-one/400.css",
         "./src/styles/starlight.css",
@@ -69,7 +106,7 @@ export default defineConfig({
             icon: "heart",
             items: [
               {
-                label: "Ao3",
+                label: "AO3",
                 items: [{ autogenerate: { directory: "/fandom/ao3/" } }],
               },
               {
