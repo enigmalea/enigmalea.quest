@@ -22,10 +22,10 @@ collections:
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Publish Date", name: "published", widget: "datetime" }
       - {
           label: "Updated Date",
-          name: "date",
+          name: "updated",
           widget: "datetime",
           required: false,
         }
