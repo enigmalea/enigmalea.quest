@@ -1,17 +1,16 @@
 @import "tailwindcss";
-@import "@catppuccin/tailwindcss/macchiato.css";
+@import "@fontsource-variable/atkinson-hyperlegible-next/wght.css";
+@import "@fontsource/monaspace-neon";
+@import "@fontsource/unica-one";
 @plugin "@tailwindcss/typography";
-@config "../../tailwind.config.js";
 
-@custom-media --motionSafe (prefers-reduced-motion: no-preference);
+@import "./colors.css";
 
-@theme inline {
-  --font-title: "Unica One";
-  --font-sans: "Atkinson Hyperlegible";
-  --font-mono: "Monaspace Neon";
+@theme {
+  --font-sans: "Atkinson Hyperlegible Next Variable", sans-serif;
+  --font-mono: "Monaspace Neon", monospace;
+  --font-title: "Unica One", sans-serif;
   --box-shadow-footer: "0 -10px 12px rgba(24,25,38,0.5)";
-  --cursor-coffee: "url('/images/coffee.cur'), url('/images/coffee.png'), auto";
-  --cursor-coffee_select: "url('/images/coffee_select.cur'), url('/images/coffee_select.png'), auto";
 }
 
 @layer components {
@@ -44,23 +43,67 @@
 
 @layer utilities {
   .prose {
-    ul {
-      list-style-type: none;
-    }
-
-    ul li::before {
-      content: "★";
-      padding-right: 0.3rem;
-      color: var(--color-ctp-yellow);
-    }
-
-    ul li p {
-      display: inline;
-    }
-
-    p img {
-      padding: 0px;
-      margin: 0px;
-    }
+    @apply text-ctp-text;
   }
+
+  .prose ul {
+    @apply list-none;
+  }
+
+  .prose ul li::before {
+    @apply text-ctp-yellow pr-1.5;
+    content: "★";
+  }
+
+  .prose ul li p {
+    @apply inline;
+  }
+
+  .prose p img {
+    @apply m-0! p-0!;
+  }
+
+  .prose b,
+  .prose strong {
+    @apply text-ctp-green;
+  }
+
+  .prose em,
+  .prose i {
+    @apply text-ctp-sky;
+  }
+
+  .prose h1 {
+    @apply text-ctp-red;
+  }
+  .prose h2 {
+    @apply text-ctp-peach;
+  }
+  .prose h3 {
+    @apply text-ctp-yellow;
+  }
+  .prose h4 {
+    @apply text-ctp-green;
+  }
+  .prose h5 {
+    @apply text-ctp-blue;
+  }
+  .prose h6 {
+    @apply text-ctp-lavender;
+  }
+}
+
+body {
+  cursor: url("/images/coffee.cur"), url("/images/coffee.png"), auto !important;
+}
+
+.prose a:any-link {
+	@apply text-ctp-blue hover:text-ctp-rosewater hover:underline hover:underline-offset-4 hover:decoration-dotted hover:decoration-3;
+  cursor: url("/images/coffee.cur"), url("/images/coffee.png"), auto !important;
+  text-decoration-skip-ink: none;
+}
+
+.prose a:hover {
+  cursor:
+    url("/images/coffee_select.cur"), url("/images/coffee_select.png"), auto !important;
 }

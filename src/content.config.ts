@@ -68,7 +68,7 @@ const ships = defineCollection({
       fandom: z.string(),
       ship: z.string(),
       image: image(),
-      credits: z.string().optional(),
+      credits: z.url().optional(),
     }),
 });
 

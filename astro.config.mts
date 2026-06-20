@@ -57,6 +57,8 @@ export default defineConfig({
           "home-sharp",
           "mail",
           "minus-box",
+					"moon",
+					"sun"
         ],
         simpleIcons: ["*"],
       },
@@ -82,8 +84,8 @@ export default defineConfig({
       title: "enigmalea",
       titleDelimiter: "★",
       logo: {
-        light: "./src/assets/img/light-home.svg",
-        dark: "./src/assets/img/dark-home.svg",
+				light: "./src/assets/img/home-light.svg",
+        dark: "./src/assets/img/home.svg",
         replacesTitle: true,
       },
       customCss: [
@@ -94,6 +96,7 @@ export default defineConfig({
       ],
       components: {
         SocialIcons: "./src/components/starlight/SocialIcons.astro",
+				ThemeSelect: "./src/components/starlight/ThemeSelect.astro"
       },
       plugins: [
         starlightThemeNova(),

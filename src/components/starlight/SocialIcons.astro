@@ -1,21 +1,24 @@
 ---
 import Default from "@astrojs/starlight/components/SocialIcons.astro";
 import { Icon } from "astro-icon/components";
+
+const className = ["sl-flex", "text-base"];
 ---
 
-<a href="mailto:admin@enigmalea.quest" aria-label="e-mail"
-  ><Icon name="pixelarticons:mail" class="mt-2 hover:opacity-60 text-xl" /></a
+<a href="mailto:admin@enigmalea.quest" rel="me" class:list={className}>
+  <span class="sr-only">e-mail</span>
+  <Icon name="pixelarticons:mail" class="h-[22px] w-auto" /></a
 >
-<a href="https://ao3.org/users/enigmalea/profile" aria-label="ArchiveOfOurOwn"
-  ><Icon name="simple-icons:archiveofourown" class="mt-2 hover:opacity-60 text-xl" /></a
+<a
+  href="https://ao3.org/users/enigmalea/profile"
+  rel="me"
+  class:list={className}
 >
-<a href="https://enigmalea.tumblr.com" aria-label="tumblr"
-  ><Icon name="simple-icons:tumblr" class="mt-2 hover:opacity-60" /></a
+  <span class="sr-only">AO3</span>
+  <Icon name="simple-icons:archiveofourown" class="h-[22px] w-auto" /></a
+>
+<a href="https://enigmalea.tumblr.com" rel="me" class:list={className}>
+  <span class="sr-only">tumblr</span>
+  <Icon name="simple-icons:tumblr" /></a
 >
 <Default><slot /></Default>
-
-<style>
-	[data-icon] {
-    color: var(--sl-color-blue);
-}
-</style>

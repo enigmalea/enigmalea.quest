@@ -1,0 +1,33 @@
+---
+import { Toggle } from "astro-theme-toggle/components";
+import { Icon } from "astro-icon/components";
+---
+
+<Toggle
+  aria-label="Toggle light/dark mode"
+  title="Toggle light/dark mode"
+  class="ml-2.5 h-8 w-8"
+>
+  <Fragment slot="icon-light">
+    <Icon
+      name="pixelarticons:sun"
+      width="24"
+      height="24"
+      aria-label="light mode active"
+      class="h-[24px] w-[24px] text-ctp-peach!"
+    />
+  </Fragment>
+  <Fragment slot="icon-dark">
+    <Icon
+      name="pixelarticons:moon"
+      width="20"
+      height="20"
+      aria-label="dark mode active"
+      class="h-[20px] w-[20px] text-macchiato-yellow!"
+    />
+  </Fragment>
+</Toggle>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
+></script>
