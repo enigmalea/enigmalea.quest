@@ -81,6 +81,12 @@ export default defineConfig({
     }),
     metaTags(),
     starlight({
+			head: [{
+				tag: 'script',
+				attrs: {
+					src: 'https://identity.netlify.com/v1/netlify-identity-widget.js',
+				}
+			}],
       title: "enigmalea",
       titleDelimiter: "★",
       logo: {

@@ -1,7 +1,6 @@
 {
-  "name": "enigmalea",
+  "name": "enigmalea-dot-quest",
   "type": "module",
-  "version": "0.0.1",
   "scripts": {
     "start": "astro dev",
     "build": "astro build",
@@ -17,7 +16,7 @@
     "@fontsource-variable/atkinson-hyperlegible-next": "^5.2.6",
     "@fontsource/monaspace-neon": "^5.2.5",
     "@fontsource/unica-one": "^5.2.8",
-    "astro": "^6.4.6",
+    "astro": "^6.4.8",
     "astro-expressive-code": "^0.43.1",
     "astro-favicons": "^3.1.6",
     "astro-icon": "^1.1.5",
