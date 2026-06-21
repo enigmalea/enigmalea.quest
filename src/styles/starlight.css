@@ -144,7 +144,7 @@ a {
 }
 /* Active nav item */
 a[aria-current*="page"] {
-  @apply text-ctp-base! bg-ctp-rosewater! dark:bg-macchiato-rosewater! dark:text-macchiato-base! font-bold hover:no-underline!;
+  @apply text-ctp-base! bg-ctp-rosewater! dark:bg-macchiato-rosewater! dark:text-macchiato-base! hover:no-underline!;
 }
 
 /* ============================================================
@@ -198,7 +198,7 @@ ul.starlight-sidebar-topics::after {
 
 /* Nav links */
 .sidebar-content ul li a {
-  @apply text-ctp-text/75 hover:text-ctp-base hover:bg-ctp-rosewater dark:text-macchiato-text/75 dark:hover:text-macchiato-base dark:hover:bg-macchiato-rosewater font-sans no-underline hover:font-bold;
+  @apply text-ctp-text/75 hover:text-ctp-base hover:bg-ctp-rosewater dark:text-macchiato-text/75 dark:hover:text-macchiato-base dark:hover:bg-macchiato-rosewater font-sans no-underline;
 }
 
 /* Nested nav link size */
@@ -220,7 +220,7 @@ starlight-toc nav h2 {
 }
 
 starlight-toc nav ul li a {
-  @apply text-ctp-text/50! hover:text-ctp-text! dark:text-macchiato-text/50! dark:hover:text-macchiato-text! dark:hover:bg-macchiato-rosewater mr-15 ml-5 font-sans text-base/tight no-underline hover:font-bold;
+  @apply text-ctp-text/50! hover:text-ctp-text! dark:text-macchiato-text/50! dark:hover:text-macchiato-text! mr-15 ml-5 font-sans text-base/tight no-underline;
 }
 
 /* ============================================================
@@ -231,7 +231,7 @@ CONTENT PANEL — list styling
 }
 
 [data-theme="light"] .content-panel ul li::marker {
-  @apply text-ctp-yellow text-base font-normal;
+  @apply text-ctp-yellow text-2xl font-normal;
   content: "★";
 }
 
@@ -241,7 +241,7 @@ CONTENT PANEL — list styling
 }
 
 [data-theme="light"] .content-panel ul li ul li ul li::marker {
-  @apply text-ctp-yellow text-base font-normal;
+  @apply text-ctp-yellow text-2xl font-normal;
   content: "▸";
 }
 
