@@ -1,13 +1,14 @@
-import { defineCollection, z } from "astro:content";
-
-import { SocialLinks } from "@fujocoded/zod-transform-socials";
+import type { LocalImageProps } from "astro:assets";
+import { SocialLinks } from "@fujocoded/zod-transform-socials/zod4"
+import { defineCollection } from "astro:content";
 import { docsLoader } from "@astrojs/starlight/loaders";
 import { docsSchema } from "@astrojs/starlight/schema";
 import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const badges = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/badges/" }),
-  schema: ({ image }) =>
+  schema: ({ image }:LocalImageProps) =>
     z.object({
       order: z.number(),
       image: image(),
@@ -18,7 +19,7 @@ const badges = defineCollection({
 
 const banners = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/banners/" }),
-  schema: ({ image }) =>
+  schema: ({ image }:LocalImageProps) =>
     z.object({
       order: z.number(),
       image: image(),
@@ -36,8 +37,8 @@ const posts = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/posts/" }),
   schema: z.object({
     title: z.string(),
-    published: z.date(),
-    updated: z.date().optional(),
+    published: z.coerce.date(),
+    updated: z.coerce.date().optional(),
     draft: z.boolean().optional().default(false),
     description: z.string(),
     image: z.string().optional(),
@@ -48,7 +49,7 @@ const posts = defineCollection({
 
 const projects = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/projects/" }),
-  schema: ({ image }) =>
+  schema: ({ image }: LocalImageProps) =>
     z.object({
       title: z.string(),
       description: z.string(),
@@ -62,12 +63,12 @@ const projects = defineCollection({
 
 const ships = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/ships/" }),
-  schema: ({ image }) =>
+  schema: ({ image }: LocalImageProps) =>
     z.object({
       fandom: z.string(),
       ship: z.string(),
       image: image(),
-      credits: z.string().optional(),
+      credits: z.url().optional(),
     }),
 });
 

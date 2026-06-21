@@ -1,8 +1,5 @@
 ---
 import "../styles/global.css";
-import "@fontsource/unica-one";
-import "@fontsource/atkinson-hyperlegible";
-import "@fontsource/monaspace-neon";
 import BlogNavbar from "../components/blog/BlogNavbar.astro";
 import Header from "../components/Header.astro";
 import BlogFooter from "../components/blog/BlogFooter.astro";
@@ -95,20 +92,12 @@ const { pageTitle, description } = Astro.props;
 </html>
 
 <style>
+	@import "tailwindcss";
+	@import "../styles/colors.css";
+
   html,
   body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
+		@apply m-0 w-full h-full;
+	}
 
-  a:any-link {
-    cursor:
-      url("/images/coffee.cur"), url("/images/coffee.png"), auto !important;
-  }
-
-  a:hover {
-    cursor:
-      url("/images/coffee_select.cur"), url("/images/coffee_select.png"), auto !important;
-  }
 </style>
