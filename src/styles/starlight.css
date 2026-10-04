@@ -12,11 +12,6 @@
 
 @plugin "@tailwindcss/typography";
 
-@layer overrides {
-  .sl-markdown-content .sl-link-card .description {
-    @apply hover:text-ctp-rosewater! focus-visible:text-ctp-rosewater! dark:hover:text-macchiato-rosewater! dark:focus-visible:text-macchiato-rosewater!;
-  }
-}
 
 @theme {
   --sl-sidebar-width: 20rem;
@@ -263,13 +258,12 @@ CONTENT PANEL — list styling
 /* ============================================================
 * CONTENT PANEL - cards styling
 ============================================================ */
-
-[data-theme="light"] .sl-link-card {
-  @apply hover:border-ctp-rosewater! border;
+.sl-link-card {
+  @apply hover:border-ctp-rosewater! border dark:hover:border-macchiato-rosewater! text-ctp-text dark:text-macchiato-text!;
 }
 
-[data-theme="dark"] .sl-link-card {
-  @apply hover:border-macchiato-rosewater! border;
+.sl-markdown-content .sl-link-card .description {
+	@apply text-ctp-text dark:text-macchiato-text;
 }
 
 a span.title {
@@ -304,13 +298,6 @@ a span.title {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration-skip-ink: none;
-}
-
-[data-theme="dark"]
-  .sl-markdown-content
-  .sl-link-card:hover
-  .description:hover {
-  @apply text-macchiato-rosewater;
 }
 
 /* ============================================================
