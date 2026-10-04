@@ -98,7 +98,7 @@ body {
 }
 
 .prose a:any-link {
-	@apply text-ctp-blue hover:text-ctp-rosewater hover:underline hover:underline-offset-4 hover:decoration-dotted hover:decoration-3;
+  @apply text-ctp-blue hover:text-ctp-rosewater hover:underline hover:decoration-dotted hover:decoration-3 hover:underline-offset-4;
   cursor: url("/images/coffee.cur"), url("/images/coffee.png"), auto !important;
   text-decoration-skip-ink: none;
 }

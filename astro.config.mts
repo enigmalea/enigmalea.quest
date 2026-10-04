@@ -1,12 +1,11 @@
 import { defineConfig } from "astro/config";
-import expressiveCode from "astro-expressive-code";
 import favicons from "astro-favicons";
 import icon from "astro-icon";
+import { mdastReadingTimePlugin } from "./src/utils/mdast-reading-time";
 import mdx from "@astrojs/mdx";
 import metaTags from "astro-meta-tags";
-import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
-import { remarkReadingTime } from "./src/utils/remark-reading-time.mjs";
 import robotsTxt from "astro-robots-txt";
+import { satteri } from "@astrojs/markdown-satteri";
 import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
 import starlightImageZoom from "starlight-image-zoom";
@@ -18,11 +17,14 @@ export default defineConfig({
   site: "https://enigmalea.quest",
   base: "/",
   trailingSlash: "never",
-  markdown: { remarkPlugins: [remarkReadingTime] },
+  markdown: {
+    processor: satteri({
+      mdastPlugins: [mdastReadingTimePlugin],
+    }),
+  },
 
   integrations: [
     sitemap(),
-    expressiveCode({ plugins: [pluginLineNumbers()] }),
     icon({
       include: {
         openmoji: [
@@ -45,6 +47,7 @@ export default defineConfig({
           "book",
           "calendar",
           "calendar-2",
+          "castle-sharp",
           "check",
           "chevron-down",
           "chevron-left",
@@ -57,8 +60,8 @@ export default defineConfig({
           "home-sharp",
           "mail",
           "minus-box",
-					"moon",
-					"sun"
+          "moon",
+          "sun",
         ],
         simpleIcons: ["*"],
       },
@@ -84,7 +87,7 @@ export default defineConfig({
       title: "enigmalea",
       titleDelimiter: "★",
       logo: {
-				light: "./src/assets/img/home-light.svg",
+        light: "./src/assets/img/home-light.svg",
         dark: "./src/assets/img/home.svg",
         replacesTitle: true,
       },
@@ -96,7 +99,7 @@ export default defineConfig({
       ],
       components: {
         SocialIcons: "./src/components/starlight/SocialIcons.astro",
-				ThemeSelect: "./src/components/starlight/ThemeSelect.astro"
+        ThemeSelect: "./src/components/starlight/ThemeSelect.astro",
       },
       plugins: [
         starlightThemeNova(),
@@ -140,10 +143,6 @@ export default defineConfig({
           },
         ]),
       ],
-      expressiveCode: {
-        themes: ["catppuccin-macchiato", "catppuccin-latte"],
-        plugins: [pluginLineNumbers()],
-      },
       social: [
         {
           icon: "blueSky",

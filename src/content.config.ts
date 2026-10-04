@@ -1,6 +1,5 @@
-import type { LocalImageProps } from "astro:assets";
-import { SocialLinks } from "@fujocoded/zod-transform-socials/zod4"
-import { defineCollection } from "astro:content";
+import { defineCollection, type SchemaContext } from "astro:content";
+import { SocialLinks } from "@fujocoded/zod-transform-socials/zod4";
 import { docsLoader } from "@astrojs/starlight/loaders";
 import { docsSchema } from "@astrojs/starlight/schema";
 import { glob } from "astro/loaders";
@@ -8,7 +7,7 @@ import { z } from "astro/zod";
 
 const badges = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/badges/" }),
-  schema: ({ image }:LocalImageProps) =>
+  schema: ({ image }: SchemaContext) =>
     z.object({
       order: z.number(),
       image: image(),
@@ -19,7 +18,7 @@ const badges = defineCollection({
 
 const banners = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/banners/" }),
-  schema: ({ image }:LocalImageProps) =>
+  schema: ({ image }: SchemaContext) =>
     z.object({
       order: z.number(),
       image: image(),
@@ -49,7 +48,7 @@ const posts = defineCollection({
 
 const projects = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/projects/" }),
-  schema: ({ image }: LocalImageProps) =>
+  schema: ({ image }: SchemaContext) =>
     z.object({
       title: z.string(),
       description: z.string(),
@@ -63,7 +62,7 @@ const projects = defineCollection({
 
 const ships = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/ships/" }),
-  schema: ({ image }: LocalImageProps) =>
+  schema: ({ image }: SchemaContext) =>
     z.object({
       fandom: z.string(),
       ship: z.string(),
