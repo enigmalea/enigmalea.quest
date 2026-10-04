@@ -47,10 +47,11 @@ and I highly recommend them!
 
 - [AO3 Posting Script 2.0](https://docs.google.com/document/d/1nzEXnFu1U_HZMYOAnCfW8E_EH2eQgQVyNXS-o08yVAY/edit?usp=sharing)
   - Updated to support:
-	  - horizontal rule
-		- all alignments
-		- font colors & highlighting
-		- create & restore from back-up copy with no html (a true remove html function)
+    - horizontal rule
+    - all alignments
+    - font colors & highlighting
+    - create & restore from back-up copy with no html (a true remove html
+      function)
 
 ### Exchange/Event Mods & Participants
 

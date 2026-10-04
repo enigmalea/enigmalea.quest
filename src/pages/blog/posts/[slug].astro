@@ -60,7 +60,10 @@ const { Content, remarkPluginFrontmatter } = await render(post);
         {
           post.data.updated &&
             (<div class="bg-ctp-surface0 m-0 w-fit rounded p-2">
-              <Icon name="pixelarticons:calendar-2" class="text-ctp-sky text-lg" />
+              <Icon
+                name="pixelarticons:calendar-2"
+                class="text-ctp-sky text-lg"
+              />
             </div>)(post.data.updated).toLocaleDateString("en-us", {
               year: "numeric",
               month: "short",

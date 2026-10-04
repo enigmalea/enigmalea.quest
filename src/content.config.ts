@@ -1,5 +1,5 @@
 import type { LocalImageProps } from "astro:assets";
-import { SocialLinks } from "@fujocoded/zod-transform-socials/zod4"
+import { SocialLinks } from "@fujocoded/zod-transform-socials/zod4";
 import { defineCollection } from "astro:content";
 import { docsLoader } from "@astrojs/starlight/loaders";
 import { docsSchema } from "@astrojs/starlight/schema";
@@ -8,7 +8,7 @@ import { z } from "astro/zod";
 
 const badges = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/badges/" }),
-  schema: ({ image }:LocalImageProps) =>
+  schema: ({ image }: LocalImageProps) =>
     z.object({
       order: z.number(),
       image: image(),
@@ -19,7 +19,7 @@ const badges = defineCollection({
 
 const banners = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/data/banners/" }),
-  schema: ({ image }:LocalImageProps) =>
+  schema: ({ image }: LocalImageProps) =>
     z.object({
       order: z.number(),
       image: image(),
