@@ -3,6 +3,14 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import UserName from "../components/UserName.astro";
+
+interface Ship {
+	fandom: string;
+	ship: string;
+  image: string;
+  credits?: URL;
+}
 
 const allShips = await getCollection("ships");
 ---
@@ -31,7 +39,7 @@ const allShips = await getCollection("ships");
   </p>
 
   {
-    allShips.map((ship) => (
+    allShips.map((ship: Ship) => (
       <div>
         <Image
           src={ship.data.image}
@@ -47,9 +55,9 @@ const allShips = await getCollection("ships");
         <span class="text-ctp-text block text-center text-lg">
           {ship.data.ship}
         </span>
-        <span class="text-mono text-ctp-overlay1 block text-center text-lg italic">
-          {ship.data.credits}
-        </span>
+				<div class="flex justify-center items-center text text-ctp-overlay1 italic">
+					{ship.data.credits && <>art by:</> <UserName url={ship.data.credits} iconClass="ml-1" class="text-lg no-underline not-italic" />}
+				</div>
       </div>
     ))
   }

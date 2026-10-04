@@ -1,7 +1,6 @@
-import catppuccin from "@catppuccin/starlight";
-// @ts-check
 import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
+import favicons from "astro-favicons";
 import icon from "astro-icon";
 import mdx from "@astrojs/mdx";
 import metaTags from "astro-meta-tags";
@@ -12,11 +11,9 @@ import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightSidebarTopics from "starlight-sidebar-topics";
-import favicons from "astro-favicons";
-
+import starlightThemeNova from "starlight-theme-nova";
 import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://enigmalea.quest",
   base: "/",
@@ -26,7 +23,46 @@ export default defineConfig({
   integrations: [
     sitemap(),
     expressiveCode({ plugins: [pluginLineNumbers()] }),
-    icon(),
+    icon({
+      include: {
+        openmoji: [
+          "artist-palette",
+          "bookmark",
+          "card-file-box",
+          "card-index-dividers",
+          "cup-with-straw",
+          "globe-with-meridians",
+          "input-latin-letters",
+          "love-letter",
+          "memo",
+          "rainbow-hexagon",
+          "sparkling-heart",
+          "spiral-notepad",
+          "sports-medal",
+        ],
+        pixelarticons: [
+          "align-left",
+          "book",
+          "calendar",
+          "calendar-2",
+          "check",
+          "chevron-down",
+          "chevron-left",
+          "chevron-right",
+          "chevron-up",
+          "clock",
+          "close",
+          "hash",
+          "heart",
+          "home-sharp",
+          "mail",
+          "minus-box",
+					"moon",
+					"sun"
+        ],
+        simpleIcons: ["*"],
+      },
+    }),
     favicons(),
     robotsTxt({
       policy: [
@@ -48,25 +84,23 @@ export default defineConfig({
       title: "enigmalea",
       titleDelimiter: "★",
       logo: {
-        light: "./src/assets/img/light-home.svg",
-        dark: "./src/assets/img/dark-home.svg",
+				light: "./src/assets/img/home-light.svg",
+        dark: "./src/assets/img/home.svg",
         replacesTitle: true,
       },
       customCss: [
-        "@fontsource/atkinson-hyperlegible/400.css",
+        "@fontsource-variable/atkinson-hyperlegible-next/wght.css",
         "@fontsource/monaspace-neon/400.css",
         "@fontsource/unica-one/400.css",
         "./src/styles/starlight.css",
       ],
       components: {
         SocialIcons: "./src/components/starlight/SocialIcons.astro",
+				ThemeSelect: "./src/components/starlight/ThemeSelect.astro"
       },
       plugins: [
+        starlightThemeNova(),
         starlightImageZoom(),
-        catppuccin({
-          dark: { flavor: "macchiato", accent: "blue" },
-          light: { flavor: "latte", accent: "blue" },
-        }),
         starlightSidebarTopics([
           {
             label: "Fandom",
@@ -75,17 +109,12 @@ export default defineConfig({
             icon: "heart",
             items: [
               {
-                label: "General",
-                items: [
-                  {
-                    label: "AO3",
-                    autogenerate: { directory: "/fandom/general/ao3" },
-                  },
-                ],
+                label: "AO3",
+                items: [{ autogenerate: { directory: "/fandom/ao3/" } }],
               },
               {
                 label: "Dragon Age",
-                autogenerate: { directory: "/fandom/dragonage/" },
+                items: [{ autogenerate: { directory: "/fandom/dragonage/" } }],
               },
             ],
           },
@@ -97,15 +126,15 @@ export default defineConfig({
             items: [
               {
                 label: "Tutorials",
-                autogenerate: { directory: "/tech/tutorials/" },
+                items: [{ autogenerate: { directory: "/tech/tutorials/" } }],
               },
               {
                 label: "Open Source",
-                autogenerate: { directory: "/tech/opensource/" },
+                items: [{ autogenerate: { directory: "/tech/opensource/" } }],
               },
               {
                 label: "Obsidian",
-                autogenerate: { directory: "/tech/obsidian/" },
+                items: [{ autogenerate: { directory: "/tech/obsidian/" } }],
               },
             ],
           },

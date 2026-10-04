@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import "@catppuccin/tailwindcss/macchiato.css";
+
+@theme {
+  /* --- Dark palette (macchiato) --- */
+  --color-macchiato-rosewater: #f4dbd6;
+  --color-macchiato-flamingo: #f0c6c6;
+  --color-macchiato-pink: #f5bde6;
+  --color-macchiato-mauve: #c6a0f6;
+  --color-macchiato-red: #ed8796;
+  --color-macchiato-maroon: #ee99a0;
+  --color-macchiato-peach: #f5a97f;
+  --color-macchiato-yellow: #eed49f;
+  --color-macchiato-green: #a6da95;
+  --color-macchiato-teal: #8bd5ca;
+  --color-macchiato-sky: #91d7e3;
+  --color-macchiato-sapphire: #7dc4e4;
+  --color-macchiato-blue: #8aadf4;
+  --color-macchiato-lavender: #b7bdf8;
+  --color-macchiato-text: #cad3f5;
+  --color-macchiato-subtext1: #cad3f5;
+  --color-macchiato-subtext0: #a5adcb;
+  --color-macchiato-overlay2: #939ab7;
+  --color-macchiato-overlay1: #8087a2;
+  --color-macchiato-overlay0: #6e738d;
+  --color-macchiato-surface2: #5b6078;
+  --color-macchiato-surface1: #494d64;
+  --color-macchiato-surface0: #363a4f;
+  --color-macchiato-base: #24273a;
+  --color-macchiato-mantle: #1e2030;
+  --color-macchiato-crust: #181926;
+  --box-shadow-footer: "0 -10px 12px rgba(24,25,38,0.5)";
+}
+
+/* ============================================================
+STARLIGHT TOKEN OVERRIDES — LIGHT (Latte)
+============================================================ */
+:root[data-theme="light"] {
+  --sl-font: var(--font-sans);
+
+  --sl-color-bg: var(--color-ctp-base);
+  --sl-color-bg-nav: var(--color-ctp-mantle);
+  --sl-color-bg-sidebar: var(--color-ctp-mantle);
+  --sl-color-black: var(--color-ctp-mantle);
+  --sl-color-white: var(--color-ctp-text);
+  --sl-color-text: var(--color-ctp-text);
+  --sl-color-text-accent: var(--color-ctp-blue);
+  --sl-color-accent: var(--color-ctp-blue);
+  --sl-color-accent-high: var(--color-ctp-rosewater);
+  --sl-color-hairline: var(--color-ctp-mantle);
+  --sl-color-gray-1: var(--color-ctp-crust);
+  --sl-color-gray-2: var(--color-ctp-mantle);
+  --sl-color-gray-3: var(--color-ctp-mantle);
+  --sl-color-gray-4: var(--color-ctp-subtext1);
+  --sl-color-gray-5: var(--color-ctp-subtext-2);
+  --sl-color-gray-6: var(--color-ctp-text);
+}
+
+/* ============================================================
+STARLIGHT TOKEN OVERRIDES — DARK (macchiato)
+============================================================ */
+:root[data-theme="dark"] {
+  --sl-font: var(--font-sans);
+
+  --sl-color-bg: var(--color-macchiato-base);
+  --sl-color-bg-nav: var(--color-macchiato-crust);
+  --sl-color-bg-sidebar: var(--color-macchiato-mantle);
+  --sl-color-black: var(--color-macchiato-crust);
+  --sl-color-white: var(--color-macchiato-text);
+  --sl-color-text: var(--color-macchiato-text);
+  --sl-color-text-accent: var(--color-macchiato-blue);
+  --sl-color-accent: var(--color-macchiato-blue);
+  --sl-color-accent-high: var(--color-macchiato-rosewater);
+  --sl-color-hairline: var(--color-macchiato-crust);
+  --sl-color-gray-1: var(--color-macchiato-crust);
+  --sl-color-gray-2: var(--color-macchiato-mantle);
+  --sl-color-gray-3: var(--color-macchiato-overlay-0);
+  --sl-color-gray-4: var(--color-macchiato-subtext0);
+  --sl-color-gray-5: var(--color-macchiato-subtext1);
+  --sl-color-gray-6: var(--color-macchiato-text);
+}
