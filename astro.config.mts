@@ -45,6 +45,7 @@ export default defineConfig({
           "book",
           "calendar",
           "calendar-2",
+					"castle-sharp",
           "check",
           "chevron-down",
           "chevron-left",
